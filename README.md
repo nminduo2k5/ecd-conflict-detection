@@ -23,6 +23,11 @@ python experiments\compare_results.py results_rerun results_mine   :: macro-by-m
 with every LaTeX macro, vector figures). Deterministic numbers (pair counts, pruning, recall of the exact mode and
 of the hash/index baselines, proof obligations, real-policy counts) reproduce exactly; GNN-dependent numbers vary by
 about ±0.01; timings depend on the machine. Trained GNN models (8 × 25 MB) are not tracked — `run_all` retrains them.
+
+**Licence:** MIT for the code (see `LICENSE`). The converted policy datasets under `data/processed/` are derived
+from public sources — the XPA XACML benchmark policies, AWS managed IAM policies (SummitRoute mirror) with the
+MAMIP action registry, and the Kubernetes bootstrap ClusterRoles — and remain subject to the licences of those
+sources (`benchmark/datasets/README.md`, `scripts/download_datasets.sh`).
 The remainder of this README is in Vietnamese.
 
 ---
