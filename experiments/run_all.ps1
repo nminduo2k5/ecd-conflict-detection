@@ -25,7 +25,7 @@ param(
     [string]$ResultsDir = "results_rerun",
     [switch]$FreshCache,
     [string[]]$Steps = @("rq1", "train_complex", "rq2", "rq2_complex", "rq3", "rq5", "real", "rq4",
-                         "summarize", "export", "figures", "plots")
+                         "summarize", "export", "tables", "figures", "plots")
 )
 
 $Steps = @($Steps | ForEach-Object { $_ -split "," } | Where-Object { $_ })   # "-Steps rq2,rq3" also works via -File / run_all.cmd
@@ -55,6 +55,7 @@ $Plan = [ordered]@{
     rq4           = @("experiments\run_rq4_scalability.py")                    # 1k..100k rules x 30 seeds (longest step)
     summarize     = @("experiments\summarize.py")                              # <results>\SUMMARY.md
     export        = @("experiments\export_numbers.py", (Join-Path $Res "numbers.tex"))
+    tables        = @("experiments\export_tables.py", (Join-Path $Res "paper_tables"))
     figures       = @("experiments\paper_figures.py", (Join-Path $Res "paper_figures"))
     plots         = @("experiments\plot_results.py")                           # <results>\figures\*.png
 }

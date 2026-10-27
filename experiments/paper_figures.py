@@ -28,6 +28,7 @@ plt.rcParams.update({
     "axes.linewidth": 0.6, "xtick.major.width": 0.5, "ytick.major.width": 0.5,
     "pdf.fonttype": 42, "savefig.bbox": "tight", "savefig.pad_inches": 0.03,
 })
+NO_STAMP = {"CreationDate": None, "ModDate": None}   # reproducible PDFs: same results -> byte-identical figures
 # colour-blind-safe palette + hatches so the bars survive greyscale printing
 PAL = ["#bdbdbd", "#7f7f7f", "#4c78a8", "#f58518", "#54a24b", "#b279a2", "#e45756"]
 HATCH = ["", "//", "", "\\\\", "xx", "..", "++"]
@@ -83,28 +84,14 @@ def fig_rq1():
                 if v == v:
                     ax.text(g + (i - 2) * 0.16, v + 0.02, f"{v:.2f}", ha="center", fontsize=6.5)
     fig.tight_layout()
-    fig.savefig(OUT / "rq1.pdf")
+    fig.savefig(OUT / "rq1.pdf", metadata=NO_STAMP)
     plt.close(fig)
 
 
 def fig_rq2():
+    """Recall of the approximate mode against the budget k (the pair counts per variant are in Table RQ2)."""
     a2, c2 = load("rq2_pruning"), load("rq2_complex")
-    fig, (a, b) = plt.subplots(1, 2, figsize=(4.8, 1.75), dpi=300, gridspec_kw={"width_ratios": [1.3, 1]})
-    # (a) pairs sent to Z3 per variant, both datasets, log scale
-    variants = [("no_tierA", "full\nSMT"), ("tierA_only", "Tier A\nexact"), ("approx_gnn_k10", "Tier A\ntop-10"),
-                ("approx_gnn_k50", "Tier A\ntop-50")]
-    idx = [("exact_index", "literal\nindex"), ("exact_index+ont", "index +\nontology")]
-    groups = [l for _, l in variants] + [l for _, l in idx]
-    vals = []
-    for d in (a2, c2):
-        row = [(d.get(k) or {}).get("verified", np.nan) for k, _ in variants]
-        row += [(d.get(k) or {}).get("candidates", np.nan) for k, _ in idx]
-        vals.append(row)
-    grouped_bars(a, groups, ["synthetic_1k", "complex_1k"], vals, ylabel="pairs sent to the solver", log=True,
-                 ylim=(1e3, 3e6), ncol=2)
-    a.tick_params(axis="x", labelsize=7)
-    a.set_title("(a) verification work per variant", loc="left")
-    # (b) recall vs budget k for hash and GNN orders on both datasets
+    fig, b = plt.subplots(figsize=(2.9, 1.9), dpi=300)
     ks = [10, 25, 50]
     for d, name, ls in ((a2, "synthetic_1k", "-"), (c2, "complex_1k", "--")):
         for emb, c, mk in (("hash", PAL[1], "s"), ("gnn", PAL[4], "o")):
@@ -117,16 +104,15 @@ def fig_rq2():
     b.set_ylim(55, 103)
     b.grid(linewidth=0.3, alpha=0.6)
     b.legend(loc="lower right", frameon=False, handlelength=1.8, fontsize=6.8, labelspacing=0.3)
-    b.set_title("(b) approximate mode", loc="left")
-    fig.tight_layout(w_pad=1.2)
-    fig.savefig(OUT / "rq2.pdf")
+    fig.tight_layout()
+    fig.savefig(OUT / "rq2.pdf", metadata=NO_STAMP)
     plt.close(fig)
 
 
 def fig_rq3():
     rq3 = load("rq3_incremental")
     rows = rq3.get("rows", [])
-    fig, ax = plt.subplots(figsize=(4.8, 1.6), dpi=300)
+    fig, ax = plt.subplots(figsize=(4.8, 1.5), dpi=300)
     if rows:
         x = np.array([r["delta"] for r in rows])
         po = np.array([max(r["po_new"], 0.6) for r in rows], dtype=float)   # 0 → tiny bar on log axis
@@ -148,13 +134,13 @@ def fig_rq3():
         ax.legend(loc="upper left", bbox_to_anchor=(0.0, 0.58), ncol=3, frameon=False, handlelength=1.1,
                   columnspacing=0.8, handletextpad=0.4, borderaxespad=0.0)
     fig.tight_layout()
-    fig.savefig(OUT / "rq3.pdf")
+    fig.savefig(OUT / "rq3.pdf", metadata=NO_STAMP)
     plt.close(fig)
 
 
 def fig_rq4():
     rq4 = load("rq4_scalability")
-    fig, ax = plt.subplots(figsize=(3.4, 1.9), dpi=300)
+    fig, ax = plt.subplots(figsize=(3.0, 1.6), dpi=300)
     if rq4:
         sizes = sorted(int(k) for k in rq4)
         for key, lab, c, mk in (("exact_ms_per_delta", "exact mode (recall 100 %)", PAL[3], "s"),
@@ -170,7 +156,7 @@ def fig_rq4():
         ax.grid(which="major", linewidth=0.3, alpha=0.6)
         ax.legend(loc="upper left", frameon=False, handlelength=1.6, handletextpad=0.4, borderaxespad=0.3)
     fig.tight_layout()
-    fig.savefig(OUT / "rq4.pdf")
+    fig.savefig(OUT / "rq4.pdf", metadata=NO_STAMP)
     plt.close(fig)
 
 
@@ -184,7 +170,7 @@ def fig_rq5():
              ("tierA_only", "Tier A, all survivors (exact)")]
     vals = [[100 * (rq5.get(d, {}).get(m) or {}).get("recall_no_shared_literal", np.nan) for d, _ in dsets]
             for m, _ in meths]
-    fig, ax = plt.subplots(figsize=(4.8, 1.75), dpi=300)
+    fig, ax = plt.subplots(figsize=(4.8, 1.55), dpi=300)
     grouped_bars(ax, [l for _, l in dsets], [l for _, l in meths], vals, ylim=(0, 172),
                  ylabel="recall on cross-vocabulary conflicts (%)", ncol=3, width=0.75)
     ax.set_yticks([0, 25, 50, 75, 100])
@@ -194,7 +180,7 @@ def fig_rq5():
             if v == v:
                 ax.text(g + (i - 3) * (0.75 / 7), v + 1.5, f"{v:.0f}", ha="center", fontsize=6)
     fig.tight_layout()
-    fig.savefig(OUT / "rq5.pdf")
+    fig.savefig(OUT / "rq5.pdf", metadata=NO_STAMP)
     plt.close(fig)
 
 
