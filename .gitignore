@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+notebooks/.ipynb_checkpoints/
+
+# Third-party raw policy sources (60 MB): re-fetch with  bash scripts/download_datasets.sh
+data/raw/*
+!data/raw/.gitkeep
+# data/processed/ IS tracked: the converted datasets with their cached Z3 ground truth and overlap
+# labels are what the paper's experiments ran on.
+
+# Superseded first run (archive only); the paper is built from results_rerun/
+results/*
+!results/.gitkeep
+
+# Re-run outputs that are large or regenerable
+*.pt
+results_rerun/models/
+results_rerun/cache/
+results_rerun/rq4_partial.json
+results_rerun/rodin_ws/

@@ -1,0 +1,749 @@
+{
+ "data/processed/real/xacml_itrust": {
+  "rules": 64,
+  "source_rules": 64,
+  "attributes": 3,
+  "combining": "first-applicable",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 2016,
+  "pruning_ratio": 1.0,
+  "verified": 0,
+  "conflicts": 0,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {},
+  "full_check_ms": 1.497400000516791,
+  "approx_k50": {
+   "verified": 0,
+   "recall": 1.0
+  },
+  "examples": [],
+  "delta_ms": {
+   "mean": 3.2940359999884095,
+   "std": 6.071874599151494,
+   "median": 2.1933999996690545,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 1.74,
+   "std": 4.379031670055258,
+   "median": 1.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 87
+ },
+ "data/processed/real/xacml_hl7": {
+  "rules": 22,
+  "source_rules": 19,
+  "attributes": 9,
+  "combining": "first-applicable",
+  "rules_with_overapprox_condition": 4,
+  "pairs_total": 231,
+  "pruning_ratio": 0.9264069264069265,
+  "verified": 17,
+  "conflicts": 17,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "order-dependent": 17
+  },
+  "full_check_ms": 30.600900000536058,
+  "approx_k50": {
+   "verified": 17,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.createNote",
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.safetyHarness"
+    ],
+    "counterexample": {
+     "resource.com.axiomatics.hl7.object.objectType": "progress note",
+     "access-subject.com.axiomatics.hl7.user.role": "physician",
+     "action.com.axiomatics.hl7.action.id": "create"
+    },
+    "class": "order-dependent",
+    "winner": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.createNote",
+    "explanation": "first-applicable: http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.createNote appears first; swapping order flips the decision"
+   },
+   {
+    "pair": [
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.updateNote",
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.safetyHarness"
+    ],
+    "counterexample": {
+     "resource.com.axiomatics.hl7.object.objectType": "progress note",
+     "access-subject.com.axiomatics.hl7.user.role": "physician",
+     "action.com.axiomatics.hl7.action.id": "update"
+    },
+    "class": "order-dependent",
+    "winner": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.updateNote",
+    "explanation": "first-applicable: http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.updateNote appears first; swapping order flips the decision"
+   },
+   {
+    "pair": [
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment",
+     "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.safetyHarness"
+    ],
+    "counterexample": {
+     "resource.com.axiomatics.hl7.object.objectType": "assessment",
+     "access-subject.com.axiomatics.hl7.user.role": "physician",
+     "action.com.axiomatics.hl7.action.id": "create"
+    },
+    "class": "order-dependent",
+    "winner": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment",
+    "explanation": "first-applicable: http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment appears first; swapping order flips the decision"
+   }
+  ],
+  "delta_ms": {
+   "mean": 3.302462000028754,
+   "std": 3.704923635509186,
+   "median": 2.6542000000517874,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 3.08,
+   "std": 3.2940267523045343,
+   "median": 2.5,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 154
+ },
+ "data/processed/real/xacml_gpms": {
+  "rules": 210,
+  "source_rules": 97,
+  "attributes": 42,
+  "combining": "permit-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 21945,
+  "pruning_ratio": 0.9902483481430849,
+  "verified": 214,
+  "conflicts": 214,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 214
+  },
+  "full_check_ms": 489.04440000023897,
+  "approx_k50": {
+   "verified": 214,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "OtherStaffCannotCreateProposal-Rule2#0",
+     "DelegateAssociateChairComputerEngineeringByDepartmentChair-Rule2"
+    ],
+    "counterexample": {
+     "access-subject.position.type": "Teaching faculty",
+     "resource.proposal.section": "Whole Proposal",
+     "action.proposal.action": "Add",
+     "access-subject.position.title": "Department Chair",
+     "resource.department": "Computer Engineering",
+     "access-subject.department": "Computer Engineering",
+     "resource.positiontitle": "Associate Chair"
+    },
+    "class": "masked",
+    "winner": "DelegateAssociateChairComputerEngineeringByDepartmentChair-Rule2",
+    "explanation": "permit-overrides: DelegateAssociateChairComputerEngineeringByDepartmentChair-Rule2 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "OtherStaffCannotCreateProposal-Rule2#0",
+     "DelegateAssociateChairComputerScienceByDepartmentChair-Rule1"
+    ],
+    "counterexample": {
+     "access-subject.position.type": "Teaching faculty",
+     "resource.proposal.section": "Whole Proposal",
+     "action.proposal.action": "Add",
+     "access-subject.position.title": "Department Chair",
+     "resource.department": "Computer Science",
+     "access-subject.department": "Computer Science",
+     "resource.positiontitle": "Associate Chair"
+    },
+    "class": "masked",
+    "winner": "DelegateAssociateChairComputerScienceByDepartmentChair-Rule1",
+    "explanation": "permit-overrides: DelegateAssociateChairComputerScienceByDepartmentChair-Rule1 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "OtherStaffCannotCreateProposal-Rule2#1",
+     "DelegateAssociateChairComputerScienceByDepartmentChair-Rule1"
+    ],
+    "counterexample": {
+     "access-subject.position.type": "Research staff",
+     "resource.proposal.section": "Whole Proposal",
+     "action.proposal.action": "Add",
+     "access-subject.position.title": "Department Chair",
+     "resource.department": "Computer Science",
+     "access-subject.department": "Computer Science",
+     "resource.positiontitle": "Associate Chair"
+    },
+    "class": "masked",
+    "winner": "DelegateAssociateChairComputerScienceByDepartmentChair-Rule1",
+    "explanation": "permit-overrides: DelegateAssociateChairComputerScienceByDepartmentChair-Rule1 (Permit) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 7.184280000074068,
+   "std": 12.092489465745478,
+   "median": 4.2828499999814085,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 5.16,
+   "std": 9.067456948351289,
+   "median": 2.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 258
+ },
+ "data/processed/real/xacml_pluto": {
+  "rules": 176,
+  "source_rules": 21,
+  "attributes": 3,
+  "combining": "permit-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 15400,
+  "pruning_ratio": 0.9886363636363636,
+  "verified": 175,
+  "conflicts": 175,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 175
+  },
+  "full_check_ms": 309.12200000057055,
+  "approx_k50": {
+   "verified": 175,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "odu_faculty_aps#0",
+     "default"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "faculty@odu.edu",
+     "resource.resource-id": "APS:archive",
+     "action.action-id": "execute"
+    },
+    "class": "masked",
+    "winner": "odu_faculty_aps#0",
+    "explanation": "permit-overrides: odu_faculty_aps#0 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "odu_faculty_aps#1",
+     "default"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "faculty@odu.edu",
+     "resource.resource-id": "APS:creator",
+     "action.action-id": "execute"
+    },
+    "class": "masked",
+    "winner": "odu_faculty_aps#1",
+    "explanation": "permit-overrides: odu_faculty_aps#1 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "odu_faculty_aps#2",
+     "default"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "faculty@odu.edu",
+     "resource.resource-id": "APS:subject",
+     "action.action-id": "execute"
+    },
+    "class": "masked",
+    "winner": "odu_faculty_aps#2",
+    "explanation": "permit-overrides: odu_faculty_aps#2 (Permit) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 4.018977999949129,
+   "std": 6.9777897964424795,
+   "median": 2.6254000003973488,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 2.84,
+   "std": 7.9343222387142225,
+   "median": 1.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 142
+ },
+ "data/processed/real/xacml_conference": {
+  "rules": 15,
+  "source_rules": 15,
+  "attributes": 2,
+  "combining": "permit-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 105,
+  "pruning_ratio": 0.8666666666666667,
+  "verified": 14,
+  "conflicts": 14,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 14
+  },
+  "full_check_ms": 20.543000000543543,
+  "approx_k50": {
+   "verified": 14,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:1.0:Rule0",
+     "urn:oasis:names:tc:xacml:1.0:Rule14"
+    ],
+    "counterexample": {
+     "resource.resource-id": "author",
+     "action.action-id": "read"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:1.0:Rule0",
+    "explanation": "permit-overrides: urn:oasis:names:tc:xacml:1.0:Rule0 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:1.0:Rule1",
+     "urn:oasis:names:tc:xacml:1.0:Rule14"
+    ],
+    "counterexample": {
+     "resource.resource-id": "chair",
+     "action.action-id": "read"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:1.0:Rule1",
+    "explanation": "permit-overrides: urn:oasis:names:tc:xacml:1.0:Rule1 (Permit) wins on the overlap"
+   },
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:1.0:Rule2",
+     "urn:oasis:names:tc:xacml:1.0:Rule14"
+    ],
+    "counterexample": {
+     "resource.resource-id": "pcmember",
+     "action.action-id": "read"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:1.0:Rule2",
+    "explanation": "permit-overrides: urn:oasis:names:tc:xacml:1.0:Rule2 (Permit) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 3.516541999997571,
+   "std": 3.0720164150001024,
+   "median": 3.3893500003614463,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 4.04,
+   "std": 3.5911455735756865,
+   "median": 4.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 202
+ },
+ "data/processed/real/xacml_fedora": {
+  "rules": 15,
+  "source_rules": 12,
+  "attributes": 4,
+  "combining": "deny-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 105,
+  "pruning_ratio": 0.819047619047619,
+  "verified": 19,
+  "conflicts": 19,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 19
+  },
+  "full_check_ms": 24.248500000794593,
+  "approx_k50": {
+   "verified": 19,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "rule1",
+     "rule10"
+    ],
+    "counterexample": {
+     "action.action-id": "urn:fedora:names:fedora:2.1:action:api-m",
+     "environment.environment-id": 2,
+     "access-subject.subject-id": "administrator"
+    },
+    "class": "masked",
+    "winner": "rule1",
+    "explanation": "deny-overrides: rule1 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "rule2#0",
+     "rule9"
+    ],
+    "counterexample": {
+     "action.action-id": "urn:fedora:names:fedora:2.1:action:id-adminPing",
+     "access-subject.subject-id": 2,
+     "resource.resource-id": "Inactive"
+    },
+    "class": "masked",
+    "winner": "rule2#0",
+    "explanation": "deny-overrides: rule2#0 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "rule2#0",
+     "rule13"
+    ],
+    "counterexample": {
+     "action.action-id": "urn:fedora:names:fedora:2.1:action:id-serverStatus",
+     "access-subject.subject-id": 3,
+     "resource.resource-id": "Inactive"
+    },
+    "class": "masked",
+    "winner": "rule2#0",
+    "explanation": "deny-overrides: rule2#0 (Deny) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 3.419871999976749,
+   "std": 2.6574764829671187,
+   "median": 3.8121499997032515,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 4.12,
+   "std": 3.4678700161597167,
+   "median": 4.5,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 206
+ },
+ "data/processed/real/xacml_kmarket": {
+  "rules": 3,
+  "source_rules": 3,
+  "attributes": 4,
+  "combining": "deny-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 3,
+  "pruning_ratio": 0.3333333333333333,
+  "verified": 2,
+  "conflicts": 2,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 2
+  },
+  "full_check_ms": 5.094500000268454,
+  "approx_k50": {
+   "verified": 2,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "total-amount",
+     "permit-rule"
+    ],
+    "counterexample": {
+     "access-subject.//kmarket.com/id/role": "gold",
+     "//kmarket.com/category.//kmarket.com/id/totalAmount": 1001.0
+    },
+    "class": "masked",
+    "winner": "total-amount",
+    "explanation": "deny-overrides: total-amount (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "max-liquor-amount",
+     "permit-rule"
+    ],
+    "counterexample": {
+     "access-subject.//kmarket.com/id/role": "gold",
+     "resource.resource-id": "Liquor",
+     "//kmarket.com/category.//kmarket.com/id/amount": 11.0
+    },
+    "class": "masked",
+    "winner": "max-liquor-amount",
+    "explanation": "deny-overrides: max-liquor-amount (Deny) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 1.7705320000095526,
+   "std": 1.3386371459645237,
+   "median": 2.1134000003257825,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 2.3,
+   "std": 1.9192898346492004,
+   "median": 3.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 115
+ },
+ "data/processed/real/xacml_simpson": {
+  "rules": 4,
+  "source_rules": 4,
+  "attributes": 4,
+  "combining": "deny-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 6,
+  "pruning_ratio": 0.5,
+  "verified": 3,
+  "conflicts": 3,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 3
+  },
+  "full_check_ms": 18.895400000474183,
+  "approx_k50": {
+   "verified": 3,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule2"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "J. Hibbert"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+    "explanation": "deny-overrides: urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID301ordered:rule2"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "J. Hibbert"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+    "explanation": "deny-overrides: urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+     "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule3"
+    ],
+    "counterexample": {
+     "access-subject.subject-id": "J. Hibbert",
+     "access-subject.test": "Zaphod Beedlebrox"
+    },
+    "class": "masked",
+    "winner": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+    "explanation": "deny-overrides: urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1 (Deny) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 2.474783999932697,
+   "std": 1.850520964651697,
+   "median": 2.967349999835278,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 3.34,
+   "std": 2.8328250844666836,
+   "median": 4.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 167
+ },
+ "data/processed/real/aws_managed_100": {
+  "rules": 239,
+  "source_rules": 100,
+  "attributes": 15,
+  "combining": "deny-overrides",
+  "rules_with_overapprox_condition": 33,
+  "pairs_total": 28441,
+  "pruning_ratio": 0.9915614781477444,
+  "verified": 240,
+  "conflicts": 240,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 240
+  },
+  "full_check_ms": 925.7203999995909,
+  "approx_k50": {
+   "verified": 240,
+   "recall": 1.0
+  },
+  "examples": [
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt0",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "sns:ListSubscriptionsByTopic"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt1",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "cloudwatch:GetInsightRuleReport",
+     "resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt2",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "iam:PassRole"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 51.19447000004584,
+   "std": 116.76516295208576,
+   "median": 12.539850000393926,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 12.1,
+   "std": 33.198383289871586,
+   "median": 3.5,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 605
+ },
+ "data/processed/real/aws_managed_300": {
+  "rules": 756,
+  "source_rules": 300,
+  "attributes": 25,
+  "combining": "deny-overrides",
+  "rules_with_overapprox_condition": 65,
+  "pairs_total": 285390,
+  "pruning_ratio": 0.9973334734924139,
+  "verified": 761,
+  "conflicts": 761,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {
+   "masked": 761
+  },
+  "full_check_ms": 3800.4885000000286,
+  "approx_k50": {
+   "verified": 281,
+   "recall": 0.3692509855453351
+  },
+  "examples": [
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt0",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "dax:ListTags"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt1",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "cloudwatch:GetInsightRuleReport",
+     "resource": "arn:aws:cloudwatch:*:*:insight-rule/DynamoDBContributorInsights*"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   },
+   {
+    "pair": [
+     "AmazonDynamoDBFullAccess/stmt2",
+     "AWSDenyAll/stmt0"
+    ],
+    "counterexample": {
+     "action": "iam:PassRole"
+    },
+    "class": "masked",
+    "winner": "AWSDenyAll/stmt0",
+    "explanation": "deny-overrides: AWSDenyAll/stmt0 (Deny) wins on the overlap"
+   }
+  ],
+  "delta_ms": {
+   "mean": 237.70241800004442,
+   "std": 553.7850687260002,
+   "median": 49.09010000028502,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 23.74,
+   "std": 29.98149769577285,
+   "median": 12.5,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 1187
+ },
+ "data/processed/real/k8s_clusterroles": {
+  "rules": 138,
+  "source_rules": null,
+  "attributes": 5,
+  "combining": "permit-overrides",
+  "rules_with_overapprox_condition": 0,
+  "pairs_total": 9453,
+  "pruning_ratio": 1.0,
+  "verified": 0,
+  "conflicts": 0,
+  "recall": 1.0,
+  "precision": 1.0,
+  "conflict_classes": {},
+  "full_check_ms": 7.3972000000139815,
+  "approx_k50": {
+   "verified": 0,
+   "recall": 1.0
+  },
+  "examples": [],
+  "delta_ms": {
+   "mean": 13.977727999972558,
+   "std": 28.087202317824893,
+   "median": 4.865849999987404,
+   "n": 50
+  },
+  "delta_verified": {
+   "mean": 9.48,
+   "std": 20.725848989282213,
+   "median": 3.0,
+   "n": 50
+  },
+  "delta_conflicts_introduced": 474
+ }
+}

@@ -1,0 +1,1092 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.alternatePrivilegedHealthcareProfessionalAccess.alternateUpdate#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "update"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "hospital staff member"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.Id_10#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.alternatePrivilegedHealthcareProfessionalAccess.alternateRead#0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     },
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "payment history"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+    "policy": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory",
+    "combining": "first-applicable"
+   }
+  },
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     },
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "create"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     },
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "Clinical Object"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.clinicalObjectAccess"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "progress note"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.safetyHarness"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "Billing Statement"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.billingStatementAccess"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     },
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "create"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.billingStatementAccess"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.Id_10#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "update"
+     },
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "care plan"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.Id_10",
+    "policy": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan",
+    "combining": "first-applicable",
+    "alt": 0
+   }
+  },
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.Id_10#0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.billingStatementAccess"
+   }
+  },
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.alternatePrivilegedHealthcareProfessionalAccess.alternateUpdate#1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "alternate privileged healthcare professional"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.alternatePrivilegedHealthcareProfessionalAccess.safetyHarness"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment",
+    "policy": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments",
+    "combining": "first-applicable",
+    "approx": true
+   }
+  },
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "payment history"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "progress note"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "payment history"
+     },
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     },
+     {
+      "attr": "resource.com.axiomatics.hl7.object.administrativeAccess",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.readPaymentHistory"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "create"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "medical record"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.physiciansAccessMedicalRecords.readMedicalRecord"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new16",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.assessments.createAssessment"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "create"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new5"
+   }
+  },
+  "rule_id": "new14",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new13"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.clinicalObjectAccess.clinicalObjectAccess",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "update"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.updateCarePlan.Id_10#1"
+   }
+  },
+  "rule_id": "new0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.admissionClerkMedicalRecordAccess.withAdditionalAuthority",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "sensitive medical information"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.alternatePrivilegedHealthcareProfessionalAccess.alternateRead#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.physiciansAccessMedicalRecords.readMedicalRecord"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "payment history"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "assessment"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new18"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "payment history"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+    "policy": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory",
+    "combining": "first-applicable"
+   }
+  },
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.paymentHistory.safetyHarness",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.healthRelatedProfessionalAccess.accessMedicalRecord",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.object.objectType",
+      "op": "eq",
+      "value": "medical record"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.com.axiomatics.hl7.user.additionalAuthority",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.healthRelatedProfessionalAccess.accessMedicalRecord",
+    "policy": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.healthRelatedProfessionalAccess",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.healthRelatedProfessionalAccess.accessMedicalRecord",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.medicalRecords.healthRelatedProfessionalAccess.accessMedicalRecord",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new24",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.com.axiomatics.hl7.user.role",
+      "op": "eq",
+      "value": "physician"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.com.axiomatics.hl7.action.id",
+      "op": "eq",
+      "value": "create"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.createNote"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new18"
+   }
+  },
+  "rule_id": "new23",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "http://axiomatics.com/alfa/identifier/com.axiomatics.hl7.global.progressNotes.updateNote",
+  "position": null
+ }
+]

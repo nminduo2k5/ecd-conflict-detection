@@ -1,0 +1,3 @@
+dataset: data/processed/synthetic_1k
+top_ks: [10, 25, 50]
+n_deltas: 100

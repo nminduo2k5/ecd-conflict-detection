@@ -1,0 +1,13 @@
+context PolicyCtx_v17
+extends PolicyCtx_v16
+constants app_r1006
+axioms
+  @def_app_r1006 app_r1006 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_3 ∧ action(q) = action_9 ∧ role(q) = role_9 ∧ department(q) ∈ {department_6, department_3, department_10} | q}
+  theorem @thm_r1006_r626 app_r1006 ∩ app_r626 = ∅
+  theorem @thm_r1006_r757 app_r1006 ∩ app_r757 = ∅
+  theorem @thm_r1006_r473 app_r1006 ∩ app_r473 = ∅
+  theorem @thm_r1006_r348__v8 app_r1006 ∩ app_r348__v8 = ∅
+  theorem @thm_r1006_r12 app_r1006 ∩ app_r12 = ∅
+  theorem @thm_r1006_r566 app_r1006 ∩ app_r566 = ∅
+  theorem @thm_r1006_r287 app_r1006 ∩ app_r287 = ∅
+end

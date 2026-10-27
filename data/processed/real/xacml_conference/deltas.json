@@ -1,0 +1,997 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule12",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule6",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "reviewer"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule4",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule5",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule5",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule13",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "pcmember"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule8",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule8",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule10"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "chair"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule1",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule14",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule3",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "reviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new10"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule10"
+   }
+  },
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule2",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule11",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule11",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "urn:oasis:names:tc:xacml:1.0:Rule7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "assigned"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "urn:oasis:names:tc:xacml:1.0:Rule7",
+    "policy": "conference",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule7",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule4",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new12",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule4"
+   }
+  },
+  "rule_id": "new11",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new7",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": "new10",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "assigned"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "urn:oasis:names:tc:xacml:1.0:Rule11",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new16"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": "new15",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "assigned"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": "new16",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "subreviewer"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "urn:oasis:names:tc:xacml:1.0:Rule9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "write"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new21"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new19",
+  "position": null
+ }
+]

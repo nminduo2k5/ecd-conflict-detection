@@ -1,0 +1,15 @@
+datasets:
+  - data/processed/hetero_1k_h00
+  - data/processed/hetero_1k_h25
+  - data/processed/hetero_1k_h50
+top_k: 50
+top_ks: [5, 10, 50]
+max_smt_calls: 20000
+gnn:
+  dim: 128
+  layers: 3
+  epochs: 30
+  lr: 0.003
+  tau: 0.1
+  batch_anchors: 256
+  in_batch_weight: 0.5

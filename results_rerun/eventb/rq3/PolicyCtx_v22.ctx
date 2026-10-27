@@ -1,0 +1,13 @@
+context PolicyCtx_v22
+extends PolicyCtx_v21
+constants app_r1009
+axioms
+  @def_app_r1009 app_r1009 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_2 ∧ action(q) = action_8 ∧ clearance(q) ∈ {clearance_6, clearance_11, clearance_2} ∧ department(q) = department_4 | q}
+  theorem @thm_r1009_r247 app_r1009 ∩ app_r247 = ∅
+  theorem @thm_r1009_r254 app_r1009 ∩ app_r254 = ∅
+  theorem @thm_r1009_r509 app_r1009 ∩ app_r509 = ∅
+  theorem @thm_r1009_r321 app_r1009 ∩ app_r321 = ∅
+  theorem @thm_r1009_r438 app_r1009 ∩ app_r438 = ∅
+  theorem @thm_r1009_r41 app_r1009 ∩ app_r41 = ∅
+  theorem @thm_r1009_r121 app_r1009 ∩ app_r121 = ∅
+end

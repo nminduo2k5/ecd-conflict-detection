@@ -1,0 +1,12 @@
+{
+  "name": "xacml_hl7",
+  "rules": 22,
+  "attributes": 9,
+  "combining": "first-applicable",
+  "xacml_rules": 19,
+  "sub_rules": 22,
+  "approx_rules": 4,
+  "untranslated": [
+    "any-of-any between two attributes"
+  ]
+}

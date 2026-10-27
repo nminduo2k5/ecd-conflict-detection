@@ -1,0 +1,18 @@
+context PolicyCtx_v46
+extends PolicyCtx_v45
+constants app_r828__v46
+axioms
+  @def_app_r828__v46 app_r828__v46 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_2, resourceType_3} ∧ action(q) = action_4 ∧ role(q) = role_9 ∧ device(q) = device_0 ∧ (age(q) + riskScore(q)) > 106 | q}
+  theorem @thm_r828__v46_r550 app_r828__v46 ∩ app_r550 = ∅
+  theorem @thm_r828__v46_r661 app_r828__v46 ∩ app_r661 = ∅
+  theorem @thm_r828__v46_r803 app_r828__v46 ∩ app_r803 = ∅
+  theorem @thm_r828__v46_r38 app_r828__v46 ∩ app_r38 = ∅
+  theorem @thm_r828__v46_r217 app_r828__v46 ∩ app_r217 = ∅
+  theorem @thm_r828__v46_r29 app_r828__v46 ∩ app_r29 = ∅
+  theorem @thm_r828__v46_r332 app_r828__v46 ∩ app_r332 = ∅
+  theorem @thm_r828__v46_r104 app_r828__v46 ∩ app_r104 = ∅
+  theorem @thm_r828__v46_r205 app_r828__v46 ∩ app_r205 = ∅
+  theorem @thm_r828__v46_r768 app_r828__v46 ∩ app_r768 = ∅
+  theorem @thm_r828__v46_r423 app_r828__v46 ∩ app_r423 = ∅
+  theorem @thm_r828__v46_r761 app_r828__v46 ∩ app_r761 = ∅
+end

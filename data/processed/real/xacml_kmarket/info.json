@@ -1,0 +1,10 @@
+{
+  "name": "xacml_kmarket",
+  "rules": 3,
+  "attributes": 4,
+  "combining": "deny-overrides",
+  "xacml_rules": 3,
+  "sub_rules": 3,
+  "approx_rules": 0,
+  "untranslated": []
+}

@@ -1,0 +1,4 @@
+dataset: data/processed/synthetic_1k
+n_deltas: 50
+full_every: 10          # time a from-scratch re-verification every k Δs
+eventb_out: results/eventb/rq3

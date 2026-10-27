@@ -1,0 +1,99 @@
+{
+  "name": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342ordered:policy",
+  "version": 0,
+  "combining": "deny-overrides",
+  "attributes": {
+    "access-subject.age": {
+      "type": "numeric"
+    },
+    "environment.bart-simpson-age": {
+      "type": "numeric"
+    },
+    "access-subject.subject-id": {
+      "type": "categorical"
+    },
+    "access-subject.test": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "J. Hibbert"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Deny",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule1",
+        "policy": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342ordered:policy",
+        "combining": "deny-overrides"
+      }
+    },
+    {
+      "id": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule2",
+      "target": {
+        "atoms": []
+      },
+      "condition": {
+        "atoms": [],
+        "raw_expr": "(= (- access-subject.age environment.bart-simpson-age) 55)"
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule2",
+        "policy": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342ordered:policy",
+        "combining": "deny-overrides"
+      }
+    },
+    {
+      "id": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule3",
+      "target": {
+        "atoms": []
+      },
+      "condition": {
+        "atoms": [
+          {
+            "attr": "access-subject.test",
+            "op": "eq",
+            "value": "Zaphod Beedlebrox"
+          }
+        ]
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342:rule3",
+        "policy": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342ordered:policy",
+        "combining": "deny-overrides"
+      }
+    },
+    {
+      "id": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID301ordered:rule2",
+      "target": {
+        "atoms": []
+      },
+      "condition": {
+        "atoms": [],
+        "raw_expr": "(= (- access-subject.age environment.bart-simpson-age) 5)"
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID301ordered:rule2",
+        "policy": "urn:oasis:names:tc:xacml:2.0:conformance-test:IID342ordered:policy",
+        "combining": "deny-overrides"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+seed: 0
+dataset: data/processed/synthetic_1k
+mode: exact            # exact | approximate
+top_k: 50
+embedder: hash         # none | hash | sbert | gnn
+smt_timeout_ms: 5000
+eventb:
+  out_dir: results/eventb
+  rodin_path: null     # e.g. /opt/rodin/rodin
+gnn:
+  dim: 128
+  layers: 3
+  epochs: 20
+  lr: 0.001
+  tau: 0.1

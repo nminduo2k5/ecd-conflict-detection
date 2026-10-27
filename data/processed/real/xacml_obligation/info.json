@@ -1,0 +1,12 @@
+{
+  "name": "xacml_obligation",
+  "rules": 2,
+  "attributes": 3,
+  "combining": "permit-overrides",
+  "xacml_rules": 2,
+  "sub_rules": 2,
+  "approx_rules": 0,
+  "untranslated": [
+    "string-regexp-match"
+  ]
+}

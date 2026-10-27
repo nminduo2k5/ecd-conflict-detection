@@ -1,0 +1,25 @@
+context PolicyCtx_v39
+extends PolicyCtx_v38
+constants app_r1019
+axioms
+  @def_app_r1019 app_r1019 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_2, resourceType_8, resourceType_3} ∧ action(q) = action_0 ∧ hour(q) ∈ 3 ‥ 9 ∧ clearance(q) = clearance_7 | q}
+  theorem @thm_r1019_r412 app_r1019 ∩ app_r412 = ∅
+  theorem @thm_r1019_r645 app_r1019 ∩ app_r645 = ∅
+  theorem @thm_r1019_r846 app_r1019 ∩ app_r846 = ∅
+  theorem @thm_r1019_r447 app_r1019 ∩ app_r447 = ∅
+  theorem @thm_r1019_r393 app_r1019 ∩ app_r393 = ∅
+  theorem @thm_r1019_r235 app_r1019 ∩ app_r235 = ∅
+  theorem @thm_r1019_r127 app_r1019 ∩ app_r127 = ∅
+  theorem @thm_r1019_r1007__v35 app_r1019 ∩ app_r1007__v35 = ∅
+  theorem @thm_r1019_r879 app_r1019 ∩ app_r879 = ∅
+  theorem @thm_r1019_r820 app_r1019 ∩ app_r820 = ∅
+  theorem @thm_r1019_r650 app_r1019 ∩ app_r650 = ∅
+  theorem @thm_r1019_r252 app_r1019 ∩ app_r252 = ∅
+  theorem @thm_r1019_r449 app_r1019 ∩ app_r449 = ∅
+  theorem @thm_r1019_r334 app_r1019 ∩ app_r334 = ∅
+  theorem @thm_r1019_r247 app_r1019 ∩ app_r247 = ∅
+  theorem @thm_r1019_r187 app_r1019 ∩ app_r187 = ∅
+  theorem @thm_r1019_r769 app_r1019 ∩ app_r769 = ∅
+  theorem @thm_r1019_r407 app_r1019 ∩ app_r407 = ∅
+  theorem @thm_r1019_r230 app_r1019 ∩ app_r230 = ∅
+end

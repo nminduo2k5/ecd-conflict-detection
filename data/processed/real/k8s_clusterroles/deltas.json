@@ -1,0 +1,1488 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:node#15",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:persistent-volume-provisioner#3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:monitoring#1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:kube-controller-manager#9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:kube-controller-manager#9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "apps"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "controllerrevisions",
+       "daemonsets",
+       "daemonsets/status",
+       "deployments",
+       "deployments/scale",
+       "deployments/status",
+       "replicasets",
+       "replicasets/scale",
+       "replicasets/status",
+       "statefulsets",
+       "statefulsets/scale",
+       "statefulsets/status"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-view#5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:certificates.k8s.io:kube-apiserver-client-approver#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "resource.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "resourceclaims",
+       "resourceclaimtemplates"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create",
+       "delete",
+       "deletecollection",
+       "patch",
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-edit#14"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:node-proxier#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "endpoints",
+       "services"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:node-proxier#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "pods/finalizers"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-scheduler#23"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:node-proxier#2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "persistentvolumeclaims"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:volume-scheduler#2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:aggregate-to-view#4",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:node#13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "endpoints"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:node#13",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "cluster-admin#0",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "cluster-admin#0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:kubelet-api-admin#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "proxy"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:kubelet-api-admin#1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:aggregate-to-edit#12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "networking.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "ingresses",
+       "networkpolicies"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:aggregate-to-edit#12",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "certificates.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "signers"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "approve"
+      ]
+     },
+     {
+      "attr": "resourceName",
+      "op": "in",
+      "value": [
+       "kubernetes.io/kube-apiserver-client-kubelet"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:certificates.k8s.io:kube-apiserver-client-kubelet-approver#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "bindings",
+       "limitranges",
+       "namespaces/status",
+       "pods/log",
+       "pods/status",
+       "replicationcontrollers/status",
+       "resourcequotas",
+       "resourcequotas/status"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-view#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:persistent-volume-provisioner#2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "storage.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "csidrivers"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-scheduler#18"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "certificates.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "signers"
+      ]
+     },
+     {
+      "attr": "resourceName",
+      "op": "in",
+      "value": [
+       "kubernetes.io/kube-apiserver-client-kubelet"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:certificates.k8s.io:kube-apiserver-client-kubelet-approver#0"
+   }
+  },
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "pods/status"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "patch",
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:node#9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "secrets"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "delete"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-controller-manager#4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "statefulsets"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-scheduler#10"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:basic-user#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "authentication.k8s.io"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "selfsubjectreviews"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:basic-user#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:aggregate-to-view#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new7",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "resourceclaims",
+       "resourceclaimtemplates"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create",
+       "delete",
+       "deletecollection",
+       "patch",
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-edit#14"
+   }
+  },
+  "rule_id": "new3",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:node#20",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:node-problem-detector#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "nodes/status"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:node-problem-detector#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:node#3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "authentication.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "tokenreviews"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:auth-delegator#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "configmaps",
+       "namespaces",
+       "secrets",
+       "serviceaccounts"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-controller-manager#5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "leases"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-scheduler#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "poddisruptionbudgets"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create",
+       "delete",
+       "deletecollection",
+       "patch",
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-edit#11"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:kube-scheduler#1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "pods/status"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "patch",
+       "update"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "authorization.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "selfsubjectaccessreviews",
+       "selfsubjectrulesreviews"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:basic-user#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:auth-delegator#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "authorization.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "create"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:auth-delegator#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:auth-delegator#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "serviceaccounts"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "impersonate"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-edit#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:public-info-viewer#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "nonResourceURL",
+      "op": "in",
+      "value": [
+       "/healthz",
+       "/livez",
+       "/readyz",
+       "/version",
+       "/version/"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:public-info-viewer#0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "system:aggregate-to-edit#1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "system:aggregate-to-view#9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "policy"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "poddisruptionbudgets",
+       "poddisruptionbudgets/status"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "k8s-rbac",
+    "kind": "ClusterRole"
+   }
+  },
+  "rule_id": "system:aggregate-to-view#9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "configmaps",
+       "endpoints",
+       "persistentvolumeclaims",
+       "persistentvolumeclaims/status",
+       "pods",
+       "replicationcontrollers",
+       "replicationcontrollers/scale",
+       "serviceaccounts",
+       "services",
+       "services/status"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:aggregate-to-view#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "core"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-controller-manager#5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "policy"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "poddisruptionbudgets",
+       "poddisruptionbudgets/status"
+      ]
+     },
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get",
+       "list",
+       "watch"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "system:aggregate-to-view#9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "apiGroup",
+      "op": "in",
+      "value": [
+       "authorization.k8s.io"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "subjectaccessreviews"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "system:kube-scheduler#14"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "verb",
+      "op": "in",
+      "value": [
+       "get"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new20"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ }
+]

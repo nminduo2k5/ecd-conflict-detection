@@ -1,0 +1,10 @@
+{
+  "name": "xacml_itrust",
+  "rules": 64,
+  "attributes": 3,
+  "combining": "first-applicable",
+  "xacml_rules": 64,
+  "sub_rules": 64,
+  "approx_rules": 0,
+  "untranslated": []
+}

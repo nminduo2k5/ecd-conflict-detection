@@ -1,0 +1,23 @@
+context PolicyCtx_v4
+extends PolicyCtx_v3
+constants app_r273__v4
+axioms
+  @def_app_r273__v4 app_r273__v4 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_9 ∧ action(q) ∈ {action_0, action_11, action_10} ∧ project(q) ∈ {project_0, project_6} ∧ device(q) = device_6 | q}
+  theorem @thm_r273__v4_r967 app_r273__v4 ∩ app_r967 = ∅
+  theorem @thm_r273__v4_r288 app_r273__v4 ∩ app_r288 = ∅
+  theorem @thm_r273__v4_r304 app_r273__v4 ∩ app_r304 = ∅
+  theorem @thm_r273__v4_r473 app_r273__v4 ∩ app_r473 = ∅
+  theorem @thm_r273__v4_r159 app_r273__v4 ∩ app_r159 = ∅
+  theorem @thm_r273__v4_r686 app_r273__v4 ∩ app_r686 = ∅
+  theorem @thm_r273__v4_r836 app_r273__v4 ∩ app_r836 = ∅
+  theorem @thm_r273__v4_r992 app_r273__v4 ∩ app_r992 = ∅
+  theorem @thm_r273__v4_r889 app_r273__v4 ∩ app_r889 = ∅
+  theorem @thm_r273__v4_r591 app_r273__v4 ∩ app_r591 = ∅
+  theorem @thm_r273__v4_r146 app_r273__v4 ∩ app_r146 = ∅
+  theorem @thm_r273__v4_r367 app_r273__v4 ∩ app_r367 = ∅
+  theorem @thm_r273__v4_r907 app_r273__v4 ∩ app_r907 = ∅
+  theorem @thm_r273__v4_r287 app_r273__v4 ∩ app_r287 = ∅
+  theorem @thm_r273__v4_r286 app_r273__v4 ∩ app_r286 = ∅
+  theorem @thm_r273__v4_r826 app_r273__v4 ∩ app_r826 = ∅
+  theorem @thm_r273__v4_r320 app_r273__v4 ∩ app_r320 = ∅
+end

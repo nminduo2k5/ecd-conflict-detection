@@ -1,0 +1,9 @@
+{
+  "name": "aws_managed_300",
+  "rules": 756,
+  "attributes": 25,
+  "combining": "deny-overrides",
+  "policies": 300,
+  "registry_actions": 12230,
+  "rules_with_unexpanded_patterns": 17
+}

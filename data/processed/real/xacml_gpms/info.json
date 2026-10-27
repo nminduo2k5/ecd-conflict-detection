@@ -1,0 +1,10 @@
+{
+  "name": "xacml_gpms",
+  "rules": 210,
+  "attributes": 42,
+  "combining": "permit-overrides",
+  "xacml_rules": 97,
+  "sub_rules": 210,
+  "approx_rules": 0,
+  "untranslated": []
+}

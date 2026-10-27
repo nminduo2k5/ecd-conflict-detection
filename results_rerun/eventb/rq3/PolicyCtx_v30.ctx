@@ -1,0 +1,17 @@
+context PolicyCtx_v30
+extends PolicyCtx_v29
+constants app_r1014
+axioms
+  @def_app_r1014 app_r1014 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_0 ∧ action(q) = action_11 ∧ age(q) ∈ 78 ‥ 84 ∧ clearance(q) ∈ {clearance_10, clearance_9, clearance_6} | q}
+  theorem @thm_r1014_r28 app_r1014 ∩ app_r28 = ∅
+  theorem @thm_r1014_r70 app_r1014 ∩ app_r70 = ∅
+  theorem @thm_r1014_r304 app_r1014 ∩ app_r304 = ∅
+  theorem @thm_r1014_r965 app_r1014 ∩ app_r965 = ∅
+  theorem @thm_r1014_r135 app_r1014 ∩ app_r135 = ∅
+  theorem @thm_r1014_r74 app_r1014 ∩ app_r74 = ∅
+  theorem @thm_r1014_r688 app_r1014 ∩ app_r688 = ∅
+  theorem @thm_r1014_r775 app_r1014 ∩ app_r775 = ∅
+  theorem @thm_r1014_r492 app_r1014 ∩ app_r492 = ∅
+  theorem @thm_r1014_r426 app_r1014 ∩ app_r426 = ∅
+  theorem @thm_r1014_r220 app_r1014 ∩ app_r220 = ∅
+end

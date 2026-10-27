@@ -1,0 +1,10 @@
+{
+  "name": "xacml_pluto",
+  "rules": 176,
+  "attributes": 3,
+  "combining": "permit-overrides",
+  "xacml_rules": 21,
+  "sub_rules": 176,
+  "approx_rules": 0,
+  "untranslated": []
+}

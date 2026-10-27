@@ -1,0 +1,956 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "max-liquor-amount",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "total-amount",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "total-amount",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "total-amount",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "total-amount"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "total-amount"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "total-amount"
+   }
+  },
+  "rule_id": "new2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "permit-rule",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "permit-rule",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "permit-rule",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "total-amount",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "total-amount",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "total-amount",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "total-amount",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "total-amount",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "total-amount",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "total-amount",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "total-amount",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "total-amount",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "permit-rule",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "permit-rule",
+    "policy": "KmarketGoldPolicy",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "permit-rule",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new7",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new8",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": "new10",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new10",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new5"
+   }
+  },
+  "rule_id": "new9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "total-amount",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "total-amount"
+   }
+  },
+  "rule_id": "new2",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new11",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+      "op": "gt",
+      "value": 1000
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new9",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": "new12",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new12"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new12"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new13",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.//kmarket.com/id/role",
+      "op": "eq",
+      "value": "gold"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new19"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "permit-rule"
+   }
+  },
+  "rule_id": "new3",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new19"
+   }
+  },
+  "rule_id": "new20",
+  "position": null
+ }
+]

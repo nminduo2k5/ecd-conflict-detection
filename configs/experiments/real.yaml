@@ -1,0 +1,14 @@
+datasets:
+  - data/processed/real/xacml_itrust
+  - data/processed/real/xacml_hl7
+  - data/processed/real/xacml_gpms
+  - data/processed/real/xacml_pluto
+  - data/processed/real/xacml_conference
+  - data/processed/real/xacml_fedora
+  - data/processed/real/xacml_kmarket
+  - data/processed/real/xacml_simpson
+  - data/processed/real/aws_managed_100
+  - data/processed/real/aws_managed_300
+  - data/processed/real/k8s_clusterroles
+top_k: 50
+n_deltas: 50

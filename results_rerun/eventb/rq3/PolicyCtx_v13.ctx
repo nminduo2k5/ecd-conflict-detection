@@ -1,0 +1,21 @@
+context PolicyCtx_v13
+extends PolicyCtx_v12
+constants app_r272__v13
+axioms
+  @def_app_r272__v13 app_r272__v13 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_5 ∧ action(q) ∈ {action_8, action_9, action_7} ∧ age(q) ∈ 42 ‥ 47 ∧ clearance(q) = clearance_3 | q}
+  theorem @thm_r272__v13_r705 app_r272__v13 ∩ app_r705 = ∅
+  theorem @thm_r272__v13_r170 app_r272__v13 ∩ app_r170 = ∅
+  theorem @thm_r272__v13_r381 app_r272__v13 ∩ app_r381 = ∅
+  theorem @thm_r272__v13_r294 app_r272__v13 ∩ app_r294 = ∅
+  theorem @thm_r272__v13_r809 app_r272__v13 ∩ app_r809 = ∅
+  theorem @thm_r272__v13_r948 app_r272__v13 ∩ app_r948 = ∅
+  theorem @thm_r272__v13_r422 app_r272__v13 ∩ app_r422 = ∅
+  theorem @thm_r272__v13_r156 app_r272__v13 ∩ app_r156 = ∅
+  theorem @thm_r272__v13_r488 app_r272__v13 ∩ app_r488 = ∅
+  theorem @thm_r272__v13_r553 app_r272__v13 ∩ app_r553 = ∅
+  theorem @thm_r272__v13_r529 app_r272__v13 ∩ app_r529 = ∅
+  theorem @thm_r272__v13_r794 app_r272__v13 ∩ app_r794 = ∅
+  theorem @thm_r272__v13_r524 app_r272__v13 ∩ app_r524 = ∅
+  theorem @thm_r272__v13_r84 app_r272__v13 ∩ app_r84 = ∅
+  theorem @thm_r272__v13_r528 app_r272__v13 ∩ app_r528 = ∅
+end

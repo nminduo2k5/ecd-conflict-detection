@@ -1,0 +1,8 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {"Sid": "AllowS3Read", "Effect": "Allow", "Action": ["s3:GetObject", "s3:ListBucket"], "Resource": "arn:aws:s3:::data/*"},
+    {"Sid": "DenyProd", "Effect": "Deny", "Action": "s3:GetObject", "Resource": "arn:aws:s3:::data/*",
+     "Condition": {"StringEquals": {"aws:RequestTag/env": "prod"}}}
+  ]
+}

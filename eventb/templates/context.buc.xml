@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Reference shape of a Rodin context file as emitted by EventBContext.render_buc()
+     (src/ecd/verification/eventb/generator.py). Kept for documentation only. -->
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+  <org.eventb.core.extendsContext name="_e0" org.eventb.core.target="PolicyCtx_v0"/>
+  <org.eventb.core.carrierSet name="_s1" org.eventb.core.identifier="REQ"/>
+  <org.eventb.core.constant name="_c2" org.eventb.core.identifier="app_r1"/>
+  <org.eventb.core.axiom name="_a3" org.eventb.core.label="def_app_r1"
+      org.eventb.core.predicate="app_r1 = {q · q ∈ REQ ∧ role(q) = role_doctor | q}" org.eventb.core.theorem="false"/>
+  <org.eventb.core.axiom name="_t4" org.eventb.core.label="thm_r1_r2"
+      org.eventb.core.predicate="app_r1 ∩ app_r2 = ∅" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

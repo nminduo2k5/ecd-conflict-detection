@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="_e0" org.eventb.core.target="PolicyCtx_v17"/>
+<org.eventb.core.constant name="_c1" org.eventb.core.identifier="app_r915__v18"/>
+<org.eventb.core.axiom name="_a2" org.eventb.core.label="def_app_r915__v18" org.eventb.core.predicate="app_r915__v18 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_11 ∧ action(q) = action_7 ∧ shift(q) ∈ {shift_7, shift_8} ∧ role(q) ∈ {role_0, role_9} | q}" org.eventb.core.theorem="false"/>
+<org.eventb.core.axiom name="_t3" org.eventb.core.label="thm_r915__v18_r961" org.eventb.core.predicate="app_r915__v18 ∩ app_r961 = ∅" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

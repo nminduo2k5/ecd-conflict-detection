@@ -1,0 +1,16 @@
+context PolicyCtx_v26
+extends PolicyCtx_v25
+constants app_r1010
+axioms
+  @def_app_r1010 app_r1010 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_9 ∧ action(q) = action_9 ∧ role(q) = role_6 ∧ device(q) ∈ {device_2, device_7, device_3} | q}
+  theorem @thm_r1010_r216 app_r1010 ∩ app_r216 = ∅
+  theorem @thm_r1010_r284 app_r1010 ∩ app_r284 = ∅
+  theorem @thm_r1010_r626 app_r1010 ∩ app_r626 = ∅
+  theorem @thm_r1010_r159 app_r1010 ∩ app_r159 = ∅
+  theorem @thm_r1010_r496 app_r1010 ∩ app_r496 = ∅
+  theorem @thm_r1010_r146 app_r1010 ∩ app_r146 = ∅
+  theorem @thm_r1010_r287 app_r1010 ∩ app_r287 = ∅
+  theorem @thm_r1010_r329 app_r1010 ∩ app_r329 = ∅
+  theorem @thm_r1010_r748 app_r1010 ∩ app_r748 = ∅
+  theorem @thm_r1010_r473 app_r1010 ∩ app_r473 = ∅
+end

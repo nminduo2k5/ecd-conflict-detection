@@ -1,0 +1,61 @@
+context PolicyCtx_v20
+extends PolicyCtx_v19
+constants app_r1008
+axioms
+  @def_app_r1008 app_r1008 = {q · q ∈ REQ ∧ action(q) = action_5 ∧ clearance(q) = clearance_8 ∧ shift(q) = shift_6 | q}
+  theorem @thm_r1008_r807 app_r1008 ∩ app_r807 = ∅
+  theorem @thm_r1008_r341 app_r1008 ∩ app_r341 = ∅
+  theorem @thm_r1008_r880 app_r1008 ∩ app_r880 = ∅
+  theorem @thm_r1008_r900 app_r1008 ∩ app_r900 = ∅
+  theorem @thm_r1008_r439 app_r1008 ∩ app_r439 = ∅
+  theorem @thm_r1008_r64 app_r1008 ∩ app_r64 = ∅
+  theorem @thm_r1008_r173 app_r1008 ∩ app_r173 = ∅
+  theorem @thm_r1008_r590 app_r1008 ∩ app_r590 = ∅
+  theorem @thm_r1008_r285 app_r1008 ∩ app_r285 = ∅
+  theorem @thm_r1008_r799 app_r1008 ∩ app_r799 = ∅
+  theorem @thm_r1008_r475 app_r1008 ∩ app_r475 = ∅
+  theorem @thm_r1008_r651 app_r1008 ∩ app_r651 = ∅
+  theorem @thm_r1008_r398 app_r1008 ∩ app_r398 = ∅
+  theorem @thm_r1008_r377 app_r1008 ∩ app_r377 = ∅
+  theorem @thm_r1008_r529 app_r1008 ∩ app_r529 = ∅
+  theorem @thm_r1008_r185 app_r1008 ∩ app_r185 = ∅
+  theorem @thm_r1008_r911 app_r1008 ∩ app_r911 = ∅
+  theorem @thm_r1008_r11 app_r1008 ∩ app_r11 = ∅
+  theorem @thm_r1008_r53 app_r1008 ∩ app_r53 = ∅
+  theorem @thm_r1008_r156 app_r1008 ∩ app_r156 = ∅
+  theorem @thm_r1008_r283 app_r1008 ∩ app_r283 = ∅
+  theorem @thm_r1008_r170 app_r1008 ∩ app_r170 = ∅
+  theorem @thm_r1008_r446 app_r1008 ∩ app_r446 = ∅
+  theorem @thm_r1008_r783 app_r1008 ∩ app_r783 = ∅
+  theorem @thm_r1008_r89 app_r1008 ∩ app_r89 = ∅
+  theorem @thm_r1008_r914 app_r1008 ∩ app_r914 = ∅
+  theorem @thm_r1008_r682 app_r1008 ∩ app_r682 = ∅
+  theorem @thm_r1008_r125 app_r1008 ∩ app_r125 = ∅
+  theorem @thm_r1008_r330 app_r1008 ∩ app_r330 = ∅
+  theorem @thm_r1008_r78 app_r1008 ∩ app_r78 = ∅
+  theorem @thm_r1008_r824 app_r1008 ∩ app_r824 = ∅
+  theorem @thm_r1008_r84 app_r1008 ∩ app_r84 = ∅
+  theorem @thm_r1008_r295 app_r1008 ∩ app_r295 = ∅
+  theorem @thm_r1008_r770 app_r1008 ∩ app_r770 = ∅
+  theorem @thm_r1008_r57__v7 app_r1008 ∩ app_r57__v7 = ∅
+  theorem @thm_r1008_r236 app_r1008 ∩ app_r236 = ∅
+  theorem @thm_r1008_r279 app_r1008 ∩ app_r279 = ∅
+  theorem @thm_r1008_r754 app_r1008 ∩ app_r754 = ∅
+  theorem @thm_r1008_r699 app_r1008 ∩ app_r699 = ∅
+  theorem @thm_r1008_r408 app_r1008 ∩ app_r408 = ∅
+  theorem @thm_r1008_r607 app_r1008 ∩ app_r607 = ∅
+  theorem @thm_r1008_r339 app_r1008 ∩ app_r339 = ∅
+  theorem @thm_r1008_r386 app_r1008 ∩ app_r386 = ∅
+  theorem @thm_r1008_r332 app_r1008 ∩ app_r332 = ∅
+  theorem @thm_r1008_r217 app_r1008 ∩ app_r217 = ∅
+  theorem @thm_r1008_r784 app_r1008 ∩ app_r784 = ∅
+  theorem @thm_r1008_r312 app_r1008 ∩ app_r312 = ∅
+  theorem @thm_r1008_r584 app_r1008 ∩ app_r584 = ∅
+  theorem @thm_r1008_r533 app_r1008 ∩ app_r533 = ∅
+  theorem @thm_r1008_r958 app_r1008 ∩ app_r958 = ∅
+  theorem @thm_r1008_r352 app_r1008 ∩ app_r352 = ∅
+  theorem @thm_r1008_r902 app_r1008 ∩ app_r902 = ∅
+  theorem @thm_r1008_r740 app_r1008 ∩ app_r740 = ∅
+  theorem @thm_r1008_r211 app_r1008 ∩ app_r211 = ∅
+  theorem @thm_r1008_r515 app_r1008 ∩ app_r515 = ∅
+end

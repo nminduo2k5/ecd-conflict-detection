@@ -1,0 +1,14 @@
+context PolicyCtx_v28
+extends PolicyCtx_v27
+constants app_r1012
+axioms
+  @def_app_r1012 app_r1012 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_7 ∧ action(q) = action_8 ∧ shift(q) = shift_11 ∧ project(q) = project_1 | q}
+  theorem @thm_r1012_r450 app_r1012 ∩ app_r450 = ∅
+  theorem @thm_r1012_r985 app_r1012 ∩ app_r985 = ∅
+  theorem @thm_r1012_r482 app_r1012 ∩ app_r482 = ∅
+  theorem @thm_r1012_r671 app_r1012 ∩ app_r671 = ∅
+  theorem @thm_r1012_r563 app_r1012 ∩ app_r563 = ∅
+  theorem @thm_r1012_r906 app_r1012 ∩ app_r906 = ∅
+  theorem @thm_r1012_r455 app_r1012 ∩ app_r455 = ∅
+  theorem @thm_r1012_r41 app_r1012 ∩ app_r41 = ∅
+end

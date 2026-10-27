@@ -1,0 +1,3903 @@
+[
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1000",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_10",
+       "assetClass_3"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_6",
+       "operation_7"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_5"
+     },
+     {
+      "attr": "hour",
+      "op": "lt",
+      "value": 16
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 74)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r398",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_10",
+       "resourceType_7"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_2",
+       "action_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "role",
+      "op": "in",
+      "value": [
+       "role_11",
+       "role_4"
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_6"
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 50)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r398",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1001",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_8"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_1"
+     },
+     {
+      "attr": "jobTitle",
+      "op": "eq",
+      "value": "jobTitle_1"
+     },
+     {
+      "attr": "age",
+      "op": "lt",
+      "value": 68
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "planted_with": "r23",
+    "vocab": "B",
+    "planted_kind": "alias"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1002",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_8"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_2"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_5"
+     },
+     {
+      "attr": "location",
+      "op": "in",
+      "value": [
+       "location_1",
+       "location_10"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1003",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_7"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_5"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_5"
+     },
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_7"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r88",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_7"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_10",
+       "action_0",
+       "action_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_1"
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_3"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r88",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r212",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_2"
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_6"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_8"
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_5"
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 66)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r212",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1004",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_7"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_0"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       17,
+       34
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_10"
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 85)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1005",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_9"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_3"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_10",
+       "device_2",
+       "device_3"
+      ]
+     },
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       42,
+       55
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 91)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r354",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1006",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_7"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_11"
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_3"
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_1"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "planted_with": "r386",
+    "vocab": "A",
+    "planted_kind": "plain"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r520",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_8",
+       "resourceType_10",
+       "resourceType_6"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_5",
+       "action_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_6",
+       "device_2",
+       "device_3"
+      ]
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_2"
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 88)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r520",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r181",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_4",
+       "resourceType_3",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_3",
+       "action_11",
+       "action_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_8"
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       15,
+       31
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 131)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r181",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r958",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_6"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_10"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "lt",
+      "value": 76
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_1"
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 78)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r958",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1007",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_10",
+       "assetClass_1"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_3"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "jobTitle",
+      "op": "eq",
+      "value": "jobTitle_6"
+     },
+     {
+      "attr": "hour",
+      "op": "ge",
+      "value": 56
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 95)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1008",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_7",
+       "resourceType_6"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_4",
+       "action_7"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       31,
+       40
+      ]
+     },
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_6"
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 82)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1009",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_11",
+       "resourceType_9",
+       "resourceType_10"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_1",
+       "action_4"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       23,
+       29
+      ]
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_6"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r500",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1010",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_9",
+       "assetClass_4"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_11",
+       "operation_2"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_4"
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       5,
+       16
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 120)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r691",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_2"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_11"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_2",
+       "clearance_11",
+       "clearance_10"
+      ]
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       11,
+       31
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 62)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r691",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1011",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_4",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_1"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_0",
+       "shift_10"
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_1"
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 90)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1012",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_4"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_3"
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_3"
+     },
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_6"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "planted_with": "r824",
+    "vocab": "A",
+    "planted_kind": "plain"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1013",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_2",
+       "resourceType_8",
+       "resourceType_10"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_9"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_4"
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       16,
+       23
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 140)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1014",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_10"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_0"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_3",
+       "clearance_8",
+       "clearance_9"
+      ]
+     },
+     {
+      "attr": "hour",
+      "op": "lt",
+      "value": 32
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1015",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_9",
+       "resourceType_4",
+       "resourceType_5"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_11",
+       "action_3"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "lt",
+      "value": 51
+     },
+     {
+      "attr": "riskScore",
+      "op": "lt",
+      "value": 24
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1016",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_11"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_10"
+     },
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_3"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "planted_with": "r514",
+    "vocab": "A",
+    "planted_kind": "plain"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1017",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_11"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_2"
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_4"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "planted_with": "r901",
+    "vocab": "B",
+    "planted_kind": "alias"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r468",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r843",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_3"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_7"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_9"
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_3"
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 60)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r843",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r664",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_2",
+       "resourceType_8"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_3"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "role",
+      "op": "in",
+      "value": [
+       "role_6",
+       "role_11",
+       "role_4"
+      ]
+     },
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_5"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r664",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r49",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_2",
+       "resourceType_11"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_3"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "in",
+      "value": [
+       "project_10",
+       "project_3"
+      ]
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_3"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r49",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1018",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_0"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_5"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_8",
+       "department_1"
+      ]
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_5",
+       "shift_3"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r382",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_1",
+       "resourceType_9"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_11",
+       "action_6",
+       "action_3"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       64,
+       73
+      ]
+     },
+     {
+      "attr": "project",
+      "op": "in",
+      "value": [
+       "project_3",
+       "project_6",
+       "project_7"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 95)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r382",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r80",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_10",
+       "resourceType_9",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_1"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "ge",
+      "value": 77
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_2"
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 53)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r80",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r316",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1019",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_9"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_7"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "planted_with": "r953",
+    "vocab": "A",
+    "planted_kind": "plain"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1020",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_6",
+       "resourceType_7",
+       "resourceType_4"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_2"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_6",
+       "department_1"
+      ]
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       36,
+       43
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 135)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1021",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_11",
+       "resourceType_6",
+       "resourceType_4"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_8",
+       "action_1",
+       "action_7"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "ge",
+      "value": 26
+     },
+     {
+      "attr": "role",
+      "op": "eq",
+      "value": "role_9"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r249",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1022",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_1",
+       "assetClass_4"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_10"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "orgUnit",
+      "op": "in",
+      "value": [
+       "orgUnit_3",
+       "orgUnit_2"
+      ]
+     },
+     {
+      "attr": "jobTitle",
+      "op": "eq",
+      "value": "jobTitle_5"
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 140)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1023",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_7"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_6"
+     },
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       66,
+       76
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "planted_with": "r45",
+    "vocab": "A",
+    "planted_kind": "plain"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r905",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_7"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_4",
+       "action_5"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_4"
+     },
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_2",
+       "department_8"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 94)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r905",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r1010",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_11"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_4",
+       "operation_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_8",
+       "clearance_10"
+      ]
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       29,
+       46
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 93)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r1010",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r922",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1024",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_2",
+       "resourceType_11"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_4",
+       "action_5"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       77,
+       88
+      ]
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_5"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r333",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_5"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_2"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_11"
+     },
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_2"
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 99)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r333",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r485",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r41",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r62",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r733",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_11"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_0",
+       "operation_1",
+       "operation_9"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_6",
+       "device_8",
+       "device_1"
+      ]
+     },
+     {
+      "attr": "orgUnit",
+      "op": "in",
+      "value": [
+       "orgUnit_6",
+       "orgUnit_0"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r733",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1025",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_11"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_10",
+       "action_5"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_7",
+       "shift_0"
+      ]
+     },
+     {
+      "attr": "project",
+      "op": "in",
+      "value": [
+       "project_2",
+       "project_1",
+       "project_7"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1026",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_7"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_2",
+       "operation_1",
+       "operation_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       25,
+       36
+      ]
+     },
+     {
+      "attr": "age",
+      "op": "lt",
+      "value": 46
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r578",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_8",
+       "resourceType_11",
+       "resourceType_6"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_4",
+       "action_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "ge",
+      "value": 79
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_1",
+       "shift_7",
+       "shift_5"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r578",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1027",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_8",
+       "assetClass_9"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_0"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       68,
+       88
+      ]
+     },
+     {
+      "attr": "project",
+      "op": "in",
+      "value": [
+       "project_11",
+       "project_3"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 64)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1028",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_4",
+       "resourceType_3"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_6"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_9"
+     },
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_11"
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 106)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r308",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_11",
+       "resourceType_5",
+       "resourceType_10"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_8",
+       "action_0"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "ge",
+      "value": 7
+     },
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_3",
+       "device_8",
+       "device_6"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 119)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r308",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r1022",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_2"
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_6"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_11",
+       "clearance_3",
+       "clearance_0"
+      ]
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       80,
+       98
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r1022",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1029",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_6",
+       "resourceType_5"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_2"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       57,
+       76
+      ]
+     },
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_5",
+       "clearance_11",
+       "clearance_9"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r103",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r400",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1030",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_1"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_0"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "lt",
+      "value": 46
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_5",
+       "shift_9",
+       "shift_4"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 120)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r241",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_4"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_5",
+       "action_7",
+       "action_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_4"
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       4,
+       12
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 77)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r241",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1031",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_5"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_0"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_3",
+       "clearance_11"
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_6",
+       "device_1",
+       "device_0"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 138)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1032",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_3",
+       "resourceType_9"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_2",
+       "action_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_3",
+       "department_1"
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_1"
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 91)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r625",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r699",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1033",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_9"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_3",
+       "action_2"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_2"
+     },
+     {
+      "attr": "riskScore",
+      "op": "ge",
+      "value": 54
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1034",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_2"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_5"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "role",
+      "op": "in",
+      "value": [
+       "role_11",
+       "role_3",
+       "role_8"
+      ]
+     },
+     {
+      "attr": "hour",
+      "op": "ge",
+      "value": 60
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 62)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r161",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_4"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_2",
+       "action_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_9",
+       "clearance_7"
+      ]
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       53,
+       67
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 141)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r161",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1035",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_6"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_11",
+       "operation_5"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "jobTitle",
+      "op": "in",
+      "value": [
+       "jobTitle_10",
+       "jobTitle_1",
+       "jobTitle_4"
+      ]
+     },
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_10"
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 56)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1036",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_1"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_6",
+       "action_9"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_2"
+     },
+     {
+      "attr": "role",
+      "op": "eq",
+      "value": "role_11"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r50",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1037",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_8"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_0",
+       "action_2"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "riskScore",
+      "op": "lt",
+      "value": 56
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_8"
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 115)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r112",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_6",
+       "resourceType_0"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_2",
+       "action_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_8",
+       "department_1",
+       "department_10"
+      ]
+     },
+     {
+      "attr": "location",
+      "op": "in",
+      "value": [
+       "location_4",
+       "location_3"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 108)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r112",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1038",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_6"
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_6",
+       "action_2"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "location",
+      "op": "eq",
+      "value": "location_11"
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_2"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1039",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_10"
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_3"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "lt",
+      "value": 17
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_11"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1040",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "in",
+      "value": [
+       "assetClass_11",
+       "assetClass_8"
+      ]
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_8"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_9"
+     },
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_3",
+       "device_5"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 100)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r665",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "eq",
+      "value": "resourceType_3"
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_8"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_6",
+       "department_3"
+      ]
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_10",
+       "shift_8"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 131)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r665",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r446",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r312",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1041",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_5",
+       "resourceType_1"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_10",
+       "action_3"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "hour",
+      "op": "range",
+      "value": [
+       23,
+       32
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_10"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1042",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_4"
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_5"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "ge",
+      "value": 35
+     },
+     {
+      "attr": "orgUnit",
+      "op": "in",
+      "value": [
+       "orgUnit_10",
+       "orgUnit_7"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age riskScore) 81)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r259",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_7"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_8",
+       "operation_5",
+       "operation_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_2"
+     },
+     {
+      "attr": "age",
+      "op": "ge",
+      "value": 62
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 86)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r259",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r28",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_7"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_11",
+       "operation_5"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "lt",
+      "value": 20
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       42,
+       47
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r28",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r69",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1043",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_3",
+       "resourceType_0",
+       "resourceType_1"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_7",
+       "action_4"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       18,
+       25
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_1"
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 119)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r540",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_10",
+       "resourceType_2",
+       "resourceType_4"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_7",
+       "action_4",
+       "action_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "role",
+      "op": "eq",
+      "value": "role_0"
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       80,
+       89
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 128)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r540",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r810",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r513",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_8"
+     },
+     {
+      "attr": "operation",
+      "op": "eq",
+      "value": "operation_7"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_6"
+     },
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_7",
+       "device_9",
+       "device_6"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": "r513",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1044",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_5",
+       "resourceType_0"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_6",
+       "action_3"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_1",
+       "device_0",
+       "device_7"
+      ]
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_9",
+       "shift_7",
+       "shift_2"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 143)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1045",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_8"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_1",
+       "operation_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "ge",
+      "value": 35
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_3",
+       "shift_6",
+       "shift_8"
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1046",
+   "target": {
+    "atoms": [
+     {
+      "attr": "assetClass",
+      "op": "eq",
+      "value": "assetClass_1"
+     },
+     {
+      "attr": "operation",
+      "op": "in",
+      "value": [
+       "operation_11",
+       "operation_6"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "shift",
+      "op": "eq",
+      "value": "shift_3"
+     },
+     {
+      "attr": "riskScore",
+      "op": "range",
+      "value": [
+       3,
+       21
+      ]
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "B"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1047",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_3",
+       "resourceType_5",
+       "resourceType_10"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_0",
+       "action_8",
+       "action_10"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_9"
+     },
+     {
+      "attr": "shift",
+      "op": "in",
+      "value": [
+       "shift_11",
+       "shift_6",
+       "shift_8"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ hour riskScore) 125)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "r567",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1048",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_5",
+       "resourceType_11"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_9",
+       "action_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       26,
+       36
+      ]
+     },
+     {
+      "attr": "project",
+      "op": "eq",
+      "value": "project_5"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1049",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_4",
+       "resourceType_8",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_6"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "device",
+      "op": "in",
+      "value": [
+       "device_7",
+       "device_10",
+       "device_3"
+      ]
+     },
+     {
+      "attr": "age",
+      "op": "range",
+      "value": [
+       25,
+       40
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore hour) 69)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1050",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_6",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_5",
+       "action_11"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_11"
+     },
+     {
+      "attr": "location",
+      "op": "in",
+      "value": [
+       "location_9",
+       "location_8"
+      ]
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 149)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "r1051",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_6",
+       "resourceType_5",
+       "resourceType_9"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_1"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "in",
+      "value": [
+       "department_4",
+       "department_6",
+       "department_2"
+      ]
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_8"
+     }
+    ],
+    "raw_expr": "(> (+ riskScore age) 53)"
+   },
+   "effect": "Deny",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r78",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_9",
+       "resourceType_11",
+       "resourceType_2"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "eq",
+      "value": "action_2"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "department",
+      "op": "eq",
+      "value": "department_7"
+     },
+     {
+      "attr": "clearance",
+      "op": "eq",
+      "value": "clearance_10"
+     }
+    ],
+    "raw_expr": "(> (+ hour age) 66)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r78",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "r608",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resourceType",
+      "op": "in",
+      "value": [
+       "resourceType_4",
+       "resourceType_9",
+       "resourceType_10"
+      ]
+     },
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "action_10",
+       "action_8"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "clearance",
+      "op": "in",
+      "value": [
+       "clearance_0",
+       "clearance_7"
+      ]
+     },
+     {
+      "attr": "device",
+      "op": "eq",
+      "value": "device_9"
+     }
+    ],
+    "raw_expr": "(> (+ age hour) 73)"
+   },
+   "effect": "Permit",
+   "meta": {
+    "vocab": "A"
+   }
+  },
+  "rule_id": "r608",
+  "position": null
+ }
+]

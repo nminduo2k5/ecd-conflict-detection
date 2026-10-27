@@ -1,0 +1,7 @@
+context PolicyCtx_v18
+extends PolicyCtx_v17
+constants app_r915__v18
+axioms
+  @def_app_r915__v18 app_r915__v18 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_11 ∧ action(q) = action_7 ∧ shift(q) ∈ {shift_7, shift_8} ∧ role(q) ∈ {role_0, role_9} | q}
+  theorem @thm_r915__v18_r961 app_r915__v18 ∩ app_r961 = ∅
+end

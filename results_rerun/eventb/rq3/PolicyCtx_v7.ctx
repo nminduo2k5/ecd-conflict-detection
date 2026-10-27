@@ -1,0 +1,43 @@
+context PolicyCtx_v7
+extends PolicyCtx_v6
+constants app_r57__v7
+axioms
+  @def_app_r57__v7 app_r57__v7 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_7, resourceType_1} ∧ action(q) ∈ {action_5, action_3, action_9} ∧ department(q) ∈ {department_3, department_0} ∧ age(q) ∈ 30 ‥ 35 | q}
+  theorem @thm_r57__v7_r945 app_r57__v7 ∩ app_r945 = ∅
+  theorem @thm_r57__v7_r418 app_r57__v7 ∩ app_r418 = ∅
+  theorem @thm_r57__v7_r713 app_r57__v7 ∩ app_r713 = ∅
+  theorem @thm_r57__v7_r681 app_r57__v7 ∩ app_r681 = ∅
+  theorem @thm_r57__v7_r321 app_r57__v7 ∩ app_r321 = ∅
+  theorem @thm_r57__v7_r787 app_r57__v7 ∩ app_r787 = ∅
+  theorem @thm_r57__v7_r278 app_r57__v7 ∩ app_r278 = ∅
+  theorem @thm_r57__v7_r919 app_r57__v7 ∩ app_r919 = ∅
+  theorem @thm_r57__v7_r547 app_r57__v7 ∩ app_r547 = ∅
+  theorem @thm_r57__v7_r577 app_r57__v7 ∩ app_r577 = ∅
+  theorem @thm_r57__v7_r836 app_r57__v7 ∩ app_r836 = ∅
+  theorem @thm_r57__v7_r300 app_r57__v7 ∩ app_r300 = ∅
+  theorem @thm_r57__v7_r906 app_r57__v7 ∩ app_r906 = ∅
+  theorem @thm_r57__v7_r671 app_r57__v7 ∩ app_r671 = ∅
+  theorem @thm_r57__v7_r193 app_r57__v7 ∩ app_r193 = ∅
+  theorem @thm_r57__v7_r980 app_r57__v7 ∩ app_r980 = ∅
+  theorem @thm_r57__v7_r857 app_r57__v7 ∩ app_r857 = ∅
+  theorem @thm_r57__v7_r617 app_r57__v7 ∩ app_r617 = ∅
+  theorem @thm_r57__v7_r421 app_r57__v7 ∩ app_r421 = ∅
+  theorem @thm_r57__v7_r534 app_r57__v7 ∩ app_r534 = ∅
+  theorem @thm_r57__v7_r924 app_r57__v7 ∩ app_r924 = ∅
+  theorem @thm_r57__v7_r616 app_r57__v7 ∩ app_r616 = ∅
+  theorem @thm_r57__v7_r457 app_r57__v7 ∩ app_r457 = ∅
+  theorem @thm_r57__v7_r368 app_r57__v7 ∩ app_r368 = ∅
+  theorem @thm_r57__v7_r366 app_r57__v7 ∩ app_r366 = ∅
+  theorem @thm_r57__v7_r853 app_r57__v7 ∩ app_r853 = ∅
+  theorem @thm_r57__v7_r828 app_r57__v7 ∩ app_r828 = ∅
+  theorem @thm_r57__v7_r742 app_r57__v7 ∩ app_r742 = ∅
+  theorem @thm_r57__v7_r384 app_r57__v7 ∩ app_r384 = ∅
+  theorem @thm_r57__v7_r765 app_r57__v7 ∩ app_r765 = ∅
+  theorem @thm_r57__v7_r233 app_r57__v7 ∩ app_r233 = ∅
+  theorem @thm_r57__v7_r888 app_r57__v7 ∩ app_r888 = ∅
+  theorem @thm_r57__v7_r485 app_r57__v7 ∩ app_r485 = ∅
+  theorem @thm_r57__v7_r374 app_r57__v7 ∩ app_r374 = ∅
+  theorem @thm_r57__v7_r516 app_r57__v7 ∩ app_r516 = ∅
+  theorem @thm_r57__v7_r766 app_r57__v7 ∩ app_r766 = ∅
+  theorem @thm_r57__v7_r757 app_r57__v7 ∩ app_r757 = ∅
+end

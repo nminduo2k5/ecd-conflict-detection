@@ -1,0 +1,21 @@
+context PolicyCtx_v38
+extends PolicyCtx_v37
+constants app_r1018
+axioms
+  @def_app_r1018 app_r1018 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_0 ∧ action(q) ∈ {action_11, action_1} ∧ shift(q) = shift_3 ∧ age(q) ∈ 61 ‥ 70 | q}
+  theorem @thm_r1018_r28 app_r1018 ∩ app_r28 = ∅
+  theorem @thm_r1018_r70 app_r1018 ∩ app_r70 = ∅
+  theorem @thm_r1018_r400 app_r1018 ∩ app_r400 = ∅
+  theorem @thm_r1018_r304 app_r1018 ∩ app_r304 = ∅
+  theorem @thm_r1018_r965 app_r1018 ∩ app_r965 = ∅
+  theorem @thm_r1018_r135 app_r1018 ∩ app_r135 = ∅
+  theorem @thm_r1018_r688 app_r1018 ∩ app_r688 = ∅
+  theorem @thm_r1018_r492 app_r1018 ∩ app_r492 = ∅
+  theorem @thm_r1018_r983 app_r1018 ∩ app_r983 = ∅
+  theorem @thm_r1018_r519 app_r1018 ∩ app_r519 = ∅
+  theorem @thm_r1018_r426 app_r1018 ∩ app_r426 = ∅
+  theorem @thm_r1018_r365 app_r1018 ∩ app_r365 = ∅
+  theorem @thm_r1018_r621 app_r1018 ∩ app_r621 = ∅
+  theorem @thm_r1018_r30 app_r1018 ∩ app_r30 = ∅
+  theorem @thm_r1018_r993 app_r1018 ∩ app_r993 = ∅
+end

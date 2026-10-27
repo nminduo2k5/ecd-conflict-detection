@@ -1,0 +1,42 @@
+context PolicyCtx_v8
+extends PolicyCtx_v7
+constants app_r348__v8
+axioms
+  @def_app_r348__v8 app_r348__v8 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_8, resourceType_3} ∧ action(q) ∈ {action_2, action_9} ∧ hour(q) ≥ 11 ∧ location(q) ∈ {location_2, location_8} | q}
+  theorem @thm_r348__v8_r609 app_r348__v8 ∩ app_r609 = ∅
+  theorem @thm_r348__v8_r336 app_r348__v8 ∩ app_r336 = ∅
+  theorem @thm_r348__v8_r989 app_r348__v8 ∩ app_r989 = ∅
+  theorem @thm_r348__v8_r958 app_r348__v8 ∩ app_r958 = ∅
+  theorem @thm_r348__v8_r702 app_r348__v8 ∩ app_r702 = ∅
+  theorem @thm_r348__v8_r89 app_r348__v8 ∩ app_r89 = ∅
+  theorem @thm_r348__v8_r675 app_r348__v8 ∩ app_r675 = ∅
+  theorem @thm_r348__v8_r160 app_r348__v8 ∩ app_r160 = ∅
+  theorem @thm_r348__v8_r96 app_r348__v8 ∩ app_r96 = ∅
+  theorem @thm_r348__v8_r979 app_r348__v8 ∩ app_r979 = ∅
+  theorem @thm_r348__v8_r136 app_r348__v8 ∩ app_r136 = ∅
+  theorem @thm_r348__v8_r148 app_r348__v8 ∩ app_r148 = ∅
+  theorem @thm_r348__v8_r303 app_r348__v8 ∩ app_r303 = ∅
+  theorem @thm_r348__v8_r777 app_r348__v8 ∩ app_r777 = ∅
+  theorem @thm_r348__v8_r783 app_r348__v8 ∩ app_r783 = ∅
+  theorem @thm_r348__v8_r4 app_r348__v8 ∩ app_r4 = ∅
+  theorem @thm_r348__v8_r873 app_r348__v8 ∩ app_r873 = ∅
+  theorem @thm_r348__v8_r268 app_r348__v8 ∩ app_r268 = ∅
+  theorem @thm_r348__v8_r307 app_r348__v8 ∩ app_r307 = ∅
+  theorem @thm_r348__v8_r341 app_r348__v8 ∩ app_r341 = ∅
+  theorem @thm_r348__v8_r664 app_r348__v8 ∩ app_r664 = ∅
+  theorem @thm_r348__v8_r864 app_r348__v8 ∩ app_r864 = ∅
+  theorem @thm_r348__v8_r696 app_r348__v8 ∩ app_r696 = ∅
+  theorem @thm_r348__v8_r529 app_r348__v8 ∩ app_r529 = ∅
+  theorem @thm_r348__v8_r555 app_r348__v8 ∩ app_r555 = ∅
+  theorem @thm_r348__v8_r110 app_r348__v8 ∩ app_r110 = ∅
+  theorem @thm_r348__v8_r498 app_r348__v8 ∩ app_r498 = ∅
+  theorem @thm_r348__v8_r753 app_r348__v8 ∩ app_r753 = ∅
+  theorem @thm_r348__v8_r726 app_r348__v8 ∩ app_r726 = ∅
+  theorem @thm_r348__v8_r414 app_r348__v8 ∩ app_r414 = ∅
+  theorem @thm_r348__v8_r803 app_r348__v8 ∩ app_r803 = ∅
+  theorem @thm_r348__v8_r921 app_r348__v8 ∩ app_r921 = ∅
+  theorem @thm_r348__v8_r804 app_r348__v8 ∩ app_r804 = ∅
+  theorem @thm_r348__v8_r475 app_r348__v8 ∩ app_r475 = ∅
+  theorem @thm_r348__v8_r363 app_r348__v8 ∩ app_r363 = ∅
+  theorem @thm_r348__v8_r948 app_r348__v8 ∩ app_r948 = ∅
+end

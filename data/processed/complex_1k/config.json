@@ -1,0 +1,19 @@
+{
+  "n_rules": 1000,
+  "n_attrs": 12,
+  "n_numeric": 3,
+  "domain_size": 12,
+  "atoms_per_rule": 4,
+  "core_attrs": 2,
+  "conflict_rate": 0.05,
+  "hetero_rate": 0.2,
+  "hierarchy_rate": 0.0,
+  "complex_rate": 0.6,
+  "n_deltas": 100,
+  "delta_mix": [
+    0.5,
+    0.3,
+    0.2
+  ],
+  "seed": 11
+}

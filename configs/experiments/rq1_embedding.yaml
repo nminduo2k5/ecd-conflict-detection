@@ -1,0 +1,18 @@
+datasets:
+  - data/processed/synthetic_1k
+  - data/processed/hetero_1k_h50
+  - data/processed/real/aws_managed_300
+  - data/processed/real/xacml_gpms
+  - data/processed/real/xacml_pluto
+  - data/processed/real/xacml_itrust
+max_smt_calls: 20000
+use_sbert: true    # needs sentence-transformers (falls back gracefully)
+use_gnn: true
+gnn:
+  dim: 128
+  layers: 3
+  epochs: 30
+  lr: 0.003
+  tau: 0.1
+  batch_anchors: 256
+  in_batch_weight: 0.5

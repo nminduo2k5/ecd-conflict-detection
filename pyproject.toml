@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecd"
+version = "0.1.0"
+description = "Embedding-guided incremental conflict detection for evolving access-control policies with Event-B verification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+  "z3-solver>=4.12",
+  "numpy>=1.24",
+  "pyyaml>=6",
+  "typer>=0.9",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+ml = ["torch>=2.1", "faiss-cpu>=1.7", "sentence-transformers>=2.2"]
+dev = ["pytest>=7", "ruff>=0.4", "pandas", "matplotlib", "jupyter"]
+
+[project.scripts]
+ecd = "ecd.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"

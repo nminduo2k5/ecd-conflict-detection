@@ -1,0 +1,23 @@
+context PolicyCtx_v47
+extends PolicyCtx_v46
+constants app_r1022
+axioms
+  @def_app_r1022 app_r1022 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_4 ∧ action(q) ∈ {action_8, action_3} ∧ project(q) ∈ {project_8, project_3} ∧ shift(q) ∈ {shift_4, shift_1, shift_10} | q}
+  theorem @thm_r1022_r581 app_r1022 ∩ app_r581 = ∅
+  theorem @thm_r1022_r970 app_r1022 ∩ app_r970 = ∅
+  theorem @thm_r1022_r98 app_r1022 ∩ app_r98 = ∅
+  theorem @thm_r1022_r308 app_r1022 ∩ app_r308 = ∅
+  theorem @thm_r1022_r69 app_r1022 ∩ app_r69 = ∅
+  theorem @thm_r1022_r509 app_r1022 ∩ app_r509 = ∅
+  theorem @thm_r1022_r825 app_r1022 ∩ app_r825 = ∅
+  theorem @thm_r1022_r482 app_r1022 ∩ app_r482 = ∅
+  theorem @thm_r1022_r243 app_r1022 ∩ app_r243 = ∅
+  theorem @thm_r1022_r534 app_r1022 ∩ app_r534 = ∅
+  theorem @thm_r1022_r140__v34 app_r1022 ∩ app_r140__v34 = ∅
+  theorem @thm_r1022_r192 app_r1022 ∩ app_r192 = ∅
+  theorem @thm_r1022_r720 app_r1022 ∩ app_r720 = ∅
+  theorem @thm_r1022_r1013 app_r1022 ∩ app_r1013 = ∅
+  theorem @thm_r1022_r355 app_r1022 ∩ app_r355 = ∅
+  theorem @thm_r1022_r589 app_r1022 ∩ app_r589 = ∅
+  theorem @thm_r1022_r383 app_r1022 ∩ app_r383 = ∅
+end

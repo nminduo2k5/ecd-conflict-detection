@@ -1,0 +1,2009 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSCloud9Administrator/stmt1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSServiceRoleForImageBuilder/stmt5",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonAppStreamFullAccess/stmt6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSMarketplaceMeteringRegisterUsage/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSSecurityHubServiceRolePolicy/stmt0",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSSecurityHubServiceRolePolicy"
+   }
+  },
+  "rule_id": "AWSSecurityHubServiceRolePolicy/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iotanalytics:DescribeChannel",
+       "iotanalytics:DescribeDataset",
+       "iotanalytics:DescribeDatastore",
+       "iotanalytics:DescribePipeline",
+       "iotanalytics:ExecuteQuery",
+       "iotanalytics:GetDatasetContent",
+       "iotanalytics:ListChannels",
+       "iotanalytics:ListDatasets",
+       "iotanalytics:ListDatastores",
+       "iotanalytics:ListPipelines",
+       "iotanalytics:ListTagsForResource",
+       "iotanalytics:SampleChannelData",
+       "iotanalytics:TagResource",
+       "iotanalytics:UntagResource"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSIoTAnalyticsFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "servicediscovery:DiscoverInstances",
+       "servicediscovery:GetInstance",
+       "servicediscovery:GetNamespace",
+       "servicediscovery:GetOperation",
+       "servicediscovery:GetService",
+       "servicediscovery:ListInstances",
+       "servicediscovery:ListNamespaces",
+       "servicediscovery:ListServices",
+       "servicediscovery:ListTagsForResource"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSCloudMapReadOnlyAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSSecurityHubServiceRolePolicy/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSAppMeshServiceRolePolicy/CloudMapServiceDiscovery",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "servicediscovery:DiscoverInstances"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSAppMeshServiceRolePolicy"
+   }
+  },
+  "rule_id": "AWSAppMeshServiceRolePolicy/CloudMapServiceDiscovery",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AmazonSageMakerFullAccess/stmt6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ssm:SendCommand"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:ec2:*:*:instance/*"
+      ]
+     },
+     {
+      "attr": "ssm:resourceTag/CreatedBy",
+      "op": "eq",
+      "value": "EC2 Image Builder"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSServiceRoleForImageBuilder/stmt14"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AutoScalingReadOnlyAccess/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "autoscaling:DescribeAccountLimits",
+       "autoscaling:DescribeAutoScalingGroups",
+       "autoscaling:DescribeAutoScalingInstances",
+       "autoscaling:DescribeLaunchConfigurations",
+       "autoscaling:DescribeLifecycleHooks",
+       "autoscaling:DescribeLoadBalancers",
+       "autoscaling:DescribeNotificationConfigurations",
+       "autoscaling:DescribePolicies",
+       "autoscaling:DescribeScalingActivities",
+       "autoscaling:DescribeScheduledActions",
+       "autoscaling:DescribeTags",
+       "autoscaling:DescribeWarmPool",
+       "autoscaling:describeAdjustmentTypes",
+       "autoscaling:describeAutoScalingNotificationTypes",
+       "autoscaling:describeInstanceRefreshes",
+       "autoscaling:describeLifecycleHookTypes",
+       "autoscaling:describeLoadBalancerTargetGroups",
+       "autoscaling:describeMetricCollectionTypes",
+       "autoscaling:describeScalingProcessTypes",
+       "autoscaling:describeTerminationPolicyTypes",
+       "autoscaling:describeTrafficSources"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AutoScalingReadOnlyAccess"
+   }
+  },
+  "rule_id": "AutoScalingReadOnlyAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "s3:AbortMultipartUpload",
+       "s3:DeleteObject",
+       "s3:GetObject",
+       "s3:PutObject"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:s3:::*SageMaker*",
+       "arn:aws:s3:::*Sagemaker*",
+       "arn:aws:s3:::*sagemaker*",
+       "arn:aws:s3:::*aws-glue*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSageMakerFullAccess/stmt8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSDiscoveryContinuousExportFirehosePolicy/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:CopySnapshot",
+       "ec2:DescribeAccountAttributes",
+       "ec2:DescribeAccountVpcEncryptionControl",
+       "ec2:DescribeAddresses",
+       "ec2:DescribeAddressesAttribute",
+       "ec2:DescribeAwsNetworkPerformanceMetricSubscriptions",
+       "ec2:DescribeCapacityReservationFleets",
+       "ec2:DescribeCarrierGateways",
+       "ec2:DescribeClassicLinkInstances",
+       "ec2:DescribeCoipPools",
+       "ec2:DescribeConversionTasks",
+       "ec2:DescribeDomains",
+       "ec2:DescribeEgressOnlyInternetGateways",
+       "ec2:DescribeExportTasks",
+       "ec2:DescribeFastSnapshotRestores",
+       "ec2:DescribeFpgaImages",
+       "ec2:DescribeHosts",
+       "ec2:DescribeIamInstanceProfileAssociations",
+       "ec2:DescribeImageAttribute",
+       "ec2:DescribeImageReferences",
+       "ec2:DescribeImages",
+       "ec2:DescribeImportImageTasks",
+       "ec2:DescribeImportSnapshotTasks",
+       "ec2:DescribeInstanceAttribute",
+       "ec2:DescribeInstanceCreditSpecifications",
+       "ec2:DescribeInstanceEventWindows",
+       "ec2:DescribeInstanceImageMetadata",
+       "ec2:DescribeInstanceSqlHaStates",
+       "ec2:DescribeInstanceStatus",
+       "ec2:DescribeInstanceTopology",
+       "ec2:DescribeInstanceTypeOfferings",
+       "ec2:DescribeInstanceTypes",
+       "ec2:DescribeInstances",
+       "ec2:DescribeInternetGateways",
+       "ec2:DescribeIpamPrefixListResolverTargets",
+       "ec2:DescribeIpamPrefixListResolvers",
+       "ec2:DescribeIpv6Pools",
+       "ec2:DescribeKeyPairs",
+       "ec2:DescribeLaunchTemplateVersions",
+       "ec2:DescribeLaunchTemplates",
+       "ec2:DescribeLocalGatewayRouteTablePermissions",
+       "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+       "ec2:DescribeLocalGatewayRouteTables",
+       "ec2:DescribeLocalGateways",
+       "ec2:DescribeManagedPrefixLists",
+       "ec2:DescribeNetworkInsightsAccessScopeAnalyses",
+       "ec2:DescribeNetworkInsightsAccessScopes",
+       "ec2:DescribeNetworkInsightsAnalyses",
+       "ec2:DescribeNetworkInsightsPaths",
+       "ec2:DescribeNetworkInterface",
+       "ec2:DescribeNetworkInterfaceAttribute",
+       "ec2:DescribeNetworkInterfacePermissions",
+       "ec2:DescribeNetworkInterfaces",
+       "ec2:DescribeRegions",
+       "ec2:DescribeRouteTables",
+       "ec2:DescribeSecurityGroupReferences",
+       "ec2:DescribeSecurityGroupRules",
+       "ec2:DescribeSecurityGroupVpcAssociations",
+       "ec2:DescribeSecurityGroups",
+       "ec2:DescribeSnapshotTierStatus",
+       "ec2:DescribeSnapshots",
+       "ec2:DescribeSpotFleetInstances",
+       "ec2:DescribeSpotFleetRequests",
+       "ec2:DescribeSpotInstanceRequests",
+       "ec2:DescribeSpotPriceHistory",
+       "ec2:DescribeStaleSecurityGroups",
+       "ec2:DescribeSubnets",
+       "ec2:DescribeTags",
+       "ec2:DescribeTransitGatewayAttachments",
+       "ec2:DescribeTransitGatewayConnectPeers",
+       "ec2:DescribeTransitGatewayConnects",
+       "ec2:DescribeTransitGatewayMeteringPolicies",
+       "ec2:DescribeTransitGatewayMulticastDomains",
+       "ec2:DescribeTransitGatewayPeeringAttachments",
+       "ec2:DescribeTransitGatewayPolicyTables",
+       "ec2:DescribeTransitGatewayRouteTableAnnouncements",
+       "ec2:DescribeTransitGatewayRouteTables",
+       "ec2:DescribeTransitGatewayVpcAttachments",
+       "ec2:DescribeTransitGateways",
+       "ec2:DescribeVerifiedAccessEndpoints",
+       "ec2:DescribeVerifiedAccessGroups",
+       "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+       "ec2:DescribeVerifiedAccessInstances",
+       "ec2:DescribeVerifiedAccessTrustProviders",
+       "ec2:DescribeVolumes",
+       "ec2:DescribeVpcAttribute",
+       "ec2:DescribeVpcBlockPublicAccessOptions",
+       "ec2:DescribeVpcClassicLink",
+       "ec2:DescribeVpcEncryptionControls",
+       "ec2:DescribeVpcEndpoints",
+       "ec2:DescribeVpcs",
+       "ec2:DescribeVpnConcentrators",
+       "ec2:DescribeVpnGateways",
+       "ec2:ModifySnapshotAttribute",
+       "ec2:RegisterImage",
+       "ec2:describeAddressTransfers",
+       "ec2:describeAggregateIdFormat",
+       "ec2:describeAvailabilityZones",
+       "ec2:describeBundleTasks",
+       "ec2:describeByoipCidrs",
+       "ec2:describeCapacityBlockOfferings",
+       "ec2:describeCapacityManagerDataExports",
+       "ec2:describeCapacityReservations",
+       "ec2:describeClientVpnAuthorizationRules",
+       "ec2:describeClientVpnConnections",
+       "ec2:describeClientVpnEndpoints",
+       "ec2:describeClientVpnRoutes",
+       "ec2:describeClientVpnTargetNetworks",
+       "ec2:describeCustomerGateways",
+       "ec2:describeDhcpOptions",
+       "ec2:describeElasticGpus",
+       "ec2:describeExportImageTasks",
+       "ec2:describeFastLaunchImages",
+       "ec2:describeFleetHistory",
+       "ec2:describeFleetInstances",
+       "ec2:describeFleets",
+       "ec2:describeFlowLogs",
+       "ec2:describeFpgaImageAttribute",
+       "ec2:describeHostReservationOfferings",
+       "ec2:describeHostReservations",
+       "ec2:describeIdFormat",
+       "ec2:describeIdentityIdFormat",
+       "ec2:describeInstanceConnectEndpoints",
+       "ec2:describeInstanceEventNotificationAttributes",
+       "ec2:describeIpamByoasn",
+       "ec2:describeIpamExternalResourceVerificationTokens",
+       "ec2:describeIpamPools",
+       "ec2:describeIpamResourceDiscoveries",
+       "ec2:describeIpamResourceDiscoveryAssociations",
+       "ec2:describeIpamScopes",
+       "ec2:describeIpams",
+       "ec2:describeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+       "ec2:describeLocalGatewayVirtualInterfaceGroups",
+       "ec2:describeLocalGatewayVirtualInterfaces",
+       "ec2:describeMovingAddresses",
+       "ec2:describeNatGateways",
+       "ec2:describeNetworkAcls",
+       "ec2:describeOutpostLags",
+       "ec2:describePlacementGroups",
+       "ec2:describePrefixLists",
+       "ec2:describePrincipalIdFormat",
+       "ec2:describePublicIpv4Pools",
+       "ec2:describeReplaceRootVolumeTasks",
+       "ec2:describeReservedInstances",
+       "ec2:describeReservedInstancesListings",
+       "ec2:describeReservedInstancesModifications",
+       "ec2:describeReservedInstancesOfferings",
+       "ec2:describeRouteServerEndpoints",
+       "ec2:describeRouteServerPeers",
+       "ec2:describeRouteServers",
+       "ec2:describeScheduledInstanceAvailability",
+       "ec2:describeScheduledInstances",
+       "ec2:describeServiceLinkVirtualInterfaces",
+       "ec2:describeSnapshotAttribute",
+       "ec2:describeSpotDatafeedSubscription",
+       "ec2:describeSpotFleetRequestHistory",
+       "ec2:describeStoreImageTasks",
+       "ec2:describeTrafficMirrorFilterRules",
+       "ec2:describeTrafficMirrorFilters",
+       "ec2:describeTrafficMirrorSessions",
+       "ec2:describeTrafficMirrorTargets",
+       "ec2:describeVerifiedAccessInstanceLoggingConfigurations",
+       "ec2:describeVolumeAttribute",
+       "ec2:describeVolumeStatus",
+       "ec2:describeVolumesModifications",
+       "ec2:describeVpcBlockPublicAccessExclusions",
+       "ec2:describeVpcClassicLinkDnsSupport",
+       "ec2:describeVpcEndpointAssociations",
+       "ec2:describeVpcEndpointConnectionNotifications",
+       "ec2:describeVpcEndpointConnections",
+       "ec2:describeVpcEndpointServiceConfigurations",
+       "ec2:describeVpcEndpointServicePermissions",
+       "ec2:describeVpcEndpointServices",
+       "ec2:describeVpcPeeringConnections",
+       "ec2:describeVpnConnections"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "VMImportExportRoleForAWSConnector/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSServiceRoleForImageBuilder/stmt11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "sns:Publish"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSServiceRoleForImageBuilder"
+   }
+  },
+  "rule_id": "AWSServiceRoleForImageBuilder/stmt11",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AmazonDynamoDBFullAccess/stmt3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AmazonDynamoDBFullAccess"
+   }
+  },
+  "rule_id": "AmazonDynamoDBFullAccess/stmt3",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSImportExportReadOnlyAccess/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "importexport:GetStatus",
+       "importexport:ListJobs"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSImportExportReadOnlyAccess"
+   }
+  },
+  "rule_id": "AWSImportExportReadOnlyAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:ListRoles"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonAppStreamFullAccess/stmt4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AmazonSageMakerFullAccess/stmt13",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "lambda:InvokeFunction"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:lambda:*:*:function:*SageMaker*",
+       "arn:aws:lambda:*:*:function:*sagemaker*",
+       "arn:aws:lambda:*:*:function:*Sagemaker*",
+       "arn:aws:lambda:*:*:function:*LabelingFunction*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSageMakerFullAccess/stmt11"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iotanalytics:DescribeChannel",
+       "iotanalytics:DescribeDataset",
+       "iotanalytics:DescribeDatastore",
+       "iotanalytics:DescribePipeline",
+       "iotanalytics:ExecuteQuery",
+       "iotanalytics:GetDatasetContent",
+       "iotanalytics:ListChannels",
+       "iotanalytics:ListDatasets",
+       "iotanalytics:ListDatastores",
+       "iotanalytics:ListPipelines",
+       "iotanalytics:ListTagsForResource",
+       "iotanalytics:SampleChannelData",
+       "iotanalytics:TagResource",
+       "iotanalytics:UntagResource"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSOpsWorksRegisterCLI/stmt2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:AddUserToGroup",
+       "iam:CreateAccessKey",
+       "iam:CreateGroup",
+       "iam:CreateUser",
+       "iam:ListInstanceProfiles",
+       "iam:PassRole",
+       "iam:PutUserPolicy"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSOpsWorksRegisterCLI"
+   }
+  },
+  "rule_id": "AWSOpsWorksRegisterCLI/stmt2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "glue:GetTableVersions"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSDiscoveryContinuousExportFirehosePolicy/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "firehose:PutRecord",
+       "firehose:PutRecordBatch"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:firehose:*:*:deliverystream/aws-waf-logs-*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "WAFRegionalLoggingServiceRolePolicy/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ecr:BatchDeleteImage",
+       "ecr:CompleteLayerUpload",
+       "ecr:DeleteRepository",
+       "ecr:DeleteRepositoryPolicy",
+       "ecr:InitiateLayerUpload",
+       "ecr:PutImage",
+       "ecr:SetRepositoryPolicy",
+       "ecr:UploadLayerPart"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:ecr:*:*:repository/*sagemaker*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSageMakerFullAccess/stmt4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSDiscoveryContinuousExportFirehosePolicy/stmt2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:logs:*:*:log-group:/aws/application-discovery-service/firehose:log-stream:*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSDiscoveryContinuousExportFirehosePolicy"
+   }
+  },
+  "rule_id": "AWSDiscoveryContinuousExportFirehosePolicy/stmt2",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AmazonLexFullAccess/stmt7",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AmazonSageMakerFullAccess/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "sagemaker:AccessModelPackage",
+       "sagemaker:AddAssociation",
+       "sagemaker:AddTags",
+       "sagemaker:AssociateTrialComponent",
+       "sagemaker:AttachClusterNodeVolume",
+       "sagemaker:BatchDescribeModelPackage",
+       "sagemaker:BatchGetMetrics",
+       "sagemaker:BatchGetRecord",
+       "sagemaker:BatchPutMetrics",
+       "sagemaker:CallMlflowAppApi",
+       "sagemaker:CallPartnerAppApi",
+       "sagemaker:CallWithBearerToken",
+       "sagemaker:CompleteRollout",
+       "sagemaker:CreateAction",
+       "sagemaker:CreateAlgorithm",
+       "sagemaker:CreateApp",
+       "sagemaker:CreateAppImageConfig",
+       "sagemaker:CreateArtifact",
+       "sagemaker:CreateAutoMLJob",
+       "sagemaker:CreateAutoMLJobV2",
+       "sagemaker:CreateCluster",
+       "sagemaker:CreateCodeRepository",
+       "sagemaker:CreateCompilationJob",
+       "sagemaker:CreateContext",
+       "sagemaker:CreateDataQualityJobDefinition",
+       "sagemaker:CreateDeviceFleet",
+       "sagemaker:CreateDomain",
+       "sagemaker:CreateEdgePackagingJob",
+       "sagemaker:CreateEndpoint",
+       "sagemaker:CreateEndpointConfig",
+       "sagemaker:CreateExperiment",
+       "sagemaker:CreateFeatureGroup",
+       "sagemaker:CreateFlowDefinition",
+       "sagemaker:CreateHubContentPresignedUrls",
+       "sagemaker:CreateHumanTaskUi",
+       "sagemaker:CreateHyperParameterTuningJob",
+       "sagemaker:CreateImage",
+       "sagemaker:CreateImageVersion",
+       "sagemaker:CreateInferenceComponent",
+       "sagemaker:CreateInferenceRecommendationsJob",
+       "sagemaker:CreateLabelingJob",
+       "sagemaker:CreateLineageGroupPolicy",
+       "sagemaker:CreateMlflowApp",
+       "sagemaker:CreateMlflowTrackingServer",
+       "sagemaker:CreateModel",
+       "sagemaker:CreateModelBiasJobDefinition",
+       "sagemaker:CreateModelCard",
+       "sagemaker:CreateModelCardExportJob",
+       "sagemaker:CreateModelExplainabilityJobDefinition",
+       "sagemaker:CreateModelPackage",
+       "sagemaker:CreateModelPackageGroup",
+       "sagemaker:CreateModelQualityJobDefinition",
+       "sagemaker:CreateMonitoringSchedule",
+       "sagemaker:CreateNotebookInstance",
+       "sagemaker:CreateNotebookInstanceLifecycleConfig",
+       "sagemaker:CreatePartnerAppPresignedUrl",
+       "sagemaker:CreatePipeline",
+       "sagemaker:CreatePresignedDomainUrl",
+       "sagemaker:CreatePresignedMlflowAppUrl",
+       "sagemaker:CreatePresignedMlflowTrackingServerUrl",
+       "sagemaker:CreatePresignedNotebookInstanceUrl",
+       "sagemaker:CreateProcessingJob",
+       "sagemaker:CreateProject",
+       "sagemaker:CreateReservedCapacity",
+       "sagemaker:CreateSpace",
+       "sagemaker:CreateTrainingJob",
+       "sagemaker:CreateTrainingPlan",
+       "sagemaker:CreateTransformJob",
+       "sagemaker:CreateTrial",
+       "sagemaker:CreateTrialComponent",
+       "sagemaker:CreateUserProfile",
+       "sagemaker:CreateWorkforce",
+       "sagemaker:CreateWorkteam",
+       "sagemaker:DeleteAction",
+       "sagemaker:DeleteAlgorithm",
+       "sagemaker:DeleteApp",
+       "sagemaker:DeleteAppImageConfig",
+       "sagemaker:DeleteArtifact",
+       "sagemaker:DeleteAssociation",
+       "sagemaker:DeleteCodeRepository",
+       "sagemaker:DeleteContext",
+       "sagemaker:DeleteDataQualityJobDefinition",
+       "sagemaker:DeleteDeviceFleet",
+       "sagemaker:DeleteDomain",
+       "sagemaker:DeleteEndpoint",
+       "sagemaker:DeleteEndpointConfig",
+       "sagemaker:DeleteExperiment",
+       "sagemaker:DeleteFeatureGroup",
+       "sagemaker:DeleteFlowDefinition",
+       "sagemaker:DeleteHubContent",
+       "sagemaker:DeleteHumanLoop",
+       "sagemaker:DeleteHumanTaskUi",
+       "sagemaker:DeleteImage",
+       "sagemaker:DeleteImageVersion",
+       "sagemaker:DeleteInferenceComponent",
+       "sagemaker:DeleteLineageGroupPolicy",
+       "sagemaker:DeleteMlflowApp",
+       "sagemaker:DeleteMlflowTrackingServer",
+       "sagemaker:DeleteModel",
+       "sagemaker:DeleteModelBiasJobDefinition",
+       "sagemaker:DeleteModelCard",
+       "sagemaker:DeleteModelExplainabilityJobDefinition",
+       "sagemaker:DeleteModelPackage",
+       "sagemaker:DeleteModelPackageGroup",
+       "sagemaker:DeleteModelPackageGroupPolicy",
+       "sagemaker:DeleteModelQualityJobDefinition",
+       "sagemaker:DeleteMonitoringSchedule",
+       "sagemaker:DeleteNotebookInstance",
+       "sagemaker:DeleteNotebookInstanceLifecycleConfig",
+       "sagemaker:DeletePipeline",
+       "sagemaker:DeleteProject",
+       "sagemaker:DeleteRecord",
+       "sagemaker:DeleteResourcePolicy",
+       "sagemaker:DeleteSpace",
+       "sagemaker:DeleteTags",
+       "sagemaker:DeleteTrainingJob",
+       "sagemaker:DeleteTrial",
+       "sagemaker:DeleteTrialComponent",
+       "sagemaker:DeleteUserProfile",
+       "sagemaker:DeleteWorkforce",
+       "sagemaker:DeleteWorkteam",
+       "sagemaker:DeregisterDevices",
+       "sagemaker:DescribeAppImageConfig",
+       "sagemaker:DescribeAutoMLJobV2",
+       "sagemaker:DescribeClusterInference",
+       "sagemaker:DescribeCodeRepository",
+       "sagemaker:DescribeDomain",
+       "sagemaker:DescribeEndpoint",
+       "sagemaker:DescribeEndpointConfig",
+       "sagemaker:DescribeFlowDefinition",
+       "sagemaker:DescribeHumanLoop",
+       "sagemaker:DescribeInferenceComponent",
+       "sagemaker:DescribeInferenceRecommendationsJob",
+       "sagemaker:DescribeLineageGroup",
+       "sagemaker:DescribeMlflowApp",
+       "sagemaker:DescribeMlflowTrackingServer",
+       "sagemaker:DescribeModelCard",
+       "sagemaker:DescribeModelCardExportJob",
+       "sagemaker:DescribeNotebookInstance",
+       "sagemaker:DescribeNotebookInstanceLifecycleConfig",
+       "sagemaker:DescribeOptimizationJob",
+       "sagemaker:DescribePartnerApp",
+       "sagemaker:DescribeReservedCapacity",
+       "sagemaker:DescribeSpace",
+       "sagemaker:DescribeTrainingJob",
+       "sagemaker:DescribeTrainingPlan",
+       "sagemaker:DescribeUserProfile",
+       "sagemaker:DescribeWorkforce",
+       "sagemaker:DetachClusterNodeVolume",
+       "sagemaker:DisableSagemakerServicecatalogPortfolio",
+       "sagemaker:DisassociateTrialComponent",
+       "sagemaker:EnableSagemakerServicecatalogPortfolio",
+       "sagemaker:GetDeviceFleetReport",
+       "sagemaker:GetDeviceRegistration",
+       "sagemaker:GetLineageGroupPolicy",
+       "sagemaker:GetModelPackageGroupPolicy",
+       "sagemaker:GetRecord",
+       "sagemaker:GetResourcePolicy",
+       "sagemaker:GetSagemakerServicecatalogPortfolioStatus",
+       "sagemaker:GetSearchSuggestions",
+       "sagemaker:ImportHubContent",
+       "sagemaker:InvokeEndpoint",
+       "sagemaker:InvokeEndpointAsync",
+       "sagemaker:InvokeEndpointWithResponseStream",
+       "sagemaker:ListAppImageConfigs",
+       "sagemaker:ListApps",
+       "sagemaker:ListDomains",
+       "sagemaker:ListHumanLoops",
+       "sagemaker:ListInferenceRecommendationsJobs",
+       "sagemaker:ListLineageGroups",
+       "sagemaker:ListMlflowApps",
+       "sagemaker:ListMlflowTrackingServers",
+       "sagemaker:ListModelCardExportJobs",
+       "sagemaker:ListModelCardVersions",
+       "sagemaker:ListModelCards",
+       "sagemaker:ListModelMetadata",
+       "sagemaker:ListMonitoringAlertHistory",
+       "sagemaker:ListMonitoringAlerts",
+       "sagemaker:ListNotebookInstanceLifecycleConfigs",
+       "sagemaker:ListNotebookInstances",
+       "sagemaker:ListPartnerApps",
+       "sagemaker:ListSpaces",
+       "sagemaker:ListTags",
+       "sagemaker:ListTrainingPlans",
+       "sagemaker:ListUltraServersByReservedCapacity",
+       "sagemaker:ListUserProfiles",
+       "sagemaker:ListWorkforces",
+       "sagemaker:PutLineageGroupPolicy",
+       "sagemaker:PutModelPackageGroupPolicy",
+       "sagemaker:PutRecord",
+       "sagemaker:PutResourcePolicy",
+       "sagemaker:QueryLineage",
+       "sagemaker:RegisterDevices",
+       "sagemaker:RenderUiTemplate",
+       "sagemaker:RetryPipelineExecution",
+       "sagemaker:Sample",
+       "sagemaker:SampleWithResponseStream",
+       "sagemaker:Search",
+       "sagemaker:SearchTrainingPlanOfferings",
+       "sagemaker:SendHeartbeat",
+       "sagemaker:SendPipelineExecutionStepFailure",
+       "sagemaker:SendPipelineExecutionStepSuccess",
+       "sagemaker:StartHumanLoop",
+       "sagemaker:StartMlflowTrackingServer",
+       "sagemaker:StartMonitoringSchedule",
+       "sagemaker:StartNotebookInstance",
+       "sagemaker:StartPipelineExecution",
+       "sagemaker:StartSession",
+       "sagemaker:StopAutoMLJob",
+       "sagemaker:StopCompilationJob",
+       "sagemaker:StopEdgePackagingJob",
+       "sagemaker:StopHumanLoop",
+       "sagemaker:StopHyperParameterTuningJob",
+       "sagemaker:StopInferenceRecommendationsJob",
+       "sagemaker:StopLabelingJob",
+       "sagemaker:StopMlflowTrackingServer",
+       "sagemaker:StopMonitoringSchedule",
+       "sagemaker:StopNotebookInstance",
+       "sagemaker:StopPipelineExecution",
+       "sagemaker:StopProcessingJob",
+       "sagemaker:StopTrainingJob",
+       "sagemaker:StopTransformJob",
+       "sagemaker:UpdateAction",
+       "sagemaker:UpdateAppImageConfig",
+       "sagemaker:UpdateArtifact",
+       "sagemaker:UpdateCluster",
+       "sagemaker:UpdateClusterInference",
+       "sagemaker:UpdateCodeRepository",
+       "sagemaker:UpdateContext",
+       "sagemaker:UpdateDeviceFleet",
+       "sagemaker:UpdateDevices",
+       "sagemaker:UpdateDomain",
+       "sagemaker:UpdateEndpoint",
+       "sagemaker:UpdateEndpointWeightsAndCapacities",
+       "sagemaker:UpdateExperiment",
+       "sagemaker:UpdateImage",
+       "sagemaker:UpdateInferenceComponentRuntimeConfig",
+       "sagemaker:UpdateMlflowApp",
+       "sagemaker:UpdateMlflowTrackingServer",
+       "sagemaker:UpdateModelCard",
+       "sagemaker:UpdateModelPackage",
+       "sagemaker:UpdateMonitoringAlert",
+       "sagemaker:UpdateMonitoringSchedule",
+       "sagemaker:UpdateNotebookInstance",
+       "sagemaker:UpdateNotebookInstanceLifecycleConfig",
+       "sagemaker:UpdatePipeline",
+       "sagemaker:UpdatePipelineExecution",
+       "sagemaker:UpdateProject",
+       "sagemaker:UpdateReward",
+       "sagemaker:UpdateSpace",
+       "sagemaker:UpdateTrainingJob",
+       "sagemaker:UpdateTrial",
+       "sagemaker:UpdateTrialComponent",
+       "sagemaker:UpdateUserProfile",
+       "sagemaker:UpdateWorkforce",
+       "sagemaker:UpdateWorkteam",
+       "sagemaker:describeAction",
+       "sagemaker:describeAlgorithm",
+       "sagemaker:describeApp",
+       "sagemaker:describeArtifact",
+       "sagemaker:describeAutoMLJob",
+       "sagemaker:describeCluster",
+       "sagemaker:describeClusterEvent",
+       "sagemaker:describeClusterNode",
+       "sagemaker:describeClusterSchedulerConfig",
+       "sagemaker:describeCompilationJob",
+       "sagemaker:describeComputeQuota",
+       "sagemaker:describeContext",
+       "sagemaker:describeDataQualityJobDefinition",
+       "sagemaker:describeDevice",
+       "sagemaker:describeDeviceFleet",
+       "sagemaker:describeEdgeDeploymentPlan",
+       "sagemaker:describeEdgePackagingJob",
+       "sagemaker:describeExperiment",
+       "sagemaker:describeFeatureGroup",
+       "sagemaker:describeFeatureMetadata",
+       "sagemaker:describeHub",
+       "sagemaker:describeHubContent",
+       "sagemaker:describeHumanTaskUi",
+       "sagemaker:describeHyperParameterTuningJob",
+       "sagemaker:describeImage",
+       "sagemaker:describeImageVersion",
+       "sagemaker:describeInferenceExperiment",
+       "sagemaker:describeLabelingJob",
+       "sagemaker:describeModel",
+       "sagemaker:describeModelBiasJobDefinition",
+       "sagemaker:describeModelExplainabilityJobDefinition",
+       "sagemaker:describeModelPackage",
+       "sagemaker:describeModelPackageGroup",
+       "sagemaker:describeModelQualityJobDefinition",
+       "sagemaker:describeMonitoringSchedule",
+       "sagemaker:describePipeline",
+       "sagemaker:describePipelineDefinitionForExecution",
+       "sagemaker:describePipelineExecution",
+       "sagemaker:describeProcessingJob",
+       "sagemaker:describeProject",
+       "sagemaker:describeStudioLifecycleConfig",
+       "sagemaker:describeSubscribedWorkteam",
+       "sagemaker:describeTransformJob",
+       "sagemaker:describeTrial",
+       "sagemaker:describeTrialComponent",
+       "sagemaker:describeWorkteam",
+       "sagemaker:listActions",
+       "sagemaker:listAlgorithms",
+       "sagemaker:listAliases",
+       "sagemaker:listArtifacts",
+       "sagemaker:listAssociations",
+       "sagemaker:listAutoMLJobs",
+       "sagemaker:listCandidatesForAutoMLJob",
+       "sagemaker:listClusterEvents",
+       "sagemaker:listClusterNodes",
+       "sagemaker:listClusterSchedulerConfigs",
+       "sagemaker:listClusters",
+       "sagemaker:listCodeRepositories",
+       "sagemaker:listCompilationJobs",
+       "sagemaker:listComputeQuotas",
+       "sagemaker:listContexts",
+       "sagemaker:listDataQualityJobDefinitions",
+       "sagemaker:listDeviceFleets",
+       "sagemaker:listDevices",
+       "sagemaker:listEdgeDeploymentPlans",
+       "sagemaker:listEdgePackagingJobs",
+       "sagemaker:listEndpointConfigs",
+       "sagemaker:listEndpoints",
+       "sagemaker:listExperiments",
+       "sagemaker:listFeatureGroups",
+       "sagemaker:listFlowDefinitions",
+       "sagemaker:listHubContentVersions",
+       "sagemaker:listHubContents",
+       "sagemaker:listHubs",
+       "sagemaker:listHumanTaskUis",
+       "sagemaker:listHyperParameterTuningJobs",
+       "sagemaker:listImageVersions",
+       "sagemaker:listImages",
+       "sagemaker:listInferenceComponents",
+       "sagemaker:listInferenceExperiments",
+       "sagemaker:listInferenceRecommendationsJobSteps",
+       "sagemaker:listLabelingJobs",
+       "sagemaker:listLabelingJobsForWorkteam",
+       "sagemaker:listModelBiasJobDefinitions",
+       "sagemaker:listModelExplainabilityJobDefinitions",
+       "sagemaker:listModelPackageGroups",
+       "sagemaker:listModelPackages",
+       "sagemaker:listModelQualityJobDefinitions",
+       "sagemaker:listModels",
+       "sagemaker:listMonitoringExecutions",
+       "sagemaker:listMonitoringSchedules",
+       "sagemaker:listOptimizationJobs",
+       "sagemaker:listPipelineExecutionSteps",
+       "sagemaker:listPipelineExecutions",
+       "sagemaker:listPipelineParametersForExecution",
+       "sagemaker:listPipelineVersions",
+       "sagemaker:listPipelines",
+       "sagemaker:listProcessingJobs",
+       "sagemaker:listProjects",
+       "sagemaker:listResourceCatalogs",
+       "sagemaker:listStageDevices",
+       "sagemaker:listStudioLifecycleConfigs",
+       "sagemaker:listSubscribedWorkteams",
+       "sagemaker:listTrainingJobs",
+       "sagemaker:listTrainingJobsForHyperParameterTuningJob",
+       "sagemaker:listTransformJobs",
+       "sagemaker:listTrialComponents",
+       "sagemaker:listTrials",
+       "sagemaker:listWorkteams"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AmazonSageMakerFullAccess"
+   }
+  },
+  "rule_id": "AmazonSageMakerFullAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:AddUserToGroup",
+       "iam:CreateAccessKey",
+       "iam:CreateGroup",
+       "iam:CreateUser",
+       "iam:ListInstanceProfiles",
+       "iam:PassRole",
+       "iam:PutUserPolicy"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "AWSOpsWorksRegisterCLI/stmt2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:ModifyInstanceAttribute",
+       "ec2:StartInstances",
+       "ec2:StopInstances",
+       "ec2:TerminateInstances"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSServiceRoleForSMS/stmt9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSServiceRoleForImageBuilder/stmt3",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CloudFrontFullAccess/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:s3:::*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "CloudFrontFullAccess"
+   }
+  },
+  "rule_id": "CloudFrontFullAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:acm-pca:*:*:certificate-authority/*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "AWSCertificateManagerPrivateCAUser/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSElasticBeanstalkEnhancedHealth/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:CreateTags"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "aws:TagKeys",
+      "op": "eq",
+      "value": "LaunchWizardResourceGroupID"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonEC2RolePolicyForLaunchWizard/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "ApplicationDiscoveryServiceContinuousExportServiceRolePolicy/stmt1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "firehose:DeleteDeliveryStream",
+       "firehose:PutRecord",
+       "firehose:PutRecordBatch",
+       "firehose:UpdateDestination"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:firehose:*:*:deliverystream/aws-application-discovery-service*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "ApplicationDiscoveryServiceContinuousExportServiceRolePolicy"
+   }
+  },
+  "rule_id": "ApplicationDiscoveryServiceContinuousExportServiceRolePolicy/stmt1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AmazonSageMakerReadOnly/stmt1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "application-autoscaling:DescribeScalableTargets",
+       "application-autoscaling:DescribeScalingActivities",
+       "application-autoscaling:DescribeScalingPolicies",
+       "application-autoscaling:DescribeScheduledActions",
+       "aws-marketplace:ViewSubscriptions",
+       "cloudwatch:DescribeAlarms",
+       "cognito-idp:DescribeUserPool",
+       "cognito-idp:DescribeUserPoolClient",
+       "cognito-idp:ListGroups",
+       "cognito-idp:ListIdentityProviders",
+       "cognito-idp:ListUserPoolClients",
+       "cognito-idp:ListUserPools",
+       "cognito-idp:ListUsers",
+       "cognito-idp:ListUsersInGroup",
+       "ecr:DescribeImageReplicationStatus",
+       "ecr:DescribeImageScanFindings",
+       "ecr:DescribePullThroughCacheRules",
+       "ecr:DescribeRepositories",
+       "ecr:DescribeRepositoryCreationTemplates",
+       "ecr:describeImageSigningStatus",
+       "ecr:describeImages",
+       "ecr:describeRegistry"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AmazonSageMakerReadOnly"
+   }
+  },
+  "rule_id": "AmazonSageMakerReadOnly/stmt1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "KafkaServiceRolePolicy/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AmazonInspectorReadOnlyAccess/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeInstances",
+       "ec2:DescribeTags",
+       "events:DescribeRule",
+       "events:ListRuleNamesByTarget",
+       "inspector:GetAssessmentTelemetry",
+       "inspector:Preview*",
+       "inspector:describeAssessmentRuns",
+       "inspector:describeAssessmentTargets",
+       "inspector:describeAssessmentTemplates",
+       "inspector:describeCrossAccountAccessRole",
+       "inspector:describeResourceGroups",
+       "inspector:describeRulesPackages",
+       "inspector:getTelemetryMetadata",
+       "inspector:listAssessmentRunAgents",
+       "inspector:listAssessmentRuns",
+       "inspector:listAssessmentTargets",
+       "inspector:listAssessmentTemplates",
+       "inspector:listEventSubscriptions",
+       "inspector:listRulesPackages",
+       "inspector:listTagsForResource",
+       "sns:ListTopics"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AmazonInspectorReadOnlyAccess",
+    "pattern_actions": true
+   }
+  },
+  "rule_id": "AmazonInspectorReadOnlyAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSMarketplaceFullAccess/stmt3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "sns:Publish",
+       "sns:setTopicAttributes"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSMarketplaceFullAccess"
+   }
+  },
+  "rule_id": "AWSMarketplaceFullAccess/stmt3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "managedblockchain:GetAccessor",
+       "managedblockchain:GetProposal",
+       "managedblockchain:ListAccessors",
+       "managedblockchain:ListInvitations",
+       "managedblockchain:ListProposalVotes",
+       "managedblockchain:ListProposals",
+       "managedblockchain:ListTagsForResource",
+       "managedblockchain:TagResource",
+       "managedblockchain:UntagResource",
+       "managedblockchain:getMember",
+       "managedblockchain:getNetwork",
+       "managedblockchain:getNode",
+       "managedblockchain:listMembers",
+       "managedblockchain:listNetworks",
+       "managedblockchain:listNodes"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonManagedBlockchainFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:DeleteServiceLinkedRole",
+       "iam:GetServiceLinkedRoleDeletionStatus"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonLexFullAccess/stmt4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "LightsailExportAccess/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudhsm:DescribeHapg",
+       "cloudhsm:DescribeLunaClient",
+       "cloudhsm:describeBackups",
+       "cloudhsm:describeClusters",
+       "ec2:AuthorizeSecurityGroupIngress",
+       "ec2:CreateNetworkInterface",
+       "ec2:CreateSecurityGroup",
+       "ec2:DeleteSecurityGroup",
+       "ec2:DescribeSecurityGroups",
+       "ec2:RevokeSecurityGroupEgress"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSKeyManagementServiceCustomKeyStoresServiceRolePolicy/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSCloud9User/stmt4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:CopyImage",
+       "ec2:CopySnapshot",
+       "ec2:DeleteSnapshot",
+       "ec2:DeregisterImage",
+       "ec2:DescribeAccountAttributes",
+       "ec2:DescribeAccountVpcEncryptionControl",
+       "ec2:DescribeAddresses",
+       "ec2:DescribeAddressesAttribute",
+       "ec2:DescribeAwsNetworkPerformanceMetricSubscriptions",
+       "ec2:DescribeCapacityReservationFleets",
+       "ec2:DescribeCarrierGateways",
+       "ec2:DescribeClassicLinkInstances",
+       "ec2:DescribeCoipPools",
+       "ec2:DescribeConversionTasks",
+       "ec2:DescribeDomains",
+       "ec2:DescribeEgressOnlyInternetGateways",
+       "ec2:DescribeExportTasks",
+       "ec2:DescribeFastSnapshotRestores",
+       "ec2:DescribeFpgaImages",
+       "ec2:DescribeHosts",
+       "ec2:DescribeIamInstanceProfileAssociations",
+       "ec2:DescribeImageAttribute",
+       "ec2:DescribeImageReferences",
+       "ec2:DescribeImages",
+       "ec2:DescribeImportImageTasks",
+       "ec2:DescribeImportSnapshotTasks",
+       "ec2:DescribeInstanceAttribute",
+       "ec2:DescribeInstanceCreditSpecifications",
+       "ec2:DescribeInstanceEventWindows",
+       "ec2:DescribeInstanceImageMetadata",
+       "ec2:DescribeInstanceSqlHaStates",
+       "ec2:DescribeInstanceStatus",
+       "ec2:DescribeInstanceTopology",
+       "ec2:DescribeInstanceTypeOfferings",
+       "ec2:DescribeInstanceTypes",
+       "ec2:DescribeInstances",
+       "ec2:DescribeInternetGateways",
+       "ec2:DescribeIpamPrefixListResolverTargets",
+       "ec2:DescribeIpamPrefixListResolvers",
+       "ec2:DescribeIpv6Pools",
+       "ec2:DescribeKeyPairs",
+       "ec2:DescribeLaunchTemplateVersions",
+       "ec2:DescribeLaunchTemplates",
+       "ec2:DescribeLocalGatewayRouteTablePermissions",
+       "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+       "ec2:DescribeLocalGatewayRouteTables",
+       "ec2:DescribeLocalGateways",
+       "ec2:DescribeManagedPrefixLists",
+       "ec2:DescribeNetworkInsightsAccessScopeAnalyses",
+       "ec2:DescribeNetworkInsightsAccessScopes",
+       "ec2:DescribeNetworkInsightsAnalyses",
+       "ec2:DescribeNetworkInsightsPaths",
+       "ec2:DescribeNetworkInterface",
+       "ec2:DescribeNetworkInterfaceAttribute",
+       "ec2:DescribeNetworkInterfacePermissions",
+       "ec2:DescribeNetworkInterfaces",
+       "ec2:DescribeRegions",
+       "ec2:DescribeRouteTables",
+       "ec2:DescribeSecurityGroupReferences",
+       "ec2:DescribeSecurityGroupRules",
+       "ec2:DescribeSecurityGroupVpcAssociations",
+       "ec2:DescribeSecurityGroups",
+       "ec2:DescribeSnapshotTierStatus",
+       "ec2:DescribeSnapshots",
+       "ec2:DescribeSpotFleetInstances",
+       "ec2:DescribeSpotFleetRequests",
+       "ec2:DescribeSpotInstanceRequests",
+       "ec2:DescribeSpotPriceHistory",
+       "ec2:DescribeStaleSecurityGroups",
+       "ec2:DescribeSubnets",
+       "ec2:DescribeTags",
+       "ec2:DescribeTransitGatewayAttachments",
+       "ec2:DescribeTransitGatewayConnectPeers",
+       "ec2:DescribeTransitGatewayConnects",
+       "ec2:DescribeTransitGatewayMeteringPolicies",
+       "ec2:DescribeTransitGatewayMulticastDomains",
+       "ec2:DescribeTransitGatewayPeeringAttachments",
+       "ec2:DescribeTransitGatewayPolicyTables",
+       "ec2:DescribeTransitGatewayRouteTableAnnouncements",
+       "ec2:DescribeTransitGatewayRouteTables",
+       "ec2:DescribeTransitGatewayVpcAttachments",
+       "ec2:DescribeTransitGateways",
+       "ec2:DescribeVerifiedAccessEndpoints",
+       "ec2:DescribeVerifiedAccessGroups",
+       "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+       "ec2:DescribeVerifiedAccessInstances",
+       "ec2:DescribeVerifiedAccessTrustProviders",
+       "ec2:DescribeVolumes",
+       "ec2:DescribeVpcAttribute",
+       "ec2:DescribeVpcBlockPublicAccessOptions",
+       "ec2:DescribeVpcClassicLink",
+       "ec2:DescribeVpcEncryptionControls",
+       "ec2:DescribeVpcEndpoints",
+       "ec2:DescribeVpcs",
+       "ec2:DescribeVpnConcentrators",
+       "ec2:DescribeVpnGateways",
+       "ec2:ImportImage",
+       "ec2:ModifySnapshotAttribute",
+       "ec2:RunInstances",
+       "ec2:describeAddressTransfers",
+       "ec2:describeAggregateIdFormat",
+       "ec2:describeAvailabilityZones",
+       "ec2:describeBundleTasks",
+       "ec2:describeByoipCidrs",
+       "ec2:describeCapacityBlockOfferings",
+       "ec2:describeCapacityManagerDataExports",
+       "ec2:describeCapacityReservations",
+       "ec2:describeClientVpnAuthorizationRules",
+       "ec2:describeClientVpnConnections",
+       "ec2:describeClientVpnEndpoints",
+       "ec2:describeClientVpnRoutes",
+       "ec2:describeClientVpnTargetNetworks",
+       "ec2:describeCustomerGateways",
+       "ec2:describeDhcpOptions",
+       "ec2:describeElasticGpus",
+       "ec2:describeExportImageTasks",
+       "ec2:describeFastLaunchImages",
+       "ec2:describeFleetHistory",
+       "ec2:describeFleetInstances",
+       "ec2:describeFleets",
+       "ec2:describeFlowLogs",
+       "ec2:describeFpgaImageAttribute",
+       "ec2:describeHostReservationOfferings",
+       "ec2:describeHostReservations",
+       "ec2:describeIdFormat",
+       "ec2:describeIdentityIdFormat",
+       "ec2:describeInstanceConnectEndpoints",
+       "ec2:describeInstanceEventNotificationAttributes",
+       "ec2:describeIpamByoasn",
+       "ec2:describeIpamExternalResourceVerificationTokens",
+       "ec2:describeIpamPools",
+       "ec2:describeIpamResourceDiscoveries",
+       "ec2:describeIpamResourceDiscoveryAssociations",
+       "ec2:describeIpamScopes",
+       "ec2:describeIpams",
+       "ec2:describeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+       "ec2:describeLocalGatewayVirtualInterfaceGroups",
+       "ec2:describeLocalGatewayVirtualInterfaces",
+       "ec2:describeMovingAddresses",
+       "ec2:describeNatGateways",
+       "ec2:describeNetworkAcls",
+       "ec2:describeOutpostLags",
+       "ec2:describePlacementGroups",
+       "ec2:describePrefixLists",
+       "ec2:describePrincipalIdFormat",
+       "ec2:describePublicIpv4Pools",
+       "ec2:describeReplaceRootVolumeTasks",
+       "ec2:describeReservedInstances",
+       "ec2:describeReservedInstancesListings",
+       "ec2:describeReservedInstancesModifications",
+       "ec2:describeReservedInstancesOfferings",
+       "ec2:describeRouteServerEndpoints",
+       "ec2:describeRouteServerPeers",
+       "ec2:describeRouteServers",
+       "ec2:describeScheduledInstanceAvailability",
+       "ec2:describeScheduledInstances",
+       "ec2:describeServiceLinkVirtualInterfaces",
+       "ec2:describeSnapshotAttribute",
+       "ec2:describeSpotDatafeedSubscription",
+       "ec2:describeSpotFleetRequestHistory",
+       "ec2:describeStoreImageTasks",
+       "ec2:describeTrafficMirrorFilterRules",
+       "ec2:describeTrafficMirrorFilters",
+       "ec2:describeTrafficMirrorSessions",
+       "ec2:describeTrafficMirrorTargets",
+       "ec2:describeVerifiedAccessInstanceLoggingConfigurations",
+       "ec2:describeVolumeAttribute",
+       "ec2:describeVolumeStatus",
+       "ec2:describeVolumesModifications",
+       "ec2:describeVpcBlockPublicAccessExclusions",
+       "ec2:describeVpcClassicLinkDnsSupport",
+       "ec2:describeVpcEndpointAssociations",
+       "ec2:describeVpcEndpointConnectionNotifications",
+       "ec2:describeVpcEndpointConnections",
+       "ec2:describeVpcEndpointServiceConfigurations",
+       "ec2:describeVpcEndpointServicePermissions",
+       "ec2:describeVpcEndpointServices",
+       "ec2:describeVpcPeeringConnections",
+       "ec2:describeVpnConnections"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSServiceRoleForSMS/stmt5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iot:CreatePolicyVersion"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSIoTDeviceDefenderReplaceDefaultPolicyMitigationAction/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudwatch:PutMetricData",
+       "cloudwatch:SetAlarmState",
+       "dynamodb:PutItem",
+       "es:ESHttpPut",
+       "firehose:PutRecord",
+       "iot:Publish",
+       "kinesis:PutRecord",
+       "s3:PutObject",
+       "sns:Publish",
+       "sqs:SendMessage",
+       "sqs:SendMessageBatch"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSIoTRuleActions/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ }
+]

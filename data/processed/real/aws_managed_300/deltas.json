@@ -1,0 +1,1827 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSCodeStarFullAccess/CodeStarEC2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "sns:GetTopicAttributes",
+       "sns:ListTopics"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonAthenaFullAccess/stmt5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:ListGroups",
+       "iam:ListRoles",
+       "iam:ListUsers",
+       "kms:CreateAlias",
+       "kms:CreateKey",
+       "kms:DeleteAlias",
+       "kms:DescribeKey",
+       "kms:GenerateRandom",
+       "kms:GetKeyRotationStatus",
+       "kms:GetParametersForImport",
+       "kms:GetPublicKey",
+       "kms:ListAliases",
+       "kms:ListKeyRotations",
+       "kms:ListKeys",
+       "kms:ListKeysForService",
+       "kms:TagResource",
+       "kms:UntagResource",
+       "kms:describeCustomKeyStores",
+       "kms:getKeyPolicy",
+       "kms:listGrants",
+       "kms:listKeyPolicies",
+       "kms:listResourceTags",
+       "kms:listRetirableGrants"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSKeyManagementServicePowerUser/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "ReadOnlyAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSElasticBeanstalkEnhancedHealth/stmt1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "logs:CreateLogStream",
+       "logs:DescribeLogStreams",
+       "logs:PutLogEvents"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:logs:*:*:log-group:/aws/elasticbeanstalk/*:log-stream:*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSElasticBeanstalkEnhancedHealth"
+   }
+  },
+  "rule_id": "AWSElasticBeanstalkEnhancedHealth/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "dataexchange:AcceptDataGrant",
+       "dataexchange:CancelJob",
+       "dataexchange:CreateAsset",
+       "dataexchange:CreateDataGrant",
+       "dataexchange:CreateDataSet",
+       "dataexchange:CreateEventAction",
+       "dataexchange:CreateJob",
+       "dataexchange:CreateRevision",
+       "dataexchange:DeleteAsset",
+       "dataexchange:DeleteDataGrant",
+       "dataexchange:DeleteDataSet",
+       "dataexchange:DeleteEventAction",
+       "dataexchange:DeleteRevision",
+       "dataexchange:GetAsset",
+       "dataexchange:GetDataGrant",
+       "dataexchange:GetDataSet",
+       "dataexchange:GetEventAction",
+       "dataexchange:GetJob",
+       "dataexchange:GetReceivedDataGrant",
+       "dataexchange:GetRevision",
+       "dataexchange:ListDataGrants",
+       "dataexchange:ListDataSetRevisions",
+       "dataexchange:ListDataSets",
+       "dataexchange:ListEventActions",
+       "dataexchange:ListJobs",
+       "dataexchange:ListReceivedDataGrants",
+       "dataexchange:ListRevisionAssets",
+       "dataexchange:ListTagsForResource",
+       "dataexchange:PublishDataSet",
+       "dataexchange:PublishToDataGrant",
+       "dataexchange:RevokeRevision",
+       "dataexchange:SendApiAsset",
+       "dataexchange:SendDataSetNotification",
+       "dataexchange:StartJob",
+       "dataexchange:TagResource",
+       "dataexchange:UntagResource",
+       "dataexchange:UpdateAsset",
+       "dataexchange:UpdateDataSet",
+       "dataexchange:UpdateEventAction",
+       "dataexchange:UpdateRevision"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSDataExchangeFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "DataScientist/stmt1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "s3:AbortMultipartUpload",
+       "s3:DeleteObject",
+       "s3:GetAccelerateConfiguration",
+       "s3:GetAccessGrant",
+       "s3:GetAccessGrantsInstance",
+       "s3:GetAccessGrantsInstanceForPrefix",
+       "s3:GetAccessGrantsInstanceResourcePolicy",
+       "s3:GetAccessGrantsLocation",
+       "s3:GetAccessPoint",
+       "s3:GetAccessPointPolicy",
+       "s3:GetAccessPointPolicyStatus",
+       "s3:GetAccountPublicAccessBlock",
+       "s3:GetBucketAbac",
+       "s3:GetBucketAcl",
+       "s3:GetBucketCORS",
+       "s3:GetBucketLocation",
+       "s3:GetBucketLogging",
+       "s3:GetBucketMetadataTableConfiguration",
+       "s3:GetBucketNotification",
+       "s3:GetBucketObjectLockConfiguration",
+       "s3:GetBucketPolicy",
+       "s3:GetBucketPolicyStatus",
+       "s3:GetBucketPublicAccessBlock",
+       "s3:GetBucketRequestPayment",
+       "s3:GetBucketTagging",
+       "s3:GetBucketVersioning",
+       "s3:GetBucketWebsite",
+       "s3:GetBucketWebsiteConfiguration",
+       "s3:GetDataAccess",
+       "s3:GetEncryptionConfiguration",
+       "s3:GetLifecycleConfiguration",
+       "s3:GetMultiRegionAccessPoint",
+       "s3:GetMultiRegionAccessPointPolicy",
+       "s3:GetMultiRegionAccessPointPolicyStatus",
+       "s3:GetObject",
+       "s3:GetObjectAcl",
+       "s3:GetObjectAttributes",
+       "s3:GetObjectMetadata",
+       "s3:GetObjectTagging",
+       "s3:GetObjectVersion",
+       "s3:GetObjectVersionAcl",
+       "s3:GetObjectVersionAttributes",
+       "s3:GetObjectVersionForReplication",
+       "s3:GetObjectVersionTagging",
+       "s3:GetObjectVersionTorrent",
+       "s3:GetPublicAccessBlock",
+       "s3:GetReplicationConfiguration",
+       "s3:GetStorageLensGroup",
+       "s3:ListAccessGrants",
+       "s3:ListAccessGrantsInstances",
+       "s3:ListAccessGrantsLocations",
+       "s3:ListAccessPoints",
+       "s3:ListAllMyBuckets",
+       "s3:ListBucket",
+       "s3:ListBucketMultipartUploads",
+       "s3:ListBucketVersions",
+       "s3:ListCallerAccessGrants",
+       "s3:ListMultiRegionAccessPoints",
+       "s3:ListMultipartUploadParts",
+       "s3:ListObjectVersions",
+       "s3:ListObjects",
+       "s3:ListObjectsV2",
+       "s3:ListStorageLensGroups",
+       "s3:ListTagsForResource",
+       "s3:PutAccelerateConfiguration",
+       "s3:PutBucketCors",
+       "s3:PutBucketLogging",
+       "s3:PutBucketNotification",
+       "s3:PutBucketTagging",
+       "s3:PutObject",
+       "s3:ReplicateObject",
+       "s3:RestoreObject",
+       "s3:getAccessPointConfigurationForObjectLambda",
+       "s3:getAccessPointForObjectLambda",
+       "s3:getAccessPointPolicyForObjectLambda",
+       "s3:getAccessPointPolicyStatusForObjectLambda",
+       "s3:getAnalyticsConfiguration",
+       "s3:getBucketOwnershipControls",
+       "s3:getIntelligentTieringConfiguration",
+       "s3:getInventoryConfiguration",
+       "s3:getJobTagging",
+       "s3:getMetricsConfiguration",
+       "s3:getMultiRegionAccessPointRoutes",
+       "s3:getObjectLegalHold",
+       "s3:getObjectRetention",
+       "s3:getStorageLensConfiguration",
+       "s3:getStorageLensConfigurationTagging",
+       "s3:listAccessPointsForObjectLambda",
+       "s3:listBuckets",
+       "s3:listJobs",
+       "s3:listStorageLensConfigurations"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "DataScientist"
+   }
+  },
+  "rule_id": "DataScientist/stmt1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSPrivateMarketplaceRequests/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "aws-marketplace:CreatePrivateMarketplaceRequests",
+       "aws-marketplace:DescribePrivateMarketplaceRequests",
+       "aws-marketplace:ListPrivateMarketplaceRequests"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSPrivateMarketplaceRequests"
+   }
+  },
+  "rule_id": "AWSPrivateMarketplaceRequests/stmt0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "MigrationHubDMSAccessServiceRolePolicy/stmt2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "sagemaker:CreateApp",
+       "sagemaker:CreateMlflowApp",
+       "sagemaker:CreatePresignedDomainUrl",
+       "sagemaker:DeleteApp",
+       "sagemaker:DeleteMlflowApp",
+       "sagemaker:DescribeDomain",
+       "sagemaker:DescribeMlflowApp",
+       "sagemaker:DescribePartnerApp",
+       "sagemaker:DescribeUserProfile",
+       "sagemaker:ListApps",
+       "sagemaker:ListDomains",
+       "sagemaker:ListUserProfiles",
+       "sagemaker:UpdateMlflowApp",
+       "sagemaker:describeApp"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSageMakerFullAccess/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSStepFunctionsFullAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudfront:ListDistributionsByLambdaFunction"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSLambdaReplicator/CloudFrontListDistributions"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeInstances",
+       "ec2:DescribeTags",
+       "events:DescribeRule",
+       "events:ListRuleNamesByTarget",
+       "inspector:GetAssessmentTelemetry",
+       "inspector:LocalizeText",
+       "inspector:SetTagsForResource",
+       "inspector:describeAssessmentRuns",
+       "inspector:describeAssessmentTargets",
+       "inspector:describeAssessmentTemplates",
+       "inspector:describeCrossAccountAccessRole",
+       "inspector:describeResourceGroups",
+       "inspector:describeRulesPackages",
+       "inspector:getTelemetryMetadata",
+       "inspector:listAssessmentRunAgents",
+       "inspector:listAssessmentRuns",
+       "inspector:listAssessmentTargets",
+       "inspector:listAssessmentTemplates",
+       "inspector:listEventSubscriptions",
+       "inspector:listRulesPackages",
+       "inspector:listTagsForResource",
+       "sns:ListTopics"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonInspectorFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "iam:AWSServiceName",
+      "op": "eq",
+      "value": "access-analyzer.amazonaws.com"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "IAMAccessAnalyzerFullAccess/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSBackupServiceRolePolicyForBackup/stmt3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeSnapshots",
+       "ec2:DescribeVolumes",
+       "ec2:describeAvailabilityZones"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSBackupOperatorAccess/stmt4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "autoscaling:DescribeAutoScalingGroups"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "CloudwatchApplicationInsightsServiceLinkedRolePolicy/stmt8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSIoTDeviceDefenderAddThingsToThingGroupMitigationAction/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSDeepLensServiceRolePolicy/DeepLensIAMLambdaPassRoleAccess",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:PassRole"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:iam::*:role/AWSDeepLens*",
+       "arn:aws:iam::*:role/service-role/AWSDeepLens*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "iam:PassedToService",
+      "op": "eq",
+      "value": "lambda.amazonaws.com"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSDeepLensServiceRolePolicy"
+   }
+  },
+  "rule_id": "AWSDeepLensServiceRolePolicy/DeepLensIAMLambdaPassRoleAccess",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSDirectConnectFullAccess/stmt0",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSDirectConnectFullAccess"
+   }
+  },
+  "rule_id": "AWSDirectConnectFullAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AmazonKinesisAnalyticsFullAccess/stmt2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudwatch:PutMetricData",
+       "ds:CreateComputer",
+       "ds:DescribeDirectories",
+       "ec2:DescribeInstanceStatus",
+       "ec2messages:AcknowledgeMessage",
+       "ec2messages:DeleteMessage",
+       "ec2messages:FailMessage",
+       "ec2messages:GetEndpoint",
+       "ec2messages:GetMessages",
+       "ec2messages:SendReply",
+       "logs:AssociateKmsKey",
+       "logs:CallWithBearerToken",
+       "logs:CreateDelivery",
+       "logs:CreateLogDelivery",
+       "logs:CreateLogGroup",
+       "logs:CreateLogStream",
+       "logs:DeleteDataProtectionPolicy",
+       "logs:DeleteIntegration",
+       "logs:DeleteLogDelivery",
+       "logs:DeleteLogGroup",
+       "logs:DeleteLogStream",
+       "logs:DeleteRetentionPolicy",
+       "logs:DeleteSubscriptionFilter",
+       "logs:DescribeLogGroups",
+       "logs:DescribeLogStreams",
+       "logs:DescribeMetricFilters",
+       "logs:DescribeQueryDefinitions",
+       "logs:DescribeResourcePolicies",
+       "logs:DisassociateKmsKey",
+       "logs:FilterLogEvents",
+       "logs:GetDataProtectionPolicy",
+       "logs:GetIntegration",
+       "logs:GetLogDelivery",
+       "logs:GetLogEvents",
+       "logs:GetLogGroupFields",
+       "logs:GetLogRecord",
+       "logs:GetQueryResults",
+       "logs:GetTransformer",
+       "logs:Link",
+       "logs:ListAggregateLogGroupSummaries",
+       "logs:ListAnomalies",
+       "logs:ListEntitiesForLogGroup",
+       "logs:ListIntegrations",
+       "logs:ListLogAnomalyDetectors",
+       "logs:ListLogDeliveries",
+       "logs:ListLogGroups",
+       "logs:ListLogGroupsForEntity",
+       "logs:ListLogGroupsForQuery",
+       "logs:ListScheduledQueries",
+       "logs:ListSourcesForS3TableIntegration",
+       "logs:ListTagsForResource",
+       "logs:ListTagsLogGroup",
+       "logs:PutDataProtectionPolicy",
+       "logs:PutDeliveryDestination",
+       "logs:PutDeliverySource",
+       "logs:PutIndexPolicy",
+       "logs:PutIntegration",
+       "logs:PutLogEvents",
+       "logs:PutMetricFilter",
+       "logs:PutResourcePolicy",
+       "logs:PutRetentionPolicy",
+       "logs:PutSubscriptionFilter",
+       "logs:StartLiveTail",
+       "logs:StartQuery",
+       "logs:StopLiveTail",
+       "logs:StopQuery",
+       "logs:TagLogGroup",
+       "logs:TagResource",
+       "logs:TestMetricFilter",
+       "logs:UntagLogGroup",
+       "logs:UntagResource",
+       "logs:UpdateLogDelivery",
+       "logs:describeAccountPolicies",
+       "logs:describeDeliveries",
+       "logs:describeDeliveryDestinations",
+       "logs:describeDeliverySources",
+       "logs:describeDestinations",
+       "logs:describeExportTasks",
+       "logs:describeFieldIndexes",
+       "logs:describeIndexPolicies",
+       "logs:describeQueries",
+       "logs:describeSubscriptionFilters",
+       "logs:getDelivery",
+       "logs:getDeliveryDestination",
+       "logs:getDeliveryDestinationPolicy",
+       "logs:getDeliverySource",
+       "logs:getLogAnomalyDetector",
+       "ssm:AddTagsToResource",
+       "ssm:AssociateOpsItemRelatedItem",
+       "ssm:CancelCommand",
+       "ssm:CreateActivation",
+       "ssm:CreateAssociation",
+       "ssm:CreateCloudConnector",
+       "ssm:CreateDocument",
+       "ssm:CreateOpsItem",
+       "ssm:CreateOpsMetadata",
+       "ssm:CreateResourceDataSync",
+       "ssm:DeleteActivation",
+       "ssm:DeleteAssociation",
+       "ssm:DeleteCloudConnector",
+       "ssm:DeleteDocument",
+       "ssm:DeleteOpsItem",
+       "ssm:DeleteOpsMetadata",
+       "ssm:DeleteParameter",
+       "ssm:DeleteParameters",
+       "ssm:DeleteResourceDataSync",
+       "ssm:DeleteResourcePolicy",
+       "ssm:DeregisterManagedInstance",
+       "ssm:DescribeAutomationExecutions",
+       "ssm:DescribeDocument",
+       "ssm:DescribeDocumentParameters",
+       "ssm:DescribeInstanceInformation",
+       "ssm:DescribeInstanceProperties",
+       "ssm:DescribeOpsItems",
+       "ssm:GetAutomationExecution",
+       "ssm:GetCalendarState",
+       "ssm:GetCloudConnector",
+       "ssm:GetCommandInvocation",
+       "ssm:GetDocument",
+       "ssm:GetInventory",
+       "ssm:GetManifest",
+       "ssm:GetOpsItem",
+       "ssm:GetParameter",
+       "ssm:GetParametersByPath",
+       "ssm:ListAssociations",
+       "ssm:ListCloudConnectors",
+       "ssm:ListCommandInvocations",
+       "ssm:ListCommands",
+       "ssm:ListDocumentMetadataHistory",
+       "ssm:ListDocumentVersions",
+       "ssm:ListDocuments",
+       "ssm:ListInstanceAssociations",
+       "ssm:ListInventoryEntries",
+       "ssm:ListOpsMetadata",
+       "ssm:ListResourceDataSync",
+       "ssm:PutComplianceItems",
+       "ssm:PutConfigurePackageResult",
+       "ssm:PutInventory",
+       "ssm:PutParameter",
+       "ssm:PutResourcePolicy",
+       "ssm:RegisterManagedInstance",
+       "ssm:RemoveTagsFromResource",
+       "ssm:RemoveTagsToResource",
+       "ssm:ResetServiceSetting",
+       "ssm:ResumeSession",
+       "ssm:SendAutomationSignal",
+       "ssm:SendCommand",
+       "ssm:StartAssociationsOnce",
+       "ssm:StartAutomationExecution",
+       "ssm:StartSession",
+       "ssm:StopAutomationExecution",
+       "ssm:TerminateSession",
+       "ssm:UpdateAssociation",
+       "ssm:UpdateAssociationStatus",
+       "ssm:UpdateCloudConnector",
+       "ssm:UpdateDocument",
+       "ssm:UpdateDocumentDefaultVersion",
+       "ssm:UpdateDocumentMetadata",
+       "ssm:UpdateInstanceAssociationStatus",
+       "ssm:UpdateInstanceInformation",
+       "ssm:UpdateManagedInstanceRole",
+       "ssm:UpdateOpsItem",
+       "ssm:UpdateServiceSetting",
+       "ssm:describeActivations",
+       "ssm:describeAssociation",
+       "ssm:describeAssociationExecutionTargets",
+       "ssm:describeAssociationExecutions",
+       "ssm:describeAutomationStepExecutions",
+       "ssm:describeAvailablePatches",
+       "ssm:describeDocumentPermission",
+       "ssm:describeEffectiveInstanceAssociations",
+       "ssm:describeEffectivePatchesForPatchBaseline",
+       "ssm:describeInstanceAssociationsStatus",
+       "ssm:describeInstancePatchStates",
+       "ssm:describeInstancePatchStatesForPatchGroup",
+       "ssm:describeInstancePatches",
+       "ssm:describeInventoryDeletions",
+       "ssm:describeMaintenanceWindowExecutionTaskInvocations",
+       "ssm:describeMaintenanceWindowExecutionTasks",
+       "ssm:describeMaintenanceWindowExecutions",
+       "ssm:describeMaintenanceWindowSchedule",
+       "ssm:describeMaintenanceWindowTargets",
+       "ssm:describeMaintenanceWindowTasks",
+       "ssm:describeMaintenanceWindows",
+       "ssm:describeMaintenanceWindowsForTarget",
+       "ssm:describeParameters",
+       "ssm:describePatchBaselines",
+       "ssm:describePatchGroupState",
+       "ssm:describePatchGroups",
+       "ssm:describePatchProperties",
+       "ssm:describeSessions",
+       "ssm:getConnectionStatus",
+       "ssm:getDefaultPatchBaseline",
+       "ssm:getDeployablePatchSnapshotForInstance",
+       "ssm:getInventorySchema",
+       "ssm:getMaintenanceWindow",
+       "ssm:getMaintenanceWindowExecution",
+       "ssm:getMaintenanceWindowExecutionTask",
+       "ssm:getMaintenanceWindowExecutionTaskInvocation",
+       "ssm:getMaintenanceWindowTask",
+       "ssm:getOpsMetadata",
+       "ssm:getOpsSummary",
+       "ssm:getParameterHistory",
+       "ssm:getParameters",
+       "ssm:getPatchBaseline",
+       "ssm:getPatchBaselineForPatchGroup",
+       "ssm:getResourcePolicies",
+       "ssm:getServiceSetting",
+       "ssm:labelParameterVersion",
+       "ssm:listAssociationVersions",
+       "ssm:listComplianceItems",
+       "ssm:listComplianceSummaries",
+       "ssm:listNodes",
+       "ssm:listNodesSummary",
+       "ssm:listOpsItemEvents",
+       "ssm:listOpsItemRelatedItems",
+       "ssm:listResourceComplianceSummaries",
+       "ssm:listTagsForResource"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSSMFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "LightsailExportAccess/stmt1",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "LightsailExportAccess"
+   }
+  },
+  "rule_id": "LightsailExportAccess/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "s3:GetObject"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:s3:::s3-analytics-export-shared-*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "QuickSightAccessForS3StorageManagementAnalyticsReadOnly/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "s3:AbortMultipartUpload",
+       "s3:DeleteObject",
+       "s3:GetObject",
+       "s3:PutObject"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:s3:::*SageMaker*",
+       "arn:aws:s3:::*Sagemaker*",
+       "arn:aws:s3:::*sagemaker*",
+       "arn:aws:s3:::*aws-glue*"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonSageMakerFullAccess/stmt8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AmazonEKSWorkerNodePolicy/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeInstances"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "CloudwatchApplicationInsightsServiceLinkedRolePolicy/stmt14"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeRouteTables",
+       "ec2:DescribeSecurityGroups",
+       "ec2:DescribeSubnets",
+       "ec2:DescribeVpcEndpoints",
+       "ec2:DescribeVpcs"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonAppStreamFullAccess/stmt3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CloudwatchApplicationInsightsServiceLinkedRolePolicy/stmt3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudFormation:CreateStack",
+       "cloudFormation:DeleteStack",
+       "cloudFormation:UpdateStack"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "CloudwatchApplicationInsightsServiceLinkedRolePolicy"
+   }
+  },
+  "rule_id": "CloudwatchApplicationInsightsServiceLinkedRolePolicy/stmt3",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "elastictranscoder:ReadJob",
+       "elastictranscoder:listJobsByPipeline",
+       "elastictranscoder:listJobsByStatus",
+       "elastictranscoder:listPipelines",
+       "elastictranscoder:listPresets",
+       "elastictranscoder:readPipeline",
+       "elastictranscoder:readPreset",
+       "iam:ListRoles",
+       "s3:ListAllMyBuckets",
+       "s3:ListBucket",
+       "sns:ListTopics"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonElasticTranscoder_FullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CloudWatchFullAccess/stmt1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     },
+     {
+      "attr": "resource",
+      "op": "in",
+      "value": [
+       "arn:aws:iam::*:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents*"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "CloudWatchFullAccess",
+    "approx": true
+   }
+  },
+  "rule_id": "CloudWatchFullAccess/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "iam:CreateServiceLinkedRole"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSCloud9Administrator/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSElasticBeanstalkFullAccess/stmt2",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "NeptuneConsoleFullAccess/stmt1",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "NeptuneConsoleFullAccess"
+   }
+  },
+  "rule_id": "NeptuneConsoleFullAccess/stmt1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:DescribeInstances"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSOpsWorksRegisterCLI_EC2/stmt1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSServiceRoleForSMS/stmt0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSLicenseManagerServiceRolePolicy/S3BucketPermissions2",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CloudwatchApplicationInsightsServiceLinkedRolePolicy/stmt5",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSElasticLoadBalancingClassicServiceRolePolicy/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ec2:AssignIpv6Addresses",
+       "ec2:AssignPrivateIpAddresses",
+       "ec2:AssociateAddress",
+       "ec2:AttachNetworkInterface",
+       "ec2:AuthorizeSecurityGroupIngress",
+       "ec2:CreateNetworkInterface",
+       "ec2:CreateSecurityGroup",
+       "ec2:DeleteNetworkInterface",
+       "ec2:DescribeAccountAttributes",
+       "ec2:DescribeAddresses",
+       "ec2:DescribeClassicLinkInstances",
+       "ec2:DescribeInstances",
+       "ec2:DescribeInternetGateways",
+       "ec2:DescribeSecurityGroups",
+       "ec2:DescribeSubnets",
+       "ec2:DescribeVpcClassicLink",
+       "ec2:DescribeVpcs",
+       "ec2:DetachNetworkInterface",
+       "ec2:DisassociateAddress",
+       "ec2:ModifyNetworkInterfaceAttribute",
+       "ec2:UnassignIpv6Addresses"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSElasticLoadBalancingClassicServiceRolePolicy"
+   }
+  },
+  "rule_id": "AWSElasticLoadBalancingClassicServiceRolePolicy/stmt0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "LexChannelPolicy/stmt0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "lex:PostText"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "LexChannelPolicy"
+   }
+  },
+  "rule_id": "LexChannelPolicy/stmt0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AWSAppMeshReadOnly/stmt0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AutoScalingConsoleFullAccess/stmt4",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSDataExchangeProviderFullAccess/stmt2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "s3:GetObject"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSDataExchangeProviderFullAccess"
+   }
+  },
+  "rule_id": "AWSDataExchangeProviderFullAccess/stmt2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "codeguru-reviewer:AssociateRepository",
+       "codeguru-reviewer:DescribeCodeReview",
+       "codeguru-reviewer:DescribeRepositoryAssociation",
+       "codeguru-reviewer:DisassociateRepository",
+       "codeguru-reviewer:ListCodeReviews",
+       "codeguru-reviewer:ListRecommendations",
+       "codeguru-reviewer:ListRepositoryAssociations",
+       "codeguru-reviewer:UntagResource"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonCodeGuruReviewerFullAccess/AmazonCodeGuruReviewerFullAccess"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "ram:AcceptResourceShareInvitation",
+       "ram:GetResourceShareInvitations"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSLicenseManagerMemberAccountRolePolicy/RAMPermissions"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AWSXrayFullAccess/stmt0",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "aws-iam",
+    "policy": "AWSXrayFullAccess"
+   }
+  },
+  "rule_id": "AWSXrayFullAccess/stmt0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "transcribe:ListTagsForResource",
+       "transcribe:StartMedicalStreamTranscription",
+       "transcribe:StartStreamTranscription",
+       "transcribe:StartStreamTranscriptionWebSocket",
+       "transcribe:describeLanguageModel",
+       "transcribe:getCallAnalyticsCategory",
+       "transcribe:getCallAnalyticsJob",
+       "transcribe:getMedicalTranscriptionJob",
+       "transcribe:getMedicalVocabulary",
+       "transcribe:getTranscriptionJob",
+       "transcribe:getVocabulary",
+       "transcribe:getVocabularyFilter",
+       "transcribe:listCallAnalyticsCategories",
+       "transcribe:listCallAnalyticsJobs",
+       "transcribe:listLanguageModels",
+       "transcribe:listMedicalTranscriptionJobs",
+       "transcribe:listMedicalVocabularies",
+       "transcribe:listTranscriptionJobs",
+       "transcribe:listVocabularies",
+       "transcribe:listVocabularyFilters"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonTranscribeFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "discovery:DescribeAgents",
+       "discovery:DescribeConfigurations",
+       "discovery:DescribeContinuousExports",
+       "discovery:DescribeExportConfigurations",
+       "discovery:DescribeExportTasks",
+       "discovery:DescribeImportTasks",
+       "discovery:DescribeTags",
+       "discovery:GetDiscoverySummary",
+       "discovery:ListConfigurations",
+       "mgh:AssociateCreatedArtifact",
+       "mgh:AssociateDiscoveredResource",
+       "mgh:CreateProgressUpdateStream",
+       "mgh:DescribeApplicationState",
+       "mgh:DescribeMigrationTask",
+       "mgh:DisassociateCreatedArtifact",
+       "mgh:DisassociateDiscoveredResource",
+       "mgh:GetHomeRegion",
+       "mgh:ImportMigrationTask",
+       "mgh:ListCreatedArtifacts",
+       "mgh:ListDiscoveredResources",
+       "mgh:ListMigrationTasks",
+       "mgh:NotifyApplicationState",
+       "mgh:NotifyMigrationTaskState",
+       "mgh:PutResourceAttributes"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AWSApplicationDiscoveryServiceFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "connect:AdminGetEmergencyAccessToken",
+       "connect:AssociatePhoneNumberContactFlow",
+       "connect:AssociateQueueQuickConnects",
+       "connect:AssociateRoutingProfileQueues",
+       "connect:AssociateUserProficiencies",
+       "connect:BatchGetFlowAssociation",
+       "connect:BatchPutContact",
+       "connect:ClaimPhoneNumber",
+       "connect:CreateAgentStatus",
+       "connect:CreateAuthenticationProfile",
+       "connect:CreateHoursOfOperation",
+       "connect:CreateHoursOfOperationOverride",
+       "connect:CreateInstance",
+       "connect:CreateParticipant",
+       "connect:CreatePersistentContactAssociation",
+       "connect:CreatePredefinedAttribute",
+       "connect:CreatePrompt",
+       "connect:CreateQueue",
+       "connect:CreateQuickConnect",
+       "connect:CreateRoutingProfile",
+       "connect:CreateSecurityProfile",
+       "connect:CreateTrafficDistributionGroup",
+       "connect:DeleteHoursOfOperation",
+       "connect:DeleteHoursOfOperationOverride",
+       "connect:DeleteInstance",
+       "connect:DeletePredefinedAttribute",
+       "connect:DeletePrompt",
+       "connect:DeleteQueue",
+       "connect:DeleteQuickConnect",
+       "connect:DeleteRoutingProfile",
+       "connect:DeleteSecurityProfile",
+       "connect:DeleteTrafficDistributionGroup",
+       "connect:DescribeAgentStatus",
+       "connect:DescribeAuthenticationProfile",
+       "connect:DescribeContactFlow",
+       "connect:DescribeContactFlowModule",
+       "connect:DescribeContactFlowModuleAlias",
+       "connect:DescribeDataTable",
+       "connect:DescribeEmailAddress",
+       "connect:DescribeEvaluationForm",
+       "connect:DescribeHoursOfOperation",
+       "connect:DescribeHoursOfOperationOverride",
+       "connect:DescribeInstance",
+       "connect:DescribeInstanceStorageConfig",
+       "connect:DescribeNotification",
+       "connect:DescribePhoneNumber",
+       "connect:DescribePredefinedAttribute",
+       "connect:DescribePrompt",
+       "connect:DescribeQueue",
+       "connect:DescribeQuickConnect",
+       "connect:DescribeRoutingProfile",
+       "connect:DescribeRule",
+       "connect:DescribeSecurityProfile",
+       "connect:DescribeTrafficDistributionGroup",
+       "connect:DescribeUserHierarchyGroup",
+       "connect:DescribeView",
+       "connect:DescribeWorkspace",
+       "connect:DisassociatePhoneNumberContactFlow",
+       "connect:DisassociateQueueQuickConnects",
+       "connect:DisassociateRoutingProfileQueues",
+       "connect:DisassociateUserProficiencies",
+       "connect:GetContactAttributes",
+       "connect:GetCurrentUserData",
+       "connect:GetFederationToken",
+       "connect:GetFederationTokens",
+       "connect:GetMetricDataV2",
+       "connect:GetPromptFile",
+       "connect:GetTaskTemplate",
+       "connect:GetTrafficDistribution",
+       "connect:ImportPhoneNumber",
+       "connect:ListAgentStatuses",
+       "connect:ListApprovedOrigins",
+       "connect:ListAuthenticationProfiles",
+       "connect:ListBots",
+       "connect:ListContactFlowModuleAliases",
+       "connect:ListContactFlowModuleVersions",
+       "connect:ListContactFlowModules",
+       "connect:ListContactFlowVersions",
+       "connect:ListContactFlows",
+       "connect:ListContactReferences",
+       "connect:ListDataTableAttributes",
+       "connect:ListDataTables",
+       "connect:ListEvaluationForms",
+       "connect:ListHoursOfOperationOverrides",
+       "connect:ListHoursOfOperations",
+       "connect:ListInstanceAttributes",
+       "connect:ListInstanceStorageConfigs",
+       "connect:ListInstances",
+       "connect:ListIntegrationAssociations",
+       "connect:ListLambdaFunctions",
+       "connect:ListLexBots",
+       "connect:ListNotifications",
+       "connect:ListPhoneNumbers",
+       "connect:ListPhoneNumbersV2",
+       "connect:ListPredefinedAttributes",
+       "connect:ListPrompts",
+       "connect:ListQueueEmailAddresses",
+       "connect:ListQueueQuickConnects",
+       "connect:ListQueues",
+       "connect:ListQuickConnects",
+       "connect:ListRoutingProfileManualAssignmentQueues",
+       "connect:ListRoutingProfileQueues",
+       "connect:ListRules",
+       "connect:ListSecurityKeys",
+       "connect:ListSecurityProfileApplications",
+       "connect:ListSecurityProfileFlowModules",
+       "connect:ListSecurityProfilePermissions",
+       "connect:ListTagsForResource",
+       "connect:ListTaskTemplates",
+       "connect:ListTrafficDistributionGroups",
+       "connect:ListUserHierarchyGroups",
+       "connect:ListUserProficiencies",
+       "connect:ListWorkspaceMedia",
+       "connect:ListWorkspacePages",
+       "connect:ListWorkspaces",
+       "connect:ReleasePhoneNumber",
+       "connect:ReplicateInstance",
+       "connect:SearchAvailablePhoneNumbers",
+       "connect:SearchContacts",
+       "connect:SearchWorkspaceAssociations",
+       "connect:SendOutboundChatMessage",
+       "connect:SendOutboundEmail",
+       "connect:SendOutboundWebNotification",
+       "connect:StopContact",
+       "connect:TagResource",
+       "connect:UntagResource",
+       "connect:UpdateAgentStatus",
+       "connect:UpdateAuthenticationProfile",
+       "connect:UpdateContactRoutingData",
+       "connect:UpdateContactSchedule",
+       "connect:UpdateHoursOfOperation",
+       "connect:UpdateHoursOfOperationOverride",
+       "connect:UpdatePhoneNumber",
+       "connect:UpdatePredefinedAttribute",
+       "connect:UpdatePrompt",
+       "connect:UpdateSecurityProfile",
+       "connect:UpdateTrafficDistribution",
+       "connect:describeContact",
+       "connect:describeInstanceAttribute",
+       "connect:describeUser",
+       "connect:describeUserHierarchyStructure",
+       "connect:getCurrentMetricData",
+       "connect:getMetricData",
+       "connect:listContactEvaluations",
+       "connect:listEvaluationFormVersions",
+       "connect:listRoutingProfiles",
+       "connect:listSecurityProfiles",
+       "connect:listUsers",
+       "connect:listViewVersions",
+       "connect:listViews",
+       "connect:searchQueues",
+       "connect:searchRoutingProfiles",
+       "connect:searchUsers",
+       "ds:AuthorizeApplication",
+       "ds:CreateAlias",
+       "ds:CreateIdentityPoolDirectory",
+       "ds:DeleteDirectory",
+       "ds:DescribeDirectories",
+       "ds:UnauthorizeApplication",
+       "firehose:DescribeDeliveryStream",
+       "firehose:ListDeliveryStreams",
+       "kinesis:DescribeStream",
+       "kinesis:ListStreams",
+       "kms:CreateGrant",
+       "kms:DescribeKey",
+       "kms:ListAliases",
+       "lex:GetBots",
+       "logs:CreateLogGroup",
+       "s3:CreateBucket",
+       "s3:GetBucketLocation",
+       "s3:ListAllMyBuckets"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonConnectFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action",
+      "op": "in",
+      "value": [
+       "cloudwatch:DescribeAlarms",
+       "cloudwatch:DescribeAlarmsForMetric",
+       "cloudwatch:GetMetricStatistics",
+       "kms:DescribeKey",
+       "kms:ListAliases",
+       "lambda:GetPolicy",
+       "lambda:ListFunctions",
+       "lex:BuildBotLocale",
+       "lex:CreateBot",
+       "lex:CreateBotAlias",
+       "lex:CreateBotLocale",
+       "lex:CreateBotVersion",
+       "lex:CreateCustomVocabulary",
+       "lex:CreateExport",
+       "lex:CreateIntent",
+       "lex:CreateResourcePolicy",
+       "lex:CreateSlot",
+       "lex:CreateSlotType",
+       "lex:CreateUploadUrl",
+       "lex:DeleteBot",
+       "lex:DeleteBotAlias",
+       "lex:DeleteBotChannel",
+       "lex:DeleteBotLocale",
+       "lex:DeleteBotVersion",
+       "lex:DeleteCustomVocabulary",
+       "lex:DeleteIntent",
+       "lex:DeleteResourcePolicy",
+       "lex:DeleteSession",
+       "lex:DeleteSlot",
+       "lex:DeleteSlotType",
+       "lex:DescribeBot",
+       "lex:DescribeBotAlias",
+       "lex:DescribeBotChannel",
+       "lex:DescribeBotLocale",
+       "lex:DescribeBotRecommendation",
+       "lex:DescribeBotReplica",
+       "lex:DescribeBotVersion",
+       "lex:DescribeCustomVocabulary",
+       "lex:DescribeExport",
+       "lex:DescribeImport",
+       "lex:DescribeIntent",
+       "lex:DescribeResourcePolicy",
+       "lex:DescribeSlot",
+       "lex:DescribeSlotType",
+       "lex:GetBot",
+       "lex:GetBotAlias",
+       "lex:GetBotAliases",
+       "lex:GetBots",
+       "lex:GetIntent",
+       "lex:GetIntents",
+       "lex:GetSession",
+       "lex:GetSlotType",
+       "lex:GetSlotTypes",
+       "lex:GetUtterancesView",
+       "lex:ListBotAliasReplicas",
+       "lex:ListBotAliases",
+       "lex:ListBotChannels",
+       "lex:ListBotLocales",
+       "lex:ListBotRecommendations",
+       "lex:ListBotReplicas",
+       "lex:ListBotVersionReplicas",
+       "lex:ListBotVersions",
+       "lex:ListBots",
+       "lex:ListBuiltInIntents",
+       "lex:ListBuiltInSlotTypes",
+       "lex:ListCustomVocabularyItems",
+       "lex:ListExports",
+       "lex:ListImports",
+       "lex:ListIntents",
+       "lex:ListRecommendedIntents",
+       "lex:ListSlotTypes",
+       "lex:ListSlots",
+       "lex:ListTagsForResource",
+       "lex:PostContent",
+       "lex:PostText",
+       "lex:PutSession",
+       "lex:RecognizeText",
+       "lex:RecognizeUtterance",
+       "lex:SearchAssociatedTranscripts",
+       "lex:StartConversation",
+       "lex:StartImport",
+       "lex:TagResource",
+       "lex:UntagResource",
+       "lex:UpdateBot",
+       "lex:UpdateBotAlias",
+       "lex:UpdateBotLocale",
+       "lex:UpdateCustomVocabulary",
+       "lex:UpdateExport",
+       "lex:UpdateIntent",
+       "lex:UpdateResourcePolicy",
+       "lex:UpdateSlot",
+       "lex:UpdateSlotType",
+       "lex:describeCustomVocabularyMetadata",
+       "lex:getBotChannelAssociation",
+       "lex:getBotChannelAssociations",
+       "lex:getBotVersions",
+       "lex:getBuiltinIntent",
+       "lex:getBuiltinIntents",
+       "lex:getBuiltinSlotTypes",
+       "lex:getIntentVersions",
+       "lex:getSlotTypeVersions",
+       "polly:DescribeVoices",
+       "polly:SynthesizeSpeech"
+      ]
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AmazonLexFullAccess/stmt0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ }
+]

@@ -1,0 +1,27 @@
+context PolicyCtx_v40
+extends PolicyCtx_v39
+constants app_r173__v40
+axioms
+  @def_app_r173__v40 app_r173__v40 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_11, resourceType_7, resourceType_0} ∧ action(q) = action_8 ∧ project(q) = project_10 ∧ shift(q) ∈ {shift_10, shift_0, shift_9} | q}
+  theorem @thm_r173__v40_r482 app_r173__v40 ∩ app_r482 = ∅
+  theorem @thm_r173__v40_r450 app_r173__v40 ∩ app_r450 = ∅
+  theorem @thm_r173__v40_r985 app_r173__v40 ∩ app_r985 = ∅
+  theorem @thm_r173__v40_r563 app_r173__v40 ∩ app_r563 = ∅
+  theorem @thm_r173__v40_r671 app_r173__v40 ∩ app_r671 = ∅
+  theorem @thm_r173__v40_r906 app_r173__v40 ∩ app_r906 = ∅
+  theorem @thm_r173__v40_r405 app_r173__v40 ∩ app_r405 = ∅
+  theorem @thm_r173__v40_r455 app_r173__v40 ∩ app_r455 = ∅
+  theorem @thm_r173__v40_r81 app_r173__v40 ∩ app_r81 = ∅
+  theorem @thm_r173__v40_r487 app_r173__v40 ∩ app_r487 = ∅
+  theorem @thm_r173__v40_r149__v10 app_r173__v40 ∩ app_r149__v10 = ∅
+  theorem @thm_r173__v40_r41 app_r173__v40 ∩ app_r41 = ∅
+  theorem @thm_r173__v40_r615 app_r173__v40 ∩ app_r615 = ∅
+  theorem @thm_r173__v40_r501 app_r173__v40 ∩ app_r501 = ∅
+  theorem @thm_r173__v40_r88 app_r173__v40 ∩ app_r88 = ∅
+  theorem @thm_r173__v40_r965 app_r173__v40 ∩ app_r965 = ∅
+  theorem @thm_r173__v40_r1 app_r173__v40 ∩ app_r1 = ∅
+  theorem @thm_r173__v40_r920 app_r173__v40 ∩ app_r920 = ∅
+  theorem @thm_r173__v40_r215 app_r173__v40 ∩ app_r215 = ∅
+  theorem @thm_r173__v40_r983 app_r173__v40 ∩ app_r983 = ∅
+  theorem @thm_r173__v40_r742 app_r173__v40 ∩ app_r742 = ∅
+end

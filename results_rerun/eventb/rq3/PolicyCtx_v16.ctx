@@ -1,0 +1,17 @@
+context PolicyCtx_v16
+extends PolicyCtx_v15
+constants app_r1005
+axioms
+  @def_app_r1005 app_r1005 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_1 ∧ action(q) = action_3 ∧ device(q) = device_11 ∧ shift(q) = shift_0 | q}
+  theorem @thm_r1005_r8 app_r1005 ∩ app_r8 = ∅
+  theorem @thm_r1005_r71 app_r1005 ∩ app_r71 = ∅
+  theorem @thm_r1005_r717 app_r1005 ∩ app_r717 = ∅
+  theorem @thm_r1005_r483 app_r1005 ∩ app_r483 = ∅
+  theorem @thm_r1005_r296 app_r1005 ∩ app_r296 = ∅
+  theorem @thm_r1005_r297 app_r1005 ∩ app_r297 = ∅
+  theorem @thm_r1005_r57__v7 app_r1005 ∩ app_r57__v7 = ∅
+  theorem @thm_r1005_r517 app_r1005 ∩ app_r517 = ∅
+  theorem @thm_r1005_r361 app_r1005 ∩ app_r361 = ∅
+  theorem @thm_r1005_r310 app_r1005 ∩ app_r310 = ∅
+  theorem @thm_r1005_r486 app_r1005 ∩ app_r486 = ∅
+end

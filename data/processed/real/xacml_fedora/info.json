@@ -1,0 +1,10 @@
+{
+  "name": "xacml_fedora",
+  "rules": 15,
+  "attributes": 4,
+  "combining": "deny-overrides",
+  "xacml_rules": 12,
+  "sub_rules": 15,
+  "approx_rules": 0,
+  "untranslated": []
+}

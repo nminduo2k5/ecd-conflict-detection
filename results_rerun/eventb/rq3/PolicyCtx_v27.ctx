@@ -1,0 +1,31 @@
+context PolicyCtx_v27
+extends PolicyCtx_v26
+constants app_r1011
+axioms
+  @def_app_r1011 app_r1011 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_1 ∧ action(q) ∈ {action_7, action_10, action_8} ∧ riskScore(q) ∈ 13 ‥ 31 ∧ shift(q) = shift_2 | q}
+  theorem @thm_r1011_r178 app_r1011 ∩ app_r178 = ∅
+  theorem @thm_r1011_r746 app_r1011 ∩ app_r746 = ∅
+  theorem @thm_r1011_r300 app_r1011 ∩ app_r300 = ∅
+  theorem @thm_r1011_r489 app_r1011 ∩ app_r489 = ∅
+  theorem @thm_r1011_r203 app_r1011 ∩ app_r203 = ∅
+  theorem @thm_r1011_r320 app_r1011 ∩ app_r320 = ∅
+  theorem @thm_r1011_r633 app_r1011 ∩ app_r633 = ∅
+  theorem @thm_r1011_r887 app_r1011 ∩ app_r887 = ∅
+  theorem @thm_r1011_r631 app_r1011 ∩ app_r631 = ∅
+  theorem @thm_r1011_r826 app_r1011 ∩ app_r826 = ∅
+  theorem @thm_r1011_r638 app_r1011 ∩ app_r638 = ∅
+  theorem @thm_r1011_r641 app_r1011 ∩ app_r641 = ∅
+  theorem @thm_r1011_r942 app_r1011 ∩ app_r942 = ∅
+  theorem @thm_r1011_r380 app_r1011 ∩ app_r380 = ∅
+  theorem @thm_r1011_r614 app_r1011 ∩ app_r614 = ∅
+  theorem @thm_r1011_r259 app_r1011 ∩ app_r259 = ∅
+  theorem @thm_r1011_r366 app_r1011 ∩ app_r366 = ∅
+  theorem @thm_r1011_r1 app_r1011 ∩ app_r1 = ∅
+  theorem @thm_r1011_r368 app_r1011 ∩ app_r368 = ∅
+  theorem @thm_r1011_r629 app_r1011 ∩ app_r629 = ∅
+  theorem @thm_r1011_r479 app_r1011 ∩ app_r479 = ∅
+  theorem @thm_r1011_r2 app_r1011 ∩ app_r2 = ∅
+  theorem @thm_r1011_r972 app_r1011 ∩ app_r972 = ∅
+  theorem @thm_r1011_r534 app_r1011 ∩ app_r534 = ∅
+  theorem @thm_r1011_r953 app_r1011 ∩ app_r953 = ∅
+end

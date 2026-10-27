@@ -1,0 +1,5804 @@
+{
+  "name": "pluto3",
+  "version": 0,
+  "combining": "permit-overrides",
+  "attributes": {
+    "access-subject.subject-id": {
+      "type": "categorical"
+    },
+    "resource.resource-id": {
+      "type": "categorical"
+    },
+    "action.action-id": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "odu_faculty_aps#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_faculty_aps#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_faculty_aps#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_faculty_aps#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_faculty_aps#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_faculty_aps#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_faculty_aps#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_faculty_aps#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_faculty_aps#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_faculty_aps#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_faculty_aps#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_faculty_aps#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:dp9"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 11
+      }
+    },
+    {
+      "id": "odu_faculty_aps#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:annotation"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 12
+      }
+    },
+    {
+      "id": "odu_faculty_aps#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:references"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 13
+      }
+    },
+    {
+      "id": "odu_faculty_aps#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:equations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 14
+      }
+    },
+    {
+      "id": "odu_faculty_aps#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:author"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 15
+      }
+    },
+    {
+      "id": "odu_faculty_aps#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:similarsubject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 16
+      }
+    },
+    {
+      "id": "odu_faculty_aps#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:citations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_aps",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 17
+      }
+    },
+    {
+      "id": "odu_faculty_cern#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_faculty_cern#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_faculty_cern#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_faculty_cern#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_faculty_cern#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_faculty_cern#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_faculty_cern#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_faculty_cern#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_faculty_cern#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_faculty_cern#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_faculty_cern#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_faculty_cern#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:dp9"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 11
+      }
+    },
+    {
+      "id": "odu_faculty_cern#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:annotation"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 12
+      }
+    },
+    {
+      "id": "odu_faculty_cern#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:references"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 13
+      }
+    },
+    {
+      "id": "odu_faculty_cern#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:equations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 14
+      }
+    },
+    {
+      "id": "odu_faculty_cern#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:author"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 15
+      }
+    },
+    {
+      "id": "odu_faculty_cern#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:similarsubject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 16
+      }
+    },
+    {
+      "id": "odu_faculty_cern#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:citations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_cern",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 17
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:dp9"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 11
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:annotation"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 12
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:references"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 13
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:equations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 14
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:author"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 15
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:similarsubject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 16
+      }
+    },
+    {
+      "id": "odu_faculty_Emilio#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:citations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 17
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:dp9"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 11
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:annotation"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 12
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:references"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 13
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:equations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 14
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:author"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 15
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:similarsubject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 16
+      }
+    },
+    {
+      "id": "odu_faculty_NTRS-Physics#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:citations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 17
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:dp9"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 11
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:annotation"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 12
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:references"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 13
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:equations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 14
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:author"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 15
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:similarsubject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 16
+      }
+    },
+    {
+      "id": "odu_faculty_arXiv#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "faculty@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:citations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_faculty_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 17
+      }
+    },
+    {
+      "id": "odu_student_APS#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_student_APS#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_student_APS#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_student_APS#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_student_APS#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_student_APS#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_student_APS#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_student_APS#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_student_APS#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_student_APS#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_student_APS#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_student_CERN#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_student_CERN#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_student_CERN#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_student_CERN#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_student_CERN#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_student_CERN#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_student_CERN#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_student_CERN#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_student_CERN#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_student_CERN#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_student_CERN#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_student_Emilio#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_student_Emilio#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_student_Emilio#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_student_Emilio#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_student_Emilio#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_student_Emilio#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_student_Emilio#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_student_Emilio#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_student_Emilio#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_student_Emilio#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_student_Emilio#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_student_NTRS-Physics#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_student_arXiv#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_student_arXiv#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_student_arXiv#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_student_arXiv#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_student_arXiv#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_student_arXiv#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:language"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 5
+      }
+    },
+    {
+      "id": "odu_student_arXiv#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:publication"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 6
+      }
+    },
+    {
+      "id": "odu_student_arXiv#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:sets"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 7
+      }
+    },
+    {
+      "id": "odu_student_arXiv#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:rights"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 8
+      }
+    },
+    {
+      "id": "odu_student_arXiv#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:type"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 9
+      }
+    },
+    {
+      "id": "odu_student_arXiv#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "student@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:datestamp"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_student_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 10
+      }
+    },
+    {
+      "id": "odu_staff_APS#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_staff_APS#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_staff_APS#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_staff_APS#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_staff_APS#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_staff_CERN#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_staff_CERN#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_staff_CERN#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_staff_CERN#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_staff_CERN#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_staff_Emilio#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_staff_Emilio#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_staff_Emilio#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_staff_Emilio#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_staff_Emilio#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_staff_NTRS-Physics#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_staff_NTRS-Physics#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_staff_NTRS-Physics#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_staff_NTRS-Physics#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_staff_NTRS-Physics#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_staff_arXiv#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:archive"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 0
+      }
+    },
+    {
+      "id": "odu_staff_arXiv#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 1
+      }
+    },
+    {
+      "id": "odu_staff_arXiv#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:subject"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 2
+      }
+    },
+    {
+      "id": "odu_staff_arXiv#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:description"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 3
+      }
+    },
+    {
+      "id": "odu_staff_arXiv#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "staff@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:discovery"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_staff_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides",
+        "alt": 4
+      }
+    },
+    {
+      "id": "odu_guest_APS",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "guest@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "APS:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_guest_APS",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "odu_guest_CERN",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "guest@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CERN:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_guest_CERN",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "odu_guest_Emilio",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "guest@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emilio:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_guest_Emilio",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "odu_guest_NTRS-Physics",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "guest@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "NTRS-Physics:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_guest_NTRS-Physics",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "odu_guest_arXiv",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "guest@odu.edu"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "arXiv:creator"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "execute"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "odu_guest_arXiv",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "default",
+      "target": {
+        "atoms": []
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Deny",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "default",
+        "policy": "pluto3",
+        "combining": "permit-overrides"
+      }
+    }
+  ]
+}

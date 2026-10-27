@@ -1,0 +1,5301 @@
+{
+  "name": "cluster-roles",
+  "version": 0,
+  "combining": "permit-overrides",
+  "attributes": {
+    "nonResourceURL": {
+      "type": "categorical"
+    },
+    "apiGroup": {
+      "type": "categorical"
+    },
+    "resource": {
+      "type": "categorical"
+    },
+    "verb": {
+      "type": "categorical"
+    },
+    "resourceName": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "cluster-admin#0",
+      "target": {
+        "atoms": []
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "cluster-admin#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "nonResourceURL",
+            "op": "in",
+            "value": [
+              "*"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-admin#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "localsubjectaccessreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-admin#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "rbac.authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "rolebindings",
+              "roles"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/attach",
+              "pods/exec",
+              "pods/portforward",
+              "pods/proxy",
+              "secrets",
+              "services/proxy"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "serviceaccounts"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "impersonate"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods",
+              "pods/attach",
+              "pods/exec",
+              "pods/portforward",
+              "pods/proxy"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/eviction"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "configmaps",
+              "persistentvolumeclaims",
+              "replicationcontrollers",
+              "replicationcontrollers/scale",
+              "secrets",
+              "serviceaccounts",
+              "services",
+              "services/proxy"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "serviceaccounts/token"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "apps"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "daemonsets",
+              "deployments",
+              "deployments/rollback",
+              "deployments/scale",
+              "replicasets",
+              "replicasets/scale",
+              "statefulsets",
+              "statefulsets/scale"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "autoscaling"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "horizontalpodautoscalers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "batch"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "cronjobs",
+              "jobs"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "extensions"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "daemonsets",
+              "deployments",
+              "deployments/rollback",
+              "deployments/scale",
+              "ingresses",
+              "networkpolicies",
+              "replicasets",
+              "replicasets/scale",
+              "replicationcontrollers/scale"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "policy"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "poddisruptionbudgets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "networking.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "ingresses",
+              "networkpolicies"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-edit#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims",
+              "resourceclaimtemplates"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "configmaps",
+              "endpoints",
+              "persistentvolumeclaims",
+              "persistentvolumeclaims/status",
+              "pods",
+              "replicationcontrollers",
+              "replicationcontrollers/scale",
+              "serviceaccounts",
+              "services",
+              "services/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "bindings",
+              "limitranges",
+              "namespaces/status",
+              "pods/log",
+              "pods/status",
+              "replicationcontrollers/status",
+              "resourcequotas",
+              "resourcequotas/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "namespaces"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "discovery.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpointslices"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "apps"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "controllerrevisions",
+              "daemonsets",
+              "daemonsets/status",
+              "deployments",
+              "deployments/scale",
+              "deployments/status",
+              "replicasets",
+              "replicasets/scale",
+              "replicasets/status",
+              "statefulsets",
+              "statefulsets/scale",
+              "statefulsets/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "autoscaling"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "horizontalpodautoscalers",
+              "horizontalpodautoscalers/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "batch"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "cronjobs",
+              "cronjobs/status",
+              "jobs",
+              "jobs/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "extensions"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "daemonsets",
+              "daemonsets/status",
+              "deployments",
+              "deployments/scale",
+              "deployments/status",
+              "ingresses",
+              "ingresses/status",
+              "networkpolicies",
+              "replicasets",
+              "replicasets/scale",
+              "replicasets/status",
+              "replicationcontrollers/scale"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "policy"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "poddisruptionbudgets",
+              "poddisruptionbudgets/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "networking.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "ingresses",
+              "ingresses/status",
+              "networkpolicies"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:aggregate-to-view#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims",
+              "resourceclaims/status",
+              "resourceclaimtemplates"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:auth-delegator#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authentication.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "tokenreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:auth-delegator#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "subjectaccessreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:basic-user#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "selfsubjectaccessreviews",
+              "selfsubjectrulesreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:basic-user#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authentication.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "selfsubjectreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:certificatesigningrequests:nodeclient#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "certificatesigningrequests/nodeclient"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:certificatesigningrequests:selfnodeclient#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "certificatesigningrequests/selfnodeclient"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:kube-apiserver-client-approver#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "signers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "approve"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kubernetes.io/kube-apiserver-client"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:kube-apiserver-client-kubelet-approver#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "signers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "approve"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kubernetes.io/kube-apiserver-client-kubelet"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:kubelet-serving-approver#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "signers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "approve"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kubernetes.io/kubelet-serving"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:certificates.k8s.io:legacy-unknown-approver#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "signers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "approve"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kubernetes.io/legacy-unknown"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:cluster-trust-bundle-discovery#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "clustertrustbundles"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:discovery#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          },
+          {
+            "attr": "nonResourceURL",
+            "op": "in",
+            "value": [
+              "/api",
+              "/api/*",
+              "/apis",
+              "/apis/*",
+              "/healthz",
+              "/livez",
+              "/openapi",
+              "/openapi/*",
+              "/readyz",
+              "/version",
+              "/version/"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:heapster#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events",
+              "namespaces",
+              "nodes",
+              "pods"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:heapster#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "extensions"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "deployments"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-aggregator#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpoints",
+              "services"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "update"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kube-controller-manager"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "secrets",
+              "serviceaccounts"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "secrets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "delete"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "configmaps",
+              "namespaces",
+              "secrets",
+              "serviceaccounts"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "secrets",
+              "serviceaccounts"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authentication.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "tokenreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "subjectaccessreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-controller-manager#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "serviceaccounts/token"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-dns#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpoints",
+              "services"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "update",
+              "watch"
+            ]
+          },
+          {
+            "attr": "resourceName",
+            "op": "in",
+            "value": [
+              "kube-scheduler"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leasecandidates"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "deletecollection",
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "delete",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "bindings",
+              "pods/binding"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "replicationcontrollers",
+              "services"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "apps",
+              "extensions"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "replicasets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "apps"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "statefulsets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "policy"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "poddisruptionbudgets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumeclaims",
+              "persistentvolumes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authentication.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "tokenreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "subjectaccessreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "csinodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "volumeattachments"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "namespaces"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#18",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "csidrivers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#19",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "csistoragecapacities"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#20",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "deviceclasses"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#21",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#22",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#23",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/finalizers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#24",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceslices"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#25",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#26",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "devicetaintrules"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kube-scheduler#27",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims/binding"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kubelet-api-admin#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kubelet-api-admin#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "proxy"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kubelet-api-admin#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes/log",
+              "nodes/metrics",
+              "nodes/proxy",
+              "nodes/stats"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:kubelet-api-admin#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes/configz",
+              "nodes/healthz",
+              "nodes/pods"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:monitoring#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          },
+          {
+            "attr": "nonResourceURL",
+            "op": "in",
+            "value": [
+              "/flagz",
+              "/healthz",
+              "/healthz/*",
+              "/livez",
+              "/livez/*",
+              "/metrics",
+              "/metrics/slis",
+              "/readyz",
+              "/readyz/*",
+              "/statusz"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:monitoring#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes/metrics"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authentication.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "tokenreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "authorization.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "localsubjectaccessreviews",
+              "subjectaccessreviews"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "services"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "pods/eviction"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "configmaps",
+              "secrets"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumeclaims",
+              "persistentvolumes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpoints"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "certificatesigningrequests"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "coordination.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "leases"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "get",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "volumeattachments"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "serviceaccounts/token"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#18",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumeclaims/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#19",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "csidrivers"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#20",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "csinodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "get",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#21",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "node.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "runtimeclasses"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#22",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceclaims"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#23",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "resource.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "resourceslices"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "deletecollection"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#24",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "clustertrustbundles"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#25",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "serviceaccounts"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node#26",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "podcertificaterequests"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-bootstrapper#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "certificates.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "certificatesigningrequests"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-problem-detector#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-problem-detector#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes/status"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "patch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-problem-detector#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-proxier#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpoints",
+              "services"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-proxier#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "nodes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-proxier#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "networking.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "servicecidrs"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-proxier#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:node-proxier#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "discovery.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "endpointslices"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:persistent-volume-provisioner#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "delete",
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:persistent-volume-provisioner#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumeclaims"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:persistent-volume-provisioner#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "storageclasses"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:persistent-volume-provisioner#3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:persistent-volume-provisioner#4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core",
+              "events.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "events"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "create",
+              "patch",
+              "update"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:public-info-viewer#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          },
+          {
+            "attr": "nonResourceURL",
+            "op": "in",
+            "value": [
+              "/healthz",
+              "/livez",
+              "/readyz",
+              "/version",
+              "/version/"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:service-account-issuer-discovery#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get"
+            ]
+          },
+          {
+            "attr": "nonResourceURL",
+            "op": "in",
+            "value": [
+              "/.well-known/openid-configuration",
+              "/.well-known/openid-configuration/",
+              "/openid/v1/jwks",
+              "/openid/v1/jwks/"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:volume-scheduler#0",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumes"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:volume-scheduler#1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "storage.k8s.io"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "storageclasses"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    },
+    {
+      "id": "system:volume-scheduler#2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "apiGroup",
+            "op": "in",
+            "value": [
+              "core"
+            ]
+          },
+          {
+            "attr": "resource",
+            "op": "in",
+            "value": [
+              "persistentvolumeclaims"
+            ]
+          },
+          {
+            "attr": "verb",
+            "op": "in",
+            "value": [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch"
+            ]
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "k8s-rbac",
+        "kind": "ClusterRole"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="complex-demo"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable"
+        Version="1.0">
+  <Target>
+    <AnyOf><AllOf>
+      <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">record</AttributeValue>
+        <AttributeDesignator Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                             AttributeId="resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+      </Match>
+    </AllOf></AnyOf>
+  </Target>
+  <Rule RuleId="multi" Effect="Permit">
+    <Target>
+      <AnyOf>
+        <AllOf>
+          <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">doctor</AttributeValue>
+            <AttributeDesignator Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                                 AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+          </Match>
+        </AllOf>
+        <AllOf>
+          <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">nurse</AttributeValue>
+            <AttributeDesignator Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                                 AttributeId="role" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+          </Match>
+        </AllOf>
+      </AnyOf>
+    </Target>
+  </Rule>
+  <Rule RuleId="not-admin" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">administrator</AttributeValue>
+          <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id"
+                               Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                               DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="arith" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+            <AttributeSelector MustBePresent="false" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                               Path="//ak:signed/text()" DataType="http://www.w3.org/2001/XMLSchema#boolean"/>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#boolean">true</AttributeValue>
+        </Apply>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+          <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-subtract">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator AttributeId="age" Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
+                                   DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="false"/>
+            </Apply>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+              <AttributeDesignator AttributeId="min-age" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                   DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="false"/>
+            </Apply>
+          </Apply>
+          <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+  <Rule RuleId="regex" Effect="Deny">
+    <Condition>
+      <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-regexp-match">
+        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">^tmp.*</AttributeValue>
+        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+          <AttributeDesignator AttributeId="resource-id" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                               DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+        </Apply>
+      </Apply>
+    </Condition>
+  </Rule>
+</Policy>

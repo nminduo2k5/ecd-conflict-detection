@@ -1,0 +1,120 @@
+[
+  {
+    "name": "xacml_itrust",
+    "rules": 64,
+    "attributes": 3,
+    "combining": "first-applicable",
+    "xacml_rules": 64,
+    "sub_rules": 64,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_hl7",
+    "rules": 22,
+    "attributes": 9,
+    "combining": "first-applicable",
+    "xacml_rules": 19,
+    "sub_rules": 22,
+    "approx_rules": 4,
+    "untranslated": [
+      "any-of-any between two attributes"
+    ]
+  },
+  {
+    "name": "xacml_gpms",
+    "rules": 210,
+    "attributes": 42,
+    "combining": "permit-overrides",
+    "xacml_rules": 97,
+    "sub_rules": 210,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_pluto",
+    "rules": 176,
+    "attributes": 3,
+    "combining": "permit-overrides",
+    "xacml_rules": 21,
+    "sub_rules": 176,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_conference",
+    "rules": 15,
+    "attributes": 2,
+    "combining": "permit-overrides",
+    "xacml_rules": 15,
+    "sub_rules": 15,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_fedora",
+    "rules": 15,
+    "attributes": 4,
+    "combining": "deny-overrides",
+    "xacml_rules": 12,
+    "sub_rules": 15,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_kmarket",
+    "rules": 3,
+    "attributes": 4,
+    "combining": "deny-overrides",
+    "xacml_rules": 3,
+    "sub_rules": 3,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "xacml_obligation",
+    "rules": 2,
+    "attributes": 3,
+    "combining": "permit-overrides",
+    "xacml_rules": 2,
+    "sub_rules": 2,
+    "approx_rules": 0,
+    "untranslated": [
+      "string-regexp-match"
+    ]
+  },
+  {
+    "name": "xacml_simpson",
+    "rules": 4,
+    "attributes": 4,
+    "combining": "deny-overrides",
+    "xacml_rules": 4,
+    "sub_rules": 4,
+    "approx_rules": 0,
+    "untranslated": []
+  },
+  {
+    "name": "aws_managed_100",
+    "rules": 239,
+    "attributes": 15,
+    "combining": "deny-overrides",
+    "policies": 100,
+    "registry_actions": 12230,
+    "rules_with_unexpanded_patterns": 5
+  },
+  {
+    "name": "aws_managed_300",
+    "rules": 756,
+    "attributes": 25,
+    "combining": "deny-overrides",
+    "policies": 300,
+    "registry_actions": 12230,
+    "rules_with_unexpanded_patterns": 17
+  },
+  {
+    "name": "k8s_clusterroles",
+    "rules": 138,
+    "attributes": 5,
+    "combining": "permit-overrides"
+  }
+]

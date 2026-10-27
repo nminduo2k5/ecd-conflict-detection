@@ -1,0 +1,1171 @@
+[
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "DenyOtherActions"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "DenyOtherActions"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "DenyOtherActions"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AllowAllReads"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "DenyOtherActions",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "AllowAllReads"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "DenyOtherActions"
+   }
+  },
+  "rule_id": "new2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "AllowAllReads"
+   }
+  },
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "AllowAllReads",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     },
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "AllowAllReads",
+    "policy": "ObligationPolicy",
+    "combining": "permit-overrides"
+   }
+  },
+  "rule_id": "AllowAllReads",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new8",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": "new11",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new13"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new12",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": "new13",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new15",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new6"
+   }
+  },
+  "rule_id": "new10",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new16"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new19"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new18"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new11"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new24",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new25",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "AllowAllReads"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new11"
+   }
+  },
+  "rule_id": "new22",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AllowAllReads",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new3"
+   }
+  },
+  "rule_id": "new7",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new26",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "read"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new27",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new11"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new28",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new22"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new29",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new30",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new16"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new31",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "eq",
+      "value": "users.example.com"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "any",
+      "value": null
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new23"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ }
+]

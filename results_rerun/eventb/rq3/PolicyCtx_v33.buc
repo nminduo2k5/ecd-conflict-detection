@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="_e0" org.eventb.core.target="PolicyCtx_v32"/>
+<org.eventb.core.constant name="_c1" org.eventb.core.identifier="app_r1016"/>
+<org.eventb.core.axiom name="_a2" org.eventb.core.label="def_app_r1016" org.eventb.core.predicate="app_r1016 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_3 ∧ action(q) ∈ {action_4, action_11} ∧ role(q) = role_8 ∧ location(q) ∈ {location_0, location_10, location_1} | q}" org.eventb.core.theorem="false"/>
+<org.eventb.core.axiom name="_t3" org.eventb.core.label="thm_r1016_r773" org.eventb.core.predicate="app_r1016 ∩ app_r773 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t4" org.eventb.core.label="thm_r1016_r950" org.eventb.core.predicate="app_r1016 ∩ app_r950 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t5" org.eventb.core.label="thm_r1016_r753" org.eventb.core.predicate="app_r1016 ∩ app_r753 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t6" org.eventb.core.label="thm_r1016_r781" org.eventb.core.predicate="app_r1016 ∩ app_r781 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t7" org.eventb.core.label="thm_r1016_r386" org.eventb.core.predicate="app_r1016 ∩ app_r386 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t8" org.eventb.core.label="thm_r1016_r550" org.eventb.core.predicate="app_r1016 ∩ app_r550 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t9" org.eventb.core.label="thm_r1016_r38" org.eventb.core.predicate="app_r1016 ∩ app_r38 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t10" org.eventb.core.label="thm_r1016_r477" org.eventb.core.predicate="app_r1016 ∩ app_r477 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t11" org.eventb.core.label="thm_r1016_r136" org.eventb.core.predicate="app_r1016 ∩ app_r136 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t12" org.eventb.core.label="thm_r1016_r1000" org.eventb.core.predicate="app_r1016 ∩ app_r1000 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t13" org.eventb.core.label="thm_r1016_r599" org.eventb.core.predicate="app_r1016 ∩ app_r599 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t14" org.eventb.core.label="thm_r1016_r423" org.eventb.core.predicate="app_r1016 ∩ app_r423 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t15" org.eventb.core.label="thm_r1016_r370" org.eventb.core.predicate="app_r1016 ∩ app_r370 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t16" org.eventb.core.label="thm_r1016_r83" org.eventb.core.predicate="app_r1016 ∩ app_r83 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t17" org.eventb.core.label="thm_r1016_r677" org.eventb.core.predicate="app_r1016 ∩ app_r677 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t18" org.eventb.core.label="thm_r1016_r803" org.eventb.core.predicate="app_r1016 ∩ app_r803 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t19" org.eventb.core.label="thm_r1016_r521" org.eventb.core.predicate="app_r1016 ∩ app_r521 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t20" org.eventb.core.label="thm_r1016_r104" org.eventb.core.predicate="app_r1016 ∩ app_r104 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t21" org.eventb.core.label="thm_r1016_r63" org.eventb.core.predicate="app_r1016 ∩ app_r63 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t22" org.eventb.core.label="thm_r1016_r110" org.eventb.core.predicate="app_r1016 ∩ app_r110 = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="_t23" org.eventb.core.label="thm_r1016_r768" org.eventb.core.predicate="app_r1016 ∩ app_r768 = ∅" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

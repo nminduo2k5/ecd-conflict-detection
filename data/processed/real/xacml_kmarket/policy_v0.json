@@ -1,0 +1,104 @@
+{
+  "name": "KmarketGoldPolicy",
+  "version": 0,
+  "combining": "deny-overrides",
+  "attributes": {
+    "//kmarket.com/category.//kmarket.com/id/totalAmount": {
+      "type": "numeric"
+    },
+    "//kmarket.com/category.//kmarket.com/id/amount": {
+      "type": "numeric"
+    },
+    "access-subject.//kmarket.com/id/role": {
+      "type": "categorical"
+    },
+    "resource.resource-id": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "total-amount",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.//kmarket.com/id/role",
+            "op": "eq",
+            "value": "gold"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": [
+          {
+            "attr": "//kmarket.com/category.//kmarket.com/id/totalAmount",
+            "op": "gt",
+            "value": 1000
+          }
+        ]
+      },
+      "effect": "Deny",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "total-amount",
+        "policy": "KmarketGoldPolicy",
+        "combining": "deny-overrides"
+      }
+    },
+    {
+      "id": "max-liquor-amount",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.//kmarket.com/id/role",
+            "op": "eq",
+            "value": "gold"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Liquor"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": [
+          {
+            "attr": "//kmarket.com/category.//kmarket.com/id/amount",
+            "op": "gt",
+            "value": 10
+          }
+        ]
+      },
+      "effect": "Deny",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "max-liquor-amount",
+        "policy": "KmarketGoldPolicy",
+        "combining": "deny-overrides"
+      }
+    },
+    {
+      "id": "permit-rule",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.//kmarket.com/id/role",
+            "op": "eq",
+            "value": "gold"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "permit-rule",
+        "policy": "KmarketGoldPolicy",
+        "combining": "deny-overrides"
+      }
+    }
+  ]
+}

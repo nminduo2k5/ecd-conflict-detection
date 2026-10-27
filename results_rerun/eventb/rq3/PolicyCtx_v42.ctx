@@ -1,0 +1,27 @@
+context PolicyCtx_v42
+extends PolicyCtx_v41
+constants app_r926__v42
+axioms
+  @def_app_r926__v42 app_r926__v42 = {q · q ∈ REQ ∧ resourceType(q) ∈ {resourceType_0, resourceType_7, resourceType_8} ∧ action(q) = action_6 ∧ device(q) = device_0 ∧ role(q) ∈ {role_1, role_6} | q}
+  theorem @thm_r926__v42_r692 app_r926__v42 ∩ app_r692 = ∅
+  theorem @thm_r926__v42_r876 app_r926__v42 ∩ app_r876 = ∅
+  theorem @thm_r926__v42_r262 app_r926__v42 ∩ app_r262 = ∅
+  theorem @thm_r926__v42_r86 app_r926__v42 ∩ app_r86 = ∅
+  theorem @thm_r926__v42_r850 app_r926__v42 ∩ app_r850 = ∅
+  theorem @thm_r926__v42_r584 app_r926__v42 ∩ app_r584 = ∅
+  theorem @thm_r926__v42_r517 app_r926__v42 ∩ app_r517 = ∅
+  theorem @thm_r926__v42_r370 app_r926__v42 ∩ app_r370 = ∅
+  theorem @thm_r926__v42_r779 app_r926__v42 ∩ app_r779 = ∅
+  theorem @thm_r926__v42_r668 app_r926__v42 ∩ app_r668 = ∅
+  theorem @thm_r926__v42_r486 app_r926__v42 ∩ app_r486 = ∅
+  theorem @thm_r926__v42_r66 app_r926__v42 ∩ app_r66 = ∅
+  theorem @thm_r926__v42_r526 app_r926__v42 ∩ app_r526 = ∅
+  theorem @thm_r926__v42_r33 app_r926__v42 ∩ app_r33 = ∅
+  theorem @thm_r926__v42_r332 app_r926__v42 ∩ app_r332 = ∅
+  theorem @thm_r926__v42_r739 app_r926__v42 ∩ app_r739 = ∅
+  theorem @thm_r926__v42_r148 app_r926__v42 ∩ app_r148 = ∅
+  theorem @thm_r926__v42_r45 app_r926__v42 ∩ app_r45 = ∅
+  theorem @thm_r926__v42_r682 app_r926__v42 ∩ app_r682 = ∅
+  theorem @thm_r926__v42_r948 app_r926__v42 ∩ app_r948 = ∅
+  theorem @thm_r926__v42_r498 app_r926__v42 ∩ app_r498 = ∅
+end

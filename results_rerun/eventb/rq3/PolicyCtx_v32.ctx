@@ -1,0 +1,16 @@
+context PolicyCtx_v32
+extends PolicyCtx_v31
+constants app_r1015
+axioms
+  @def_app_r1015 app_r1015 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_0 ∧ action(q) = action_1 ∧ shift(q) = shift_6 ∧ age(q) ∈ 69 ‥ 83 | q}
+  theorem @thm_r1015_r519 app_r1015 ∩ app_r519 = ∅
+  theorem @thm_r1015_r365 app_r1015 ∩ app_r365 = ∅
+  theorem @thm_r1015_r400 app_r1015 ∩ app_r400 = ∅
+  theorem @thm_r1015_r993 app_r1015 ∩ app_r993 = ∅
+  theorem @thm_r1015_r965 app_r1015 ∩ app_r965 = ∅
+  theorem @thm_r1015_r215 app_r1015 ∩ app_r215 = ∅
+  theorem @thm_r1015_r983 app_r1015 ∩ app_r983 = ∅
+  theorem @thm_r1015_r688 app_r1015 ∩ app_r688 = ∅
+  theorem @thm_r1015_r30 app_r1015 ∩ app_r30 = ∅
+  theorem @thm_r1015_r621 app_r1015 ∩ app_r621 = ∅
+end

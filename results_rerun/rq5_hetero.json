@@ -1,0 +1,413 @@
+{
+ "data/processed/hetero_1k_h00": {
+  "hetero_rate": 0.0,
+  "hierarchy_rate": 0.2,
+  "n_rules": 1000,
+  "n_truth": 11775,
+  "n_planted": 100,
+  "n_alias": 0,
+  "n_hierarchy": 0,
+  "n_no_shared_literal": 104,
+  "exact_index": {
+   "candidates": 124155,
+   "recall": 0.9924416135881104,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.14423076923076922
+  },
+  "exact_index+ont": {
+   "candidates": 124351,
+   "recall": 0.9924416135881104,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.14423076923076922
+  },
+  "gnn_val_auc": 0.8443917088306444,
+  "approx_hash_k5": {
+   "verified": 4116,
+   "recall": 0.3442887473460722,
+   "precision": 1.0,
+   "time_ms": 9053.816499999812,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.0
+  },
+  "approx_hash+ont_k5": {
+   "verified": 4116,
+   "recall": 0.3443736730360934,
+   "precision": 1.0,
+   "time_ms": 9126.331499999651,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.0
+  },
+  "approx_gnn_k5": {
+   "verified": 4116,
+   "recall": 0.34547770700636943,
+   "precision": 1.0,
+   "time_ms": 13631.326300000183,
+   "recall_planted": 0.58,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.009615384615384616
+  },
+  "approx_hash_k10": {
+   "verified": 6846,
+   "recall": 0.5726539278131635,
+   "precision": 1.0,
+   "time_ms": 14729.758800000127,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.028846153846153848
+  },
+  "approx_hash+ont_k10": {
+   "verified": 6846,
+   "recall": 0.572484076433121,
+   "precision": 1.0,
+   "time_ms": 13947.528099999545,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.028846153846153848
+  },
+  "approx_gnn_k10": {
+   "verified": 6846,
+   "recall": 0.5734182590233545,
+   "precision": 1.0,
+   "time_ms": 20262.150399999882,
+   "recall_planted": 0.75,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.019230769230769232
+  },
+  "approx_hash_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 23688.40040000032,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.6346153846153846
+  },
+  "approx_hash+ont_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 22193.24779999988,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.6346153846153846
+  },
+  "approx_gnn_k50": {
+   "verified": 11816,
+   "recall": 0.9902335456475584,
+   "precision": 1.0,
+   "time_ms": 26365.016099999593,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.75
+  },
+  "exact_gnn": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 36938.59119999979,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  },
+  "tierA_only": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 21992.348000000675,
+   "recall_planted": 1.0,
+   "recall_alias": NaN,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  }
+ },
+ "data/processed/hetero_1k_h25": {
+  "hetero_rate": 0.25,
+  "hierarchy_rate": 0.2,
+  "n_rules": 1000,
+  "n_truth": 11775,
+  "n_planted": 100,
+  "n_alias": 28,
+  "n_hierarchy": 0,
+  "n_no_shared_literal": 4416,
+  "exact_index": {
+   "candidates": 91715,
+   "recall": 0.6562208067940553,
+   "recall_planted": 0.97,
+   "recall_alias": 0.9642857142857143,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.08333333333333333
+  },
+  "exact_index+ont": {
+   "candidates": 124351,
+   "recall": 0.9924416135881104,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9798460144927537
+  },
+  "gnn_val_auc": 0.853088256878322,
+  "approx_hash_k5": {
+   "verified": 4116,
+   "recall": 0.3442887473460722,
+   "precision": 1.0,
+   "time_ms": 9731.428799999776,
+   "recall_planted": 0.88,
+   "recall_alias": 0.7857142857142857,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.13269927536231885
+  },
+  "approx_hash+ont_k5": {
+   "verified": 4116,
+   "recall": 0.3443736730360934,
+   "precision": 1.0,
+   "time_ms": 9712.085999999545,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.30593297101449274
+  },
+  "approx_gnn_k5": {
+   "verified": 4116,
+   "recall": 0.3452229299363057,
+   "precision": 1.0,
+   "time_ms": 13623.861500000203,
+   "recall_planted": 0.58,
+   "recall_alias": 0.6071428571428571,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.3172554347826087
+  },
+  "approx_hash_k10": {
+   "verified": 6846,
+   "recall": 0.5726539278131635,
+   "precision": 1.0,
+   "time_ms": 14308.493700000326,
+   "recall_planted": 0.95,
+   "recall_alias": 0.8928571428571429,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.3374094202898551
+  },
+  "approx_hash+ont_k10": {
+   "verified": 6846,
+   "recall": 0.572484076433121,
+   "precision": 1.0,
+   "time_ms": 13221.668000000136,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.5357789855072463
+  },
+  "approx_gnn_k10": {
+   "verified": 6846,
+   "recall": 0.573927813163482,
+   "precision": 1.0,
+   "time_ms": 17797.410799999852,
+   "recall_planted": 0.76,
+   "recall_alias": 0.8214285714285714,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.5364583333333334
+  },
+  "approx_hash_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 21835.00550000008,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9732789855072463
+  },
+  "approx_hash+ont_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 22004.726699999992,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9834692028985508
+  },
+  "approx_gnn_k50": {
+   "verified": 11816,
+   "recall": 0.9902335456475584,
+   "precision": 1.0,
+   "time_ms": 26541.260999999395,
+   "recall_planted": 0.99,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9848278985507246
+  },
+  "exact_gnn": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 26834.845200000018,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  },
+  "tierA_only": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 20772.315100000014,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  }
+ },
+ "data/processed/hetero_1k_h50": {
+  "hetero_rate": 0.5,
+  "hierarchy_rate": 0.2,
+  "n_rules": 1000,
+  "n_truth": 11775,
+  "n_planted": 100,
+  "n_alias": 56,
+  "n_hierarchy": 0,
+  "n_no_shared_literal": 5553,
+  "exact_index": {
+   "candidates": 81810,
+   "recall": 0.5661995753715499,
+   "recall_planted": 0.97,
+   "recall_alias": 0.9821428571428571,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.0801368629569602
+  },
+  "exact_index+ont": {
+   "candidates": 124351,
+   "recall": 0.9924416135881104,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9839726274086079
+  },
+  "gnn_val_auc": 0.8623568245109723,
+  "approx_hash_k5": {
+   "verified": 4116,
+   "recall": 0.34471337579617833,
+   "precision": 1.0,
+   "time_ms": 8998.947399999452,
+   "recall_planted": 0.85,
+   "recall_alias": 0.8392857142857143,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.11993517017828201
+  },
+  "approx_hash+ont_k5": {
+   "verified": 4116,
+   "recall": 0.3443736730360934,
+   "precision": 1.0,
+   "time_ms": 8880.649599999742,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.3039798307221322
+  },
+  "approx_gnn_k5": {
+   "verified": 4116,
+   "recall": 0.34581740976645436,
+   "precision": 1.0,
+   "time_ms": 12821.625200000199,
+   "recall_planted": 0.61,
+   "recall_alias": 0.6428571428571429,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.3331532504952278
+  },
+  "approx_hash_k10": {
+   "verified": 6846,
+   "recall": 0.5729936305732484,
+   "precision": 1.0,
+   "time_ms": 13088.45349999956,
+   "recall_planted": 0.95,
+   "recall_alias": 0.9464285714285714,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.33225283630470015
+  },
+  "approx_hash+ont_k10": {
+   "verified": 6846,
+   "recall": 0.572484076433121,
+   "precision": 1.0,
+   "time_ms": 13042.693999999756,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.5409688456690077
+  },
+  "approx_gnn_k10": {
+   "verified": 6846,
+   "recall": 0.5740127388535032,
+   "precision": 1.0,
+   "time_ms": 17749.678700000004,
+   "recall_planted": 0.75,
+   "recall_alias": 0.7857142857142857,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.5596974608319827
+  },
+  "approx_hash_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 20730.583999999908,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9787502251035476
+  },
+  "approx_hash+ont_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 21875.914800000828,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.9866738699801909
+  },
+  "approx_gnn_k50": {
+   "verified": 11816,
+   "recall": 0.9899787685774947,
+   "precision": 1.0,
+   "time_ms": 32609.348500000124,
+   "recall_planted": 0.99,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 0.987394201332613
+  },
+  "exact_gnn": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 27074.645200000305,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  },
+  "tierA_only": {
+   "verified": 11934,
+   "recall": 1.0,
+   "precision": 1.0,
+   "time_ms": 20698.284399999466,
+   "recall_planted": 1.0,
+   "recall_alias": 1.0,
+   "recall_hierarchy": NaN,
+   "recall_no_shared_literal": 1.0
+  }
+ }
+}

@@ -1,0 +1,17 @@
+context PolicyCtx_v11
+extends PolicyCtx_v10
+constants app_r1003
+axioms
+  @def_app_r1003 app_r1003 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_6 ∧ action(q) = action_5 ∧ device(q) ∈ {device_8, device_3, device_5} ∧ hour(q) ∈ 49 ‥ 55 | q}
+  theorem @thm_r1003_r236 app_r1003 ∩ app_r236 = ∅
+  theorem @thm_r1003_r963 app_r1003 ∩ app_r963 = ∅
+  theorem @thm_r1003_r32 app_r1003 ∩ app_r32 = ∅
+  theorem @thm_r1003_r312 app_r1003 ∩ app_r312 = ∅
+  theorem @thm_r1003_r339 app_r1003 ∩ app_r339 = ∅
+  theorem @thm_r1003_r651 app_r1003 ∩ app_r651 = ∅
+  theorem @thm_r1003_r442 app_r1003 ∩ app_r442 = ∅
+  theorem @thm_r1003_r533 app_r1003 ∩ app_r533 = ∅
+  theorem @thm_r1003_r699 app_r1003 ∩ app_r699 = ∅
+  theorem @thm_r1003_r11 app_r1003 ∩ app_r11 = ∅
+  theorem @thm_r1003_r34 app_r1003 ∩ app_r34 = ∅
+end

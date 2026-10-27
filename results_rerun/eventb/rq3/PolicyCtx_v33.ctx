@@ -1,0 +1,27 @@
+context PolicyCtx_v33
+extends PolicyCtx_v32
+constants app_r1016
+axioms
+  @def_app_r1016 app_r1016 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_3 ∧ action(q) ∈ {action_4, action_11} ∧ role(q) = role_8 ∧ location(q) ∈ {location_0, location_10, location_1} | q}
+  theorem @thm_r1016_r773 app_r1016 ∩ app_r773 = ∅
+  theorem @thm_r1016_r950 app_r1016 ∩ app_r950 = ∅
+  theorem @thm_r1016_r753 app_r1016 ∩ app_r753 = ∅
+  theorem @thm_r1016_r781 app_r1016 ∩ app_r781 = ∅
+  theorem @thm_r1016_r386 app_r1016 ∩ app_r386 = ∅
+  theorem @thm_r1016_r550 app_r1016 ∩ app_r550 = ∅
+  theorem @thm_r1016_r38 app_r1016 ∩ app_r38 = ∅
+  theorem @thm_r1016_r477 app_r1016 ∩ app_r477 = ∅
+  theorem @thm_r1016_r136 app_r1016 ∩ app_r136 = ∅
+  theorem @thm_r1016_r1000 app_r1016 ∩ app_r1000 = ∅
+  theorem @thm_r1016_r599 app_r1016 ∩ app_r599 = ∅
+  theorem @thm_r1016_r423 app_r1016 ∩ app_r423 = ∅
+  theorem @thm_r1016_r370 app_r1016 ∩ app_r370 = ∅
+  theorem @thm_r1016_r83 app_r1016 ∩ app_r83 = ∅
+  theorem @thm_r1016_r677 app_r1016 ∩ app_r677 = ∅
+  theorem @thm_r1016_r803 app_r1016 ∩ app_r803 = ∅
+  theorem @thm_r1016_r521 app_r1016 ∩ app_r521 = ∅
+  theorem @thm_r1016_r104 app_r1016 ∩ app_r104 = ∅
+  theorem @thm_r1016_r63 app_r1016 ∩ app_r63 = ∅
+  theorem @thm_r1016_r110 app_r1016 ∩ app_r110 = ∅
+  theorem @thm_r1016_r768 app_r1016 ∩ app_r768 = ∅
+end

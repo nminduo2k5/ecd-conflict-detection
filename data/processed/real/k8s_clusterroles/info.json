@@ -1,0 +1,6 @@
+{
+  "name": "k8s_clusterroles",
+  "rules": 138,
+  "attributes": 5,
+  "combining": "permit-overrides"
+}

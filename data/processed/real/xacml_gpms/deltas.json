@@ -1,0 +1,1411 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "SubmitButtonShowForUniversityResearchAdministrator-Rule101",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "SaveProposalByFaculty-Rule7#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Business Manager"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Project Information"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByBusinessManager-Rule43#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditSomeProposalSectionByCoPI-Rule38#0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "WithdrawProposalByUniversityResearchAdministrator-Rule25a2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "University Research Administrator"
+     },
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     },
+     {
+      "attr": "resource.ApprovedByUniversityResearchAdministrator",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "resource.WithdrawnByUniversityResearchAdministrator",
+      "op": "eq",
+      "value": "NOTWITHDRAWN"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Withdraw"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "WithdrawProposalByUniversityResearchAdministrator-Rule25a2",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "WithdrawProposalByUniversityResearchAdministrator-Rule25a2",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "Co-PI"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Save"
+     },
+     {
+      "attr": "resource.deletedbypi",
+      "op": "eq",
+      "value": "NOTDELETED"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "SaveButtonShowForCo-PI-Rule103"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByBusinessManager-Rule43#8",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "ApproveProposalByUniversityResearchDirector-Rule18a2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByUniversityResearchDirector",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Approve"
+     },
+     {
+      "attr": "resource.signedByAllResearchDirectors",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "ApproveProposalByUniversityResearchDirector-Rule18a2",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "ApproveProposalByUniversityResearchDirector-Rule18a2",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "EditProposalSectionByUniversityResearchAdministrator-Rule48#11",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Dean"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "University Commitments"
+     },
+     {
+      "attr": "resource.ApprovedByDean",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByDean-Rule45#4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "IRB"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Appendices"
+     },
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByIRB-Rule47#11"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByDepartmentChair-Rule41#8",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Proprietary/Confidential Information"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByBusinessManager",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByBusinessManager-Rule43#6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "Senior Personnel"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Sponsor and Budget Information"
+     },
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "resource.ReadyForSubmissionByPI",
+      "op": "eq",
+      "value": false
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionBySeniorPersonnel-Rule39#2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CannotEditProposalSectionByIRB-Rule47#9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "IRB"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Conflict of Interest and Commitment Information"
+     },
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "CannotEditProposalSectionByIRB-Rule47",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides",
+    "alt": 9
+   }
+  },
+  "rule_id": "CannotEditProposalSectionByIRB-Rule47#9",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "EditProposalSectionByPI-Rule35#10",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "PI"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Collaboration Information"
+     },
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "EditProposalSectionByPI-Rule35#8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Dean"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByDean",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByDean-Rule45#8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByDepartmentChair-Rule41#1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "PI"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Compliance Information"
+     },
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "EditProposalSectionByPI-Rule35#6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByBusinessManager-Rule43#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Collaboration Information"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByDean",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByDean-Rule45#6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "PI"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Compliance Information"
+     },
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "EditProposalSectionByPI-Rule35#6"
+   }
+  },
+  "rule_id": "new8",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Proprietary/Confidential Information"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByBusinessManager",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new4"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CannotEditProposalSectionByDepartmentChair-Rule41#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Department Chair"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Investigator Information"
+     },
+     {
+      "attr": "resource.ApprovedByDepartmentChair",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "CannotEditProposalSectionByDepartmentChair-Rule41",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides",
+    "alt": 0
+   }
+  },
+  "rule_id": "CannotEditProposalSectionByDepartmentChair-Rule41#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "Co-PI"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "resource.ReadyForSubmissionByPI",
+      "op": "eq",
+      "value": false
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Delete"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotDeleteCoPIByCoPI-Rule29"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "AddSeniorPersonnelByPI-Rule5",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "EditProposalSectionByUniversityResearchAdministrator-Rule48#9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Conflict of Interest and Commitment Information"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByUniversityResearchAdministrator",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "EditProposalSectionByUniversityResearchAdministrator-Rule48",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides",
+    "alt": 9
+   }
+  },
+  "rule_id": "EditProposalSectionByUniversityResearchAdministrator-Rule48#9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.approvedbyuniversityresearchadministrator",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.proposal.action",
+      "op": "in",
+      "value": [
+       "Approve",
+       "Disapprove"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "ApproveDisapproveButtonShowForUniversityResearchAdministrator-Rule110"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "ApproveProposalByBusinessManager-Rule14a",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByDean-Rule45#5",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CannotEditProposalSectionByUniversityResearchDirector-Rule51#9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "University Research Director"
+     },
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Conflict of Interest and Commitment Information"
+     },
+     {
+      "attr": "resource.ApprovedByUniversityResearchDirector",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "CannotEditProposalSectionByUniversityResearchDirector-Rule51",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides",
+    "alt": 9
+   }
+  },
+  "rule_id": "CannotEditProposalSectionByUniversityResearchDirector-Rule51#9",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "DeleteProposalByPI-Rule30",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.proposal.role",
+      "op": "eq",
+      "value": "PI"
+     },
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     },
+     {
+      "attr": "resource.SubmittedByPI",
+      "op": "eq",
+      "value": "NOTSUBMITTED"
+     },
+     {
+      "attr": "resource.DeletedByPI",
+      "op": "eq",
+      "value": "NOTDELETED"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Delete"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "DeleteProposalByPI-Rule30",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "DeleteProposalByPI-Rule30",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByIRB-Rule47#5",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionBySeniorPersonnel-Rule39#10",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "CannotEditProposalSectionByDepartmentChair-Rule41#6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Department Chair"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Collaboration Information"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "CannotEditProposalSectionByDepartmentChair-Rule41",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides",
+    "alt": 6
+   }
+  },
+  "rule_id": "CannotEditProposalSectionByDepartmentChair-Rule41#6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "University Research Administrator"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Project Information"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "EditProposalSectionByUniversityResearchAdministrator-Rule48#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "DeleteProposalByUniversityResearchDirector-Rule32a1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Audit Log"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "View"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotViewAuditLogByOtherUser-Rule34#5"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Disapprove"
+     },
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "DisapproveProposalByIRB-Rule22a"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Business Manager"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     },
+     {
+      "attr": "resource.ApprovedByBusinessManager",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Disapprove"
+     },
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": false
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "DisapproveProposalByBusinessManager-Rule20a1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Disapprove"
+     },
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new15"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "CannotEditProposalSectionByDean-Rule45#6",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "ApproveProposalByDepartmentChair-Rule13b",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Department Chair"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     },
+     {
+      "attr": "resource.ApprovedByDepartmentChair",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Approve"
+     },
+     {
+      "attr": "resource.signedByAllChairs",
+      "op": "eq",
+      "value": true
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "ApproveProposalByDepartmentChair-Rule13b",
+    "policy": "Proposal-Rules",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "ApproveProposalByDepartmentChair-Rule13b",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Collaboration Information"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Edit"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "CannotEditProposalSectionByIRB-Rule47#6"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Approve"
+     },
+     {
+      "attr": "resource.signedByAllIRBs",
+      "op": "eq",
+      "value": true
+     },
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": true
+     },
+     {
+      "attr": "resource.approvedbybusinessmanager",
+      "op": "eq",
+      "value": "APPROVED"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "ApproveProposalByIRB-Rule16c"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "IRB"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.proposal.section",
+      "op": "eq",
+      "value": "Whole Proposal"
+     },
+     {
+      "attr": "resource.ApprovedByIRB",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "eq",
+      "value": "Disapprove"
+     },
+     {
+      "attr": "resource.irbApprovalRequired",
+      "op": "eq",
+      "value": true
+     },
+     {
+      "attr": "resource.approvedbydean",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "DisapproveProposalByIRB-Rule22e"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.position.title",
+      "op": "eq",
+      "value": "Dean"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "resource.approvedbydean",
+      "op": "eq",
+      "value": "READYFORAPPROVAL"
+     },
+     {
+      "attr": "action.proposal.action",
+      "op": "in",
+      "value": [
+       "Approve",
+       "Disapprove"
+      ]
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "ApproveDisapproveButtonShowForDean-Rule109"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "OtherStaffCannotCreateProposal-Rule2#3",
+  "position": null
+ }
+]

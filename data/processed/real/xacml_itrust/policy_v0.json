@@ -1,0 +1,2066 @@
+{
+  "name": "itrust",
+  "version": 0,
+  "combining": "first-applicable",
+  "attributes": {
+    "access-subject.subject-id": {
+      "type": "categorical"
+    },
+    "resource.resource-id": {
+      "type": "categorical"
+    },
+    "action.action-id": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule_1",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Demographics"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_1",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_2",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Access log"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_2",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_3",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Diagnoses"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_3",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_4",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Providers"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_4",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_5",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Records"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_5",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_6",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Prescription Records"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_6",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_7",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Expired Prescription Reports"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_7",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_8",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Messages"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_8",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_9",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Message"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Send"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_9",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_10",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Satisfaction Survey Results"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_10",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_11",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Email History"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Show"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_11",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_12",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_12",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_13",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_13",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_14",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Basic Health Information"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_14",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_15",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Demographics"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_15",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_16",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient Information"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_16",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_17",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "PHR Information"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_17",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_18",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Representatives"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_18",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_19",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "UAPs"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_19",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_20",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Messages"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_20",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_21",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Message"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Send"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_21",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_22",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "All Patients"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_22",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_23",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Laboratory Procedures"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_23",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_24",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Report Requests"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_24",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_25",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emergency Patient Report"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Report"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_25",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_26",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient List"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_26",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_27",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patients"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Monitor"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_27",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_28",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Consultations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Send"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_28",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_29",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Pending Consultations"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_29",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_30",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Chronic Disease Risks"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_30",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_31",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Document Office Visit"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_31",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_32",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Email History"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_32",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_33",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Office Visit Reminders"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_33",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_34",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Satisfaction Survey Results"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_34",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_35",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Potential Prescription-Renewals"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_35",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_36",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_36",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_37",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "PHR"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_37",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_38",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Basic Health Information"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_38",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_39",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_39",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_40",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Demographics"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_40",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_41",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Report Requests"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_41",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_42",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Laboratory Procedures"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_42",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_43",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Patient List"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_43",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_44",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Status"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Report"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_44",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_45",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Document Office Visit"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_45",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_46",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Chronic Disease Risks"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_46",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_47",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Email History"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_47",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_48",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "UAP"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Satisfaction Survey Results"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_48",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_49",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "ER"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Emergency Patient Report"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Report"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_49",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_50",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "PHA"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Adverse Events"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Monitor"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_50",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_51",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "HCP"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_51",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_52",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "ER"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_52",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_53",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "PHA"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Add"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_53",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_54",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "HCP Assignment to Hospital"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_54",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_55",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "CPT ProcedureCodes"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_55",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_56",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "ND Codes"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_56",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_57",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "ICD Codes"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_57",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_58",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "LOINC Codes"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_58",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_59",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Personnel"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_59",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_60",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "My Demographics"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Edit"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_60",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_61",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Hospital Listing"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Manage"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_61",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_62",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Global Session Timeout"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "Change"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_62",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_63",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Admin"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "Satisfaction Survey Results"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_63",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    },
+    {
+      "id": "rule_64",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "Tester"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "eq",
+            "value": "test results"
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "View"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "rule_64",
+        "policy": "itrust",
+        "combining": "first-applicable"
+      }
+    }
+  ]
+}

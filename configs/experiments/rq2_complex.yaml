@@ -1,0 +1,5 @@
+# RQ2 on a policy where Tier A is *incomplete*: 60 % of the rules carry a cross-attribute
+# arithmetic condition (hour + age > c), which per-attribute abstractions cannot decide.
+dataset: data/processed/complex_1k
+top_ks: [10, 25, 50]
+n_deltas: 100

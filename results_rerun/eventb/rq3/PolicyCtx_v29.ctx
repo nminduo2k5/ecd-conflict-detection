@@ -1,0 +1,20 @@
+context PolicyCtx_v29
+extends PolicyCtx_v28
+constants app_r1013
+axioms
+  @def_app_r1013 app_r1013 = {q · q ∈ REQ ∧ resourceType(q) = resourceType_4 ∧ action(q) ∈ {action_1, action_8, action_4} ∧ shift(q) ∈ {shift_7, shift_1, shift_10} ∧ clearance(q) = clearance_1 | q}
+  theorem @thm_r1013_r909 app_r1013 ∩ app_r909 = ∅
+  theorem @thm_r1013_r570 app_r1013 ∩ app_r570 = ∅
+  theorem @thm_r1013_r133 app_r1013 ∩ app_r133 = ∅
+  theorem @thm_r1013_r214 app_r1013 ∩ app_r214 = ∅
+  theorem @thm_r1013_r330 app_r1013 ∩ app_r330 = ∅
+  theorem @thm_r1013_r863 app_r1013 ∩ app_r863 = ∅
+  theorem @thm_r1013_r427 app_r1013 ∩ app_r427 = ∅
+  theorem @thm_r1013_r188 app_r1013 ∩ app_r188 = ∅
+  theorem @thm_r1013_r792 app_r1013 ∩ app_r792 = ∅
+  theorem @thm_r1013_r444 app_r1013 ∩ app_r444 = ∅
+  theorem @thm_r1013_r62 app_r1013 ∩ app_r62 = ∅
+  theorem @thm_r1013_r102__v23 app_r1013 ∩ app_r102__v23 = ∅
+  theorem @thm_r1013_r553 app_r1013 ∩ app_r553 = ∅
+  theorem @thm_r1013_r709 app_r1013 ∩ app_r709 = ∅
+end

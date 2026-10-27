@@ -1,0 +1,997 @@
+[
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule11",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule1",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule6#0",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule5#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Active"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule5",
+    "policy": "fedora",
+    "combining": "deny-overrides",
+    "alt": 0
+   }
+  },
+  "rule_id": "rule5#0",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new2",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new3",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new2"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule5#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule5",
+    "policy": "fedora",
+    "combining": "deny-overrides",
+    "alt": 1
+   }
+  },
+  "rule_id": "rule5#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule12",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Deleted"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule2#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-reloadPolicies"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "environment.environment-id",
+      "op": "neq",
+      "value": "127.0.0.1"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule7",
+    "policy": "fedora",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "rule7",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-adminPing"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new6",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Inactive"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule2#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule2#0",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Inactive"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "neq",
+      "value": "administrator"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule2",
+    "policy": "fedora",
+    "combining": "deny-overrides",
+    "alt": 0
+   }
+  },
+  "rule_id": "rule2#0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule13",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new7",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule4",
+   "target": {
+    "atoms": [
+     {
+      "attr": "access-subject.subject-id",
+      "op": "neq",
+      "value": "administrator"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule4",
+    "policy": "fedora",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "rule4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new8",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule5#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new4",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new9",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new6",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Active"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule5#0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new9",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new12",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new10"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new5",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule9"
+   }
+  },
+  "rule_id": "new5",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new13",
+   "target": {
+    "atoms": [
+     {
+      "attr": "environment.environment-id",
+      "op": "neq",
+      "value": "127.0.0.1"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule2#1",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule10",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule10",
+    "policy": "fedora",
+    "combining": "deny-overrides"
+   }
+  },
+  "rule_id": "rule10",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "rule6#1",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Inactive"
+     },
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeObject"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "source": "xacml",
+    "xacml_rule": "rule6",
+    "policy": "fedora",
+    "combining": "deny-overrides",
+    "alt": 1
+   }
+  },
+  "rule_id": "rule6#1",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule5#0",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new12",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new11",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeDatastream"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule5#0"
+   }
+  },
+  "rule_id": "new11",
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new7",
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new10",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new9"
+   }
+  },
+  "rule_id": "new10",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new14",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Inactive"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule6#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "rule10",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new17",
+   "target": {
+    "atoms": [
+     {
+      "attr": "environment.environment-id",
+      "op": "neq",
+      "value": "127.0.0.1"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new18",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-reloadPolicies"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "environment.environment-id",
+      "op": "neq",
+      "value": "127.0.0.1"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule7"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new19",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new16"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new15",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new1"
+   }
+  },
+  "rule_id": "new15",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new20",
+   "target": {
+    "atoms": [
+     {
+      "attr": "resource.resource-id",
+      "op": "eq",
+      "value": "Inactive"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeObject"
+     }
+    ]
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule6#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "modify",
+  "rule": {
+   "id": "new16",
+   "target": {
+    "atoms": []
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "new0"
+   }
+  },
+  "rule_id": "new16",
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new21",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeObject"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Deny",
+   "meta": {
+    "derived_from": "rule6#1"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new22",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-serverShutdown"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": [
+     {
+      "attr": "environment.environment-id",
+      "op": "neq",
+      "value": "127.0.0.1"
+     }
+    ]
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "rule8"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "add",
+  "rule": {
+   "id": "new23",
+   "target": {
+    "atoms": [
+     {
+      "attr": "action.action-id",
+      "op": "eq",
+      "value": "urn:fedora:names:fedora:2.1:action:id-purgeObject"
+     }
+    ]
+   },
+   "condition": {
+    "atoms": []
+   },
+   "effect": "Permit",
+   "meta": {
+    "derived_from": "new21"
+   }
+  },
+  "rule_id": null,
+  "position": null
+ },
+ {
+  "kind": "remove",
+  "rule": null,
+  "rule_id": "new19",
+  "position": null
+ }
+]

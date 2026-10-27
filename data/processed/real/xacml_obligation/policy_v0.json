@@ -1,0 +1,77 @@
+{
+  "name": "ObligationPolicy",
+  "version": 0,
+  "combining": "permit-overrides",
+  "attributes": {
+    "access-subject.subject-id": {
+      "type": "categorical"
+    },
+    "resource.resource-id": {
+      "type": "categorical"
+    },
+    "action.action-id": {
+      "type": "categorical"
+    }
+  },
+  "rules": [
+    {
+      "id": "AllowAllReads",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "users.example.com"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "any",
+            "value": null
+          },
+          {
+            "attr": "action.action-id",
+            "op": "eq",
+            "value": "read"
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Permit",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "AllowAllReads",
+        "policy": "ObligationPolicy",
+        "combining": "permit-overrides"
+      }
+    },
+    {
+      "id": "DenyOtherActions",
+      "target": {
+        "atoms": [
+          {
+            "attr": "access-subject.subject-id",
+            "op": "eq",
+            "value": "users.example.com"
+          },
+          {
+            "attr": "resource.resource-id",
+            "op": "any",
+            "value": null
+          }
+        ]
+      },
+      "condition": {
+        "atoms": []
+      },
+      "effect": "Deny",
+      "meta": {
+        "source": "xacml",
+        "xacml_rule": "DenyOtherActions",
+        "policy": "ObligationPolicy",
+        "combining": "permit-overrides"
+      }
+    }
+  ]
+}
