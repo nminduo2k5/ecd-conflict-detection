@@ -115,7 +115,7 @@ def tab_rq4():
 
     lines = [r"\begin{table}[t]", r"\centering\footnotesize\setlength{\tabcolsep}{5pt}",
              rf"\caption{{RQ4 --- ms per change (mean $\pm$ sd, {rep} seeds $\times$ {nd} changes, hash embedding) in exact and "
-             r"approximate ($k{=}50$) mode, pairs verified per change in exact mode, Tier~A share of the time; $p$ (paired "
+             r"approximate ($k{=}50$) mode, pairs verified per change in exact mode, Tier~A selection time (ms) per change; $p$ (paired "
              r"Wilcoxon) and $\hat{A}_{12}$ compare approximate with exact.}",
              r"\label{tab:rq4}", r"\begin{tabular}{rrrrrcc}", r"\toprule",
              r"rules & exact & approximate & pairs/$\Delta$ & Tier~A & $p$ & $\hat{A}_{12}$ \\",
