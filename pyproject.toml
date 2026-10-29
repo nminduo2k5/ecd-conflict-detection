@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ecd"
 version = "0.1.0"
-description = "Embedding-guided incremental conflict detection for evolving access-control policies with Event-B verification"
+description = "Embedding-guided incremental conflict detection for evolving access-control policies, verified with Z3"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
