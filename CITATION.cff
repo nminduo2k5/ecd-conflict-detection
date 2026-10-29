@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code or the datasets, please cite the paper below."
+title: "ECD: Verifier-Supervised Graph Embeddings for Sound and Incremental Conflict Detection in Evolving Access Control Policies"
+type: software
+repository-code: "https://github.com/nminduo2k5/ecd-conflict-detection"
+license: MIT
+authors:
+  - family-names: "Nguyen Minh"
+    given-names: "Duong"
+    affiliation: "Phenikaa University"
+  - family-names: "Nguyen Van"
+    given-names: "Cuong"
+    affiliation: "Phenikaa University"
+    orcid: "https://orcid.org/0009-0008-7778-5121"
+  - family-names: "Trinh Thanh"
+    given-names: "Binh"
+    affiliation: "Phenikaa University"
+  - family-names: "Nguyen"
+    given-names: "Viet Ha"
+    affiliation: "VNU University of Engineering and Technology"
+preferred-citation:
+  type: article
+  title: "Verifier-Supervised Graph Embeddings for Sound and Incremental Conflict Detection in Evolving Access Control Policies"
+  year: 2026
+  authors:
+    - family-names: "Nguyen Minh"
+      given-names: "Duong"
+    - family-names: "Nguyen Van"
+      given-names: "Cuong"
+    - family-names: "Trinh Thanh"
+      given-names: "Binh"
+    - family-names: "Nguyen"
+      given-names: "Viet Ha"
