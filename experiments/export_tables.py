@@ -131,8 +131,56 @@ def tab_rq4():
     write("tab_rq4", "\n".join(lines) + "\n")
 
 
+# ---- Setup: datasets and settings (dataset config.json + experiment yaml + results JSON) ----------
+def tab_setup():
+    import yaml
+    real, rq2, rq2c, rq5, rq4 = load("real_policies"), load("rq2_pruning"), load("rq2_complex"), load("rq5_hetero"), load("rq4_scalability")
+    cfg = lambda ds: json.loads((ROOT / "data/processed" / ds / "config.json").read_text(encoding="utf-8"))
+    syn, cpx, het = cfg("synthetic_1k"), cfg("complex_1k"), cfg("hetero_1k_h50")
+    het_truth = {rq5[f"data/processed/hetero_1k_h{h}"]["n_truth"] for h in ("00", "25", "50")}
+    assert len(het_truth) == 1, het_truth                       # same seed -> same ground truth
+    g = yaml.safe_load((ROOT / "configs/experiments/rq1_embedding.yaml").read_text())
+    gnn, real_deltas = g["gnn"], yaml.safe_load((ROOT / "configs/experiments/real.yaml").read_text())["n_deltas"]
+    R = lambda n: real[f"data/processed/real/{n}"]
+    xpa = [("iTrust", "xacml_itrust"), ("HL7", "xacml_hl7"), ("gpms", "xacml_gpms"), ("pluto", "xacml_pluto"),
+           ("conference", "xacml_conference"), ("fedora", "xacml_fedora"), ("kmarket", "xacml_kmarket"), ("Simpson", "xacml_simpson")]
+    xr = [R(n)["rules"] for _, n in xpa]
+    xc = [R(n)["conflicts"] for _, n in xpa]
+    a1, a3, k8 = R("aws_managed_100"), R("aws_managed_300"), R("k8s_clusterroles")
+    pc = lambda v: f"{100 * v:g}\\,\\%"
+    lines = [r"\begin{table}[t]", r"\centering\scriptsize\setlength{\tabcolsep}{3pt}",
+             r"\caption{Datasets (rules after normalisation / conflicts in the exhaustive pairwise Z3 ground truth) and experimental settings.}",
+             r"\label{tab:setup}", r"\begin{tabular}{@{}p{2.7cm}p{2.1cm}p{\dimexpr\textwidth-4.8cm-4\tabcolsep\relax}@{}}", r"\toprule",
+             r"dataset & rules/conflicts & characteristics \\", r"\midrule",
+             rf"\texttt{{synthetic\_1k}} & {I(rq2['n_rules'])} / {I(rq2['n_truth'])} & {syn['n_attrs']} attributes "
+             rf"({syn['n_attrs'] - syn['n_numeric']} categorical $\times$ {syn['domain_size']} values, {syn['n_numeric']} numeric), "
+             rf"{syn['core_attrs']} core attributes, {syn['atoms_per_rule']} atoms per rule, {pc(syn['conflict_rate'])} planted conflicts, "
+             rf"{pc(syn['complex_rate'])} arithmetic conditions, {pc(syn['hetero_rate'])} of the rules in a second vocabulary (alias ontology), "
+             rf"{syn['n_deltas']} changes \\",
+             rf"\texttt{{complex\_1k}} & {I(rq2c['n_rules'])} / {I(rq2c['n_truth'])} & as above, {pc(cpx['complex_rate'])} of the rules with a "
+             r"cross-attribute arithmetic condition \\",
+             rf"\texttt{{hetero\_1k\_h00/25/50}} & {I(het['n_rules'])} / {I(het_truth.pop())} & {pc(het['conflict_rate'])} planted, "
+             rf"{pc(het['complex_rate'])} arithmetic, role hierarchy, 0/25/50\,\% of the rules in the second vocabulary \\",
+             rf"XPA XACML~3.0 (8) & {min(xr)}--{max(xr)} / {min(xc)}--{max(xc)} & "
+             + ", ".join(f"{lab} {R(n)['rules']}" for lab, n in xpa) + rf" rules; {real_deltas} changes each \\",
+             rf"AWS IAM merges & {a1['rules']} / {a3['rules']} & {a1['source_rules']} / {a3['source_rules']} public managed policies, "
+             rf"one rule per statement, {a1['conflicts']} / {a3['conflicts']} conflicts, wildcards expanded with the IAM action registry \\",
+             rf"Kubernetes roles & {k8['rules']} / {k8['conflicts']} & 29 bootstrap ClusterRoles, allow-only \\",   # 29 = distinct ClusterRole objects in policy_v0.json
+             r"\midrule",
+             r"\multicolumn{3}{@{}p{\textwidth}@{}}{"
+             rf"\textbf{{GNN:}} $d={gnn['dim']}$, $L={gnn['layers']}$, $\tau={gnn['tau']}$, $w=2$, $\lambda={gnn['in_batch_weight']}$, "
+             rf"Adam (${gnn['lr']:g}$), {gnn['batch_anchors']} anchors per batch, {gnn['epochs']} epochs, {I(g['max_smt_calls'])} Z3 labels per policy, "
+             r"20\,\% of the rules held out. "
+             rf"\textbf{{Statistics:}} the scalability experiment repeats every size with {rq4['1000']['repeats']} seeds, the other timings are means "
+             r"over a change sequence. "
+             r"\textbf{Hardware:} dual-core laptop CPU (Intel i3-7020U, four threads), no GPU.} \\",
+             r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+    write("tab_setup", "\n".join(lines) + "\n")
+
+
 if __name__ == "__main__":
     tab_rq1()
     tab_rq2()
     tab_rq4()
-    print("wrote", ", ".join(str(OUT / f"tab_rq{i}.tex") for i in (1, 2, 4)))
+    tab_setup()
+    print("wrote", ", ".join(str(OUT / f"tab_{i}.tex") for i in ("rq1", "rq2", "rq4", "setup")))
