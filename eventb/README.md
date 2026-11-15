@@ -1,8 +1,15 @@
 # Event-B artefacts
 
+> **Not part of the paper.** The paper (*Sound and Incremental Conflict Detection in Evolving Access Control
+> Policies with Verifier-Supervised Graph Embeddings*) does not use Event-B: incremental reuse is done by the
+> verdict ledger (`src/ecd/incremental/`), whose guarantee is Theorem 2 (preservation under Δ). This optional export
+> is kept from an earlier version of the work. The RQ3 change time in the paper excludes it
+> (`incremental_ms − eventb_gen_ms` in `rq3_incremental.json`); the "THM PO" counts below equal the pairs verified
+> and the verdicts reused per change reported in the paper.
+
 `ecd` emits every policy version as a context in two formats:
 
-* `PolicyCtx_v<N>.ctx` — textual Event-B (Camille syntax, shown in the paper)
+* `PolicyCtx_v<N>.ctx` — textual Event-B (Camille syntax)
 * `PolicyCtx_v<N>.buc` — Rodin's native XML, importable as-is
 
 ```

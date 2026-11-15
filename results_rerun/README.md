@@ -7,6 +7,12 @@
 > `hetero_1k_h50` lần cũ dùng phiên bản dataset trước khi sinh lại nên số cũ không hợp lệ).
 > Sau lần chạy này, khởi tạo trọng số GNN đã được cố định seed (`common.train_gnn`, `run_rq1_embedding`),
 > nên các lần chạy sau tái lập chính xác hơn; số GNN có thể lệch ±0.01 so với lần này.
+>
+> **Lưu ý RQ3 (bản bài báo không có Event-B):** bài báo báo cáo thời gian mỗi thay đổi **54 ± 34 ms (median 52 ms,
+> nhanh hơn ≈ 340×)**, tức là `incremental_ms − eventb_gen_ms` trong `rq3_incremental.json` (bỏ phần xuất Event-B,
+> bài báo không dùng). `SUMMARY.md` và `numbers.tex` ở đây vẫn giữ số có Event-B: `\rqThreeIncMs` = 66,
+> `\rqThreeIncMsMedian` = 62, `\rqThreeIncMsSd` = 35, `\rqThreeSpeedup` = 279. Các số "PO" (`po_new`,
+> `po_reuse_rate`, …) chính là số cặp được verify và tỉ lệ verdict được dùng lại mỗi thay đổi trong bài báo.
 
 Thư mục này dành cho việc **tự chạy lại** các RQ để kiểm chứng số liệu của bài báo.
 Mọi thứ sinh ra khi chạy sẽ nằm ở đây; thư mục `results/` (nguồn số liệu hiện tại của
